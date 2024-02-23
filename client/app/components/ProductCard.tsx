@@ -12,7 +12,7 @@ const ProductCard = (props) => {
         {/* <ImageBackground source={props.image} style={styles.image}> */}
         <ImageBackground source={mockImage} style={styles.image}>
           <View style={styles.dealWrapper}>
-            <Text style={styles.dealLabel}>🔥 Hot shit</Text>
+            <Text style={styles.dealLabel}>🔥 Hot junk</Text>
           </View>
         </ImageBackground>
       </View>
