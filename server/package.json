@@ -26,6 +26,7 @@
     "prettier-plugin-sql": "^0.18.0",
     "stylelint": "^16.2.1",
     "stylelint-config-upleveled": "^1.0.7",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
 }

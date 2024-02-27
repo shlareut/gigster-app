@@ -1,3 +1,4 @@
+import { Link } from 'expo-router';
 import React from 'react';
 import { ImageBackground, Text, View } from 'react-native';
 import { styles } from './styles';
@@ -20,6 +21,14 @@ const ProductCard = (props) => {
         <Text style={styles.title}>{props.title}</Text>
         <Text>{props.id}</Text>
         <Text>{props.image}</Text>
+        <Link
+          href={{
+            pathname: '../venues/[id]',
+            params: { id: props.id },
+          }}
+        >
+          Click me!
+        </Link>
       </View>
     </View>
   );
