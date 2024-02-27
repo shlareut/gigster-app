@@ -1,7 +1,8 @@
-import { useLocalSearchParams } from 'expo-router';
+import { Link, useLocalSearchParams } from 'expo-router';
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { host } from '../constants';
 
 type Venue = {
   id: string;
@@ -22,7 +23,7 @@ export default function Venue() {
   const [venue, setVenue] = useState({});
   useEffect(() => {
     const loadVenue = async () => {
-      const response = await fetch(`http://192.168.0.5:3000/api/venues/${id}/`);
+      const response = await fetch(`${host}/api/venues/${id}/`);
       const venue = await response.json();
       console.log(venue);
       setVenue(venue);
@@ -37,8 +38,9 @@ export default function Venue() {
   return (
     <SafeAreaView style={styles.mainWrapper}>
       <View style={styles.productWrapper}>
-        <Text>{venue.venue_name}</Text>
+        <Text>{venue.name}</Text>
         <Text>{JSON.stringify(venue)}</Text>
+        <Link href="/">Click me!</Link>
       </View>
     </SafeAreaView>
   );

@@ -1,13 +1,14 @@
 import { Link } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { FlatList, SafeAreaView, StyleSheet, View } from 'react-native';
-import ProductCard from './components/ProductCard';
+import ProductCard from '../components/ProductCard';
+import { host } from './constants';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch('http://192.168.0.5:3000/api/venues');
+      const response = await fetch(`${host}/api/venues`);
       const products = await response.json();
       console.log(products);
       setProducts(products);
@@ -23,7 +24,7 @@ export default function Home() {
           data={products}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <ProductCard id={item.id} title={item.venue_name} />
+            <ProductCard id={item.id} title={item.name} />
           )}
         />
       </View>

@@ -38,3 +38,6 @@ app.get('/api/venues/:id', async (req, res) => {
 //   const data = await createVenue();
 //   return res.send(data);
 // });
+
+// serve hero image files
+app.use('/images', express.static('public/hero_images'));

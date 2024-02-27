@@ -1,17 +1,17 @@
 import { Link } from 'expo-router';
-import React from 'react';
-import { ImageBackground, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { Image, ImageBackground, Text, View } from 'react-native';
+import { host } from '../app/constants';
 import { styles } from './styles';
 
 const ProductCard = (props) => {
-  // static background image
-  const mockImage = require(`../../assets/placeholder.jpg`);
-  // const imageSource = require(`../../assets/productImages/1.jpeg`);
   return (
     <View style={styles.card}>
       <View style={styles.imageWrapper}>
-        {/* <ImageBackground source={props.image} style={styles.image}> */}
-        <ImageBackground source={mockImage} style={styles.image}>
+        <ImageBackground
+          source={{ uri: `${host}/images/${props.id}.jpeg` }}
+          style={styles.image}
+        >
           <View style={styles.dealWrapper}>
             <Text style={styles.dealLabel}>🔥 Hot junk</Text>
           </View>
@@ -20,7 +20,6 @@ const ProductCard = (props) => {
       <View style={styles.text}>
         <Text style={styles.title}>{props.title}</Text>
         <Text>{props.id}</Text>
-        <Text>{props.image}</Text>
         <Link
           href={{
             pathname: '../venues/[id]',
