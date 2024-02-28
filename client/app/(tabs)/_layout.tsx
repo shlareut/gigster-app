@@ -7,8 +7,15 @@ export default () => {
       <Tabs.Screen
         name="listings"
         options={{
-          title: 'Venues',
+          title: 'Explore',
           tabBarIcon: () => <AntDesign name="search1" size={24} color="grey" />,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: () => <AntDesign name="user" size={24} color="grey" />,
         }}
       />
     </Tabs>

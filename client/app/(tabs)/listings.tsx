@@ -23,9 +23,7 @@ export default function ListingsScreen() {
           pagingEnabled={true}
           data={products}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <ProductCard id={item.id} title={item.name} />
-          )}
+          renderItem={({ item }) => <ProductCard item={item} />}
         />
       </View>
     </SafeAreaView>

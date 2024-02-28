@@ -9,7 +9,7 @@ const ProductCard = (props) => {
     <View style={styles.card}>
       <View style={styles.imageWrapper}>
         <ImageBackground
-          source={{ uri: `${host}/images/${props.id}.jpeg` }}
+          source={{ uri: `${host}/images/${props.item.id}.jpeg` }}
           style={styles.image}
         >
           <View style={styles.dealWrapper}>
@@ -18,12 +18,14 @@ const ProductCard = (props) => {
         </ImageBackground>
       </View>
       <View style={styles.text}>
-        <Text style={styles.title}>{props.title}</Text>
-        <Text>{props.id}</Text>
+        <Text style={styles.title}>{props.item.name}</Text>
+        <Text>{props.item.type}</Text>
+        <Text>{props.item.address_line_one}</Text>
+        <Text>{props.item.city_district}</Text>
         <Link
           href={{
             pathname: '../(stack)/[details]',
-            params: { id: props.id },
+            params: { id: props.item.id },
           }}
         >
           Click me!
