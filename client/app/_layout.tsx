@@ -1,17 +1,26 @@
-import { Tabs } from 'expo-router';
+import { AntDesign } from '@expo/vector-icons';
+import { Slot, Stack, Tabs } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 
-export default function App() {
+export default () => {
   return (
     <>
       {/* <StatusBar style="auto" /> */}
-      <Tabs>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="(stack)/[details]"
+          options={{ title: 'Details', headerBackTitleVisible: false }}
+        />
+      </Stack>
+      {/* <Tabs>
         <Tabs.Screen
           // Name of the route to hide.
           name="index"
           options={{
             // This tab will no longer show up in the tab bar.
             title: 'Home',
+            tabBarIcon: () => <AntDesign name="home" size={24} color="grey" />,
           }}
         />
         <Tabs.Screen
@@ -23,7 +32,7 @@ export default function App() {
             href: null,
           }}
         />
-      </Tabs>
+      </Tabs> */}
     </>
   );
-}
+};

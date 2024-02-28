@@ -1,7 +1,7 @@
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 import React, { useState } from 'react';
-import { Image, ImageBackground, Text, View } from 'react-native';
-import { host } from '../app/constants';
+import { Button, Image, ImageBackground, Text, View } from 'react-native';
+import { host } from '../constants';
 import { styles } from './styles';
 
 const ProductCard = (props) => {
@@ -22,7 +22,7 @@ const ProductCard = (props) => {
         <Text>{props.id}</Text>
         <Link
           href={{
-            pathname: '../venues/[id]',
+            pathname: '../(stack)/[details]',
             params: { id: props.id },
           }}
         >
