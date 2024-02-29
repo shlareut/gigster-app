@@ -1,5 +1,5 @@
 import express from 'express';
-import { createVenue, getVenue, getVenues } from './db.js';
+import { getAllListings, getSingleListing } from './db.js';
 
 const app = express();
 const port = 3000;
@@ -21,15 +21,15 @@ app.listen(port, () => {
 // });
 
 // GET all venues
-app.get('/api/venues', async (req, res) => {
-  const data = await getVenues();
+app.get('/api/listings', async (req, res) => {
+  const data = await getAllListings();
   return res.send(data);
 });
 
 // GET one venue
-app.get('/api/venues/:id', async (req, res) => {
+app.get('/api/listings/:id', async (req, res) => {
   const { id } = req.params;
-  const data = await getVenue(id);
+  const data = await getSingleListing(id);
   return res.send(data[0]);
 });
 

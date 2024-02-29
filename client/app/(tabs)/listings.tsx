@@ -4,24 +4,24 @@ import ProductCard from '../components/ProductCard';
 import { host } from '../constants';
 
 export default function ListingsScreen() {
-  const [products, setProducts] = useState([]);
+  const [listings, setListings] = useState([]);
   useEffect(() => {
-    const fetchProducts = async () => {
-      const response = await fetch(`${host}/api/venues`);
-      const products = await response.json();
-      console.log(products);
-      setProducts(products);
+    const fetchListings = async () => {
+      const response = await fetch(`${host}/api/listings`);
+      const listings = await response.json();
+      console.log(listings);
+      setListings(listings);
     };
-    fetchProducts().catch(console.error);
+    fetchListings().catch(console.error);
   }, []);
   return (
     <SafeAreaView className="flex-1 bg-white">
       <FlatList
         className="w-screen"
         pagingEnabled={true}
-        data={products}
+        data={listings}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <ProductCard product={item} />}
+        renderItem={({ item }) => <ProductCard listing={item} />}
       />
     </SafeAreaView>
   );

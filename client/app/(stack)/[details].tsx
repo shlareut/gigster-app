@@ -4,7 +4,7 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { host } from '../constants';
 
-type Venue = {
+type Listing = {
   id: string;
   venue_name: string;
   address_line_one: string;
@@ -20,26 +20,26 @@ type Venue = {
 
 export default function DetailsScreen() {
   const { id } = useLocalSearchParams();
-  const [venue, setVenue] = useState({});
+  const [listing, setListing] = useState({});
   useEffect(() => {
     const loadVenue = async () => {
-      const response = await fetch(`${host}/api/venues/${id}/`);
-      const venue = await response.json();
-      console.log(venue);
-      setVenue(venue);
+      const response = await fetch(`${host}/api/listings/${id}/`);
+      const listing = await response.json();
+      console.log(listing);
+      setListing(listing);
     };
     loadVenue().catch(console.error);
   }, [id]);
 
-  if (!venue) {
+  if (!listing) {
     return null;
   }
 
   return (
     <SafeAreaView style={styles.mainWrapper}>
       <View style={styles.productWrapper}>
-        <Text>{venue.name}</Text>
-        <Text>{JSON.stringify(venue)}</Text>
+        <Text>{listing.name}</Text>
+        <Text>{JSON.stringify(listing)}</Text>
         <Link href="/">Click me!</Link>
       </View>
     </SafeAreaView>

@@ -8,7 +8,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "ley"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
@@ -20,6 +21,7 @@
     "@types/react": "^18.2.58",
     "@types/react-dom": "^18.2.19",
     "eslint-config-upleveled": "^7.8.1",
+    "ley": "^0.8.1",
     "libpg-query": "15.0.3-wasm.0.1",
     "prettier": "^3.2.5",
     "prettier-plugin-embed": "^0.4.14",

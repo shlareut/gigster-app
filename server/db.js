@@ -1,8 +1,8 @@
-import dotenv from 'dotenv';
 // db.js
 import postgres from 'postgres';
+import { setEnvironment } from './utils/config.js';
 
-dotenv.config();
+setEnvironment();
 
 export const sql = postgres();
 
@@ -21,66 +21,66 @@ export const sql = postgres();
 // new db query
 
 // Query venues
-export async function getVenues() {
-  const venues = await sql`
+export async function getAllListings() {
+  const listings = await sql`
     SELECT
       *
     FROM
-      venues
+      listings
   `;
-  return venues;
+  return listings;
 }
 
 // Query single venue
-export async function getVenue(id) {
-  const venues = await sql`
+export async function getSingleListing(id) {
+  const listings = await sql`
     SELECT
       *
     FROM
-      venues
+      listings
     WHERE
       id = ${id}
   `;
-  return venues;
+  return listings;
 }
 
 // Create new venue
-export async function createVenue(
-  venue_name,
-  venue_type,
-  address_line_one,
-  address_line_two,
-  postal_code,
-  city,
-  city_district,
-  country,
-  description,
-) {
-  const newVenue = await sql`
-    INSERT INTO
-      venues (
-        venue_name,
-        venue_type,
-        address_line_one,
-        address_line_two,
-        postal_code,
-        city,
-        city_district,
-        country,
-        description,
-      )
-    VALUES
-      (
-        ${venue_name},
-        ${venue_type},
-        ${address_line_one},
-        ${address_line_two},
-        ${postal_code},
-        ${city},
-        ${city_district},
-        ${country},
-        ${description}
-      )
-  `;
-  return newVenue;
-}
+// export async function createVenue(
+//   venue_name,
+//   venue_type,
+//   address_line_one,
+//   address_line_two,
+//   postal_code,
+//   city,
+//   city_district,
+//   country,
+//   description,
+// ) {
+//   const newVenue = await sql`
+//     INSERT INTO
+//       venues (
+//         venue_name,
+//         venue_type,
+//         address_line_one,
+//         address_line_two,
+//         postal_code,
+//         city,
+//         city_district,
+//         country,
+//         description,
+//       )
+//     VALUES
+//       (
+//         ${venue_name},
+//         ${venue_type},
+//         ${address_line_one},
+//         ${address_line_two},
+//         ${postal_code},
+//         ${city},
+//         ${city_district},
+//         ${country},
+//         ${description}
+//       )
+//   `;
+//   return newVenue;
+// }
