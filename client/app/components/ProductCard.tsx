@@ -6,6 +6,7 @@ import { host } from '../constants';
 const Card = (props) => {
   return (
     <TouchableOpacity
+      activeOpacity={1}
       onPress={() => {
         router.navigate({
           pathname: '../(stack)/[details]',
@@ -30,10 +31,12 @@ const Card = (props) => {
           </ImageBackground>
         </View>
         <View className="border rounded-b-3xl">
-          <Text className="mt-3 text-3xl font-bold">{props.listing.name}</Text>
-          <Text className="mt-2 font-bold">{props.listing.type}</Text>
-          <Text className="mt-2">{props.listing.address_line_one}</Text>
-          <Text className="mt-2 mb-3">{props.listing.city_district}</Text>
+          <View className="my-4 mx-3">
+            <Text className="text-3xl font-bold">{props.listing.name}</Text>
+            <Text className="mt-2 font-bold">{props.listing.type}</Text>
+            <Text className="mt-2">{props.listing.address_line_one}</Text>
+            <Text className="mt-2">{props.listing.city_district}</Text>
+          </View>
         </View>
       </View>
     </TouchableOpacity>

@@ -10,7 +10,10 @@ export default () => {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
           name="(stack)/[details]"
-          options={{ title: 'Details', headerBackTitleVisible: false }}
+          options={{
+            title: 'Details',
+            headerBackTitleVisible: false,
+          }}
         />
       </Stack>
       {/* <Tabs>

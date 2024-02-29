@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, SafeAreaView } from 'react-native';
+import { Dimensions, FlatList, SafeAreaView } from 'react-native';
 import ProductCard from '../components/ProductCard';
 import { host } from '../constants';
 
@@ -18,6 +18,10 @@ export default function ListingsScreen() {
     <SafeAreaView className="flex-1 bg-white">
       <FlatList
         className="w-screen"
+        decelerationRate={'fast'}
+        snapToInterval={1}
+        bounces={false}
+        showsVerticalScrollIndicator={false}
         pagingEnabled={true}
         data={listings}
         keyExtractor={(item) => item.id}
