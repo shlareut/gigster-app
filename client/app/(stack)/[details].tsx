@@ -1,4 +1,4 @@
-import { Link, useLocalSearchParams } from 'expo-router';
+import { Link, router, useLocalSearchParams } from 'expo-router';
 import { styled } from 'nativewind';
 import React, { useEffect, useState } from 'react';
 import {
@@ -16,7 +16,6 @@ import CustomButton from '../components/CustomButton';
 import { host } from '../constants';
 
 export default function DetailsScreen() {
-  const StyledButton = styled(CustomButton);
   const { id } = useLocalSearchParams();
   const [listing, setListing] = useState({});
   useEffect(() => {
@@ -61,8 +60,10 @@ export default function DetailsScreen() {
         </View>
       </ScrollView>
       <View className="h-28 border-t border-gray-200">
-        <View className="my-4 mx-3">
-          <StyledButton className="bg-red-500" />
+        <View className="self-end my-4 mx-3 align">
+          <CustomButton onPress={() => router.navigate('../(auth)/identify')}>
+            Log in to book
+          </CustomButton>
         </View>
       </View>
     </View>

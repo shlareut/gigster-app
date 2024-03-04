@@ -44,6 +44,17 @@ export async function getSingleListing(id) {
   return listings;
 }
 
+export async function getSingleUserByUsername(username) {
+  const user = await sql`
+    SELECT
+      *
+    FROM
+      users
+    WHERE
+      username = ${username}
+  `;
+  return user;
+}
 // Create new venue
 // export async function createVenue(
 //   venue_name,

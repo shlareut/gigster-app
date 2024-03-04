@@ -1,5 +1,9 @@
 import express from 'express';
-import { getAllListings, getSingleListing } from './db.js';
+import {
+  getAllListings,
+  getSingleListing,
+  getSingleUserByUsername,
+} from './db.js';
 
 const app = express();
 const port = 3000;
@@ -41,3 +45,19 @@ app.get('/api/listings/:id', async (req, res) => {
 
 // serve hero image files
 app.use('/images', express.static('public/hero_images'));
+
+// GET one user
+app.get('/api/users/:username', async (req, res) => {
+  const { username } = req.params;
+  const data = await getSingleUserByUsername(username);
+  if (data[0]) {
+    return res.json({
+      exists: true,
+      message: 'User already exists. Redirect to login.',
+    });
+  }
+  return res.json({
+    exists: false,
+    message: 'User does not exist. Redirect to sign-up.',
+  });
+});
