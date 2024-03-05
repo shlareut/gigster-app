@@ -1,6 +1,8 @@
 import { router, useLocalSearchParams, useRouter } from 'expo-router';
 import React from 'react';
 import { Text, View } from 'react-native';
+import CustomButton from '../components/CustomButton';
+import { host } from '../constants';
 
 export default function LoginScreen() {
   const local = useLocalSearchParams();

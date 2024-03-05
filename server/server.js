@@ -4,6 +4,7 @@ import {
   getSingleListing,
   getSingleUserByUsername,
 } from './db.js';
+import { sendOTP } from './sms.js';
 
 const app = express();
 const port = 3000;
@@ -60,4 +61,16 @@ app.get('/api/users/:username', async (req, res) => {
     exists: false,
     message: 'User does not exist. Redirect to sign-up.',
   });
+});
+
+// Send SMS
+app.get('/sms/otp/:phone', async (req, res) => {
+  const { phone } = req.params;
+  const data = await sendOTP(phone);
+  try {
+    return res.json({ success: true, message: 'OTP sent successfully', data });
+  } catch (error) {
+    console.error('Error sending OTP', error);
+    return res.json({ success: false, message: 'OTP sending failed', data });
+  }
 });

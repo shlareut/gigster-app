@@ -10,10 +10,13 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
-client.messages
-  .create({
-    body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
-    from: '+16078004729',
-    to: '+436764105889',
-  })
-  .then((message) => console.log(message.sid));
+export async function sendOTP(phone) {
+  const otp = Math.floor(100000 + Math.random() * 900000);
+  client.messages
+    .create({
+      body: `Your OTP is ${otp}`,
+      from: '+16078004729',
+      to: `${phone}`,
+    })
+    .then((message) => console.log(message.sid));
+}
