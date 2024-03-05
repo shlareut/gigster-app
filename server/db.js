@@ -55,6 +55,37 @@ export async function getSingleUserByUsername(username) {
   `;
   return user;
 }
+
+export async function createUser(username, password_hash) {
+  const user = await sql`
+    INSERT INTO
+      users (username, password_hash)
+    VALUES
+      (
+        ${username},
+        ${password_hash}
+      )
+    RETURNING
+      id,
+      username
+  `;
+  return user;
+}
+
+export async function updateUserPassword(username, password_hash) {
+  const updatedUser = await sql`
+    UPDATE users
+    SET
+      password_hash = ${password_hash}
+    WHERE
+      username = ${username}
+    RETURNING
+      id,
+      username;
+  `;
+  return updatedUser[0];
+}
+
 // Create new venue
 // export async function createVenue(
 //   venue_name,

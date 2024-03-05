@@ -1,8 +1,11 @@
+import bcrypt from 'bcrypt';
 import express from 'express';
 import {
+  createUser,
   getAllListings,
   getSingleListing,
   getSingleUserByUsername,
+  updateUserPassword,
 } from './db.js';
 import { sendOTP } from './sms.js';
 
@@ -63,14 +66,81 @@ app.get('/api/users/:username', async (req, res) => {
   });
 });
 
-// Send SMS
+// Send OTP SMS
 app.get('/sms/otp/:phone', async (req, res) => {
-  const { phone } = req.params;
-  const data = await sendOTP(phone);
   try {
-    return res.json({ success: true, message: 'OTP sent successfully', data });
+    // Generate OTP
+    const otp = generateOTP();
+    // Encrypt generated OTP
+    const otpHash = await bcrypt.hash(otp, 12);
+    // Compare both
+    const compareOtp = await bcrypt.compare(otp, otpHash);
+    const { phone } = req.params;
+
+    // Pass data to SMS function and wait for the result
+    const data = await sendOTP(phone, otp, otpHash, compareOtp);
+
+    // Check the success property in the result
+    if (data.success) {
+      // If successful, check if user exists
+      const data = await getSingleUserByUsername(phone);
+      if (data[0]) {
+        // If existing -> update user password
+        const updatedUser = await updateUserPassword(phone, otpHash);
+        return res.json({
+          success: true,
+          exists: true,
+          message: `OTP sent successfully. Password updated for: ${phone}.`,
+          data,
+        });
+      }
+      // If new -> create user
+      const newUser = await createUser(phone, otpHash);
+      return res.json({
+        success: true,
+        exists: false,
+        message: `OTP sent successfully. User created: ${phone}`,
+        data,
+      });
+      // // Lastly, send a JSON response indicating success
+      // return res.json({
+      //   success: true,
+      //   message: 'OTP sent successfully',
+      //   data,
+      // });
+    } else {
+      // even if failure, check if user exists
+      const data = await getSingleUserByUsername(phone);
+      if (data[0]) {
+        // If existing
+        return res.json({
+          success: false,
+          exists: true,
+          message: 'Error sending OTP. Existing user.',
+          data,
+        });
+      }
+      // If new
+      return res.json({
+        success: false,
+        exists: false,
+        message: 'Error sending OTP. New user!',
+        data,
+      });
+      // // If there's an error, log it and send a JSON response indicating failure
+      // console.error('Error sending OTP', data);
+      // return res.json({ success: false, message: 'OTP sending failed', data });
+    }
   } catch (error) {
-    console.error('Error sending OTP', error);
-    return res.json({ success: false, message: 'OTP sending failed', data });
+    // Handle unexpected errors
+    console.error('Unexpected error:', error);
+    return res
+      .status(500)
+      .json({ success: false, message: 'Internal server error' });
   }
 });
+
+// Generate OTP function
+function generateOTP() {
+  return Math.floor(100000 + Math.random() * 900000).toString();
+}
