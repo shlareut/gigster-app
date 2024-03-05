@@ -1,10 +1,12 @@
 // Download the helper library from https://www.twilio.com/docs/node/install
 // Find your Account SID and Auth Token at twilio.com/console
 // and set the environment variables. See http://twil.io/secure
+import dotenv from 'dotenv';
 import twilio from 'twilio';
 
-const accountSid = 'ACc57f5db4f999461d156799b56a816338';
-const authToken = 'c9996642442c83f2776c62be726140b3';
+dotenv.config();
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
 client.messages
