@@ -66,7 +66,7 @@ app.get('/api/users/:username', async (req, res) => {
   });
 });
 
-// Send OTP SMS
+// Registration // Send OTP SMS
 app.get('/sms/otp/:phone', async (req, res) => {
   try {
     // Generate OTP
@@ -144,3 +144,38 @@ app.get('/sms/otp/:phone', async (req, res) => {
 function generateOTP() {
   return Math.floor(100000 + Math.random() * 900000).toString();
 }
+
+// Login user
+app.get('/api/login/:phone', async (req, res) => {
+  const { phone } = req.params;
+  const typedOtp = req.query.otp;
+  const user = await getSingleUserByUsername(phone).catch((error) =>
+    console.log(error),
+  );
+  const hashedOtp = user[0].password_hash;
+  console.log(typedOtp, hashedOtp);
+  if (user[0]) {
+    // compare hashed password with typed password
+    const isOtpValid = await bcrypt
+      .compare(typedOtp, hashedOtp)
+      .catch((error) => console.log(error));
+    console.log(isOtpValid);
+    // check response
+    if (!isOtpValid) {
+      return res.json({
+        success: false,
+        message: `Wrong OTP: ${typedOtp}`,
+      });
+    } else {
+      return res.json({
+        success: true,
+        message: `Correct OTP: ${typedOtp}`,
+      });
+    }
+  }
+  // invalid user error
+  return res.json({
+    success: false,
+    message: `User not found!`,
+  });
+});

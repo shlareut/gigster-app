@@ -9,11 +9,20 @@ export default function LoginScreen() {
   const local = useLocalSearchParams();
   const [result, setResult] = useState('');
   const [otp, setOtp] = useState('');
+  const [isValid, setIsValid] = useState(null);
   const sendOTP = async () => {
     const response = await fetch(`${host}/sms/otp/${local.fullPhoneNumber}`);
     const result = await response.json();
     console.log(result);
     setResult(result.message);
+  };
+  const validateOTP = async () => {
+    const response = await fetch(
+      `${host}/api/login/${local.fullPhoneNumber}?otp=${otp}`,
+    );
+    const result = await response.json();
+    console.log(result);
+    setIsValid(result.message);
   };
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -37,6 +46,10 @@ export default function LoginScreen() {
             <CustomButton onPress={sendOTP}>Send OTP</CustomButton>
           </View>
           <Text>{result}</Text>
+          <View className="w-11/12 my-3">
+            <CustomButton onPress={validateOTP}>Validate</CustomButton>
+          </View>
+          <Text>{isValid}</Text>
         </View>
       </View>
     </TouchableWithoutFeedback>
