@@ -8,14 +8,30 @@ export default () => {
         name="listings"
         options={{
           title: 'Explore',
-          tabBarIcon: () => <AntDesign name="search1" size={24} color="grey" />,
+          tabBarActiveTintColor: '#155e75',
+          tabBarInactiveTintColor: 'grey',
+          tabBarIcon: ({ focused }) => (
+            <AntDesign
+              name="search1"
+              size={24}
+              color={focused ? '#155e75' : 'grey'}
+            />
+          ),
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: 'Profile',
-          tabBarIcon: () => <AntDesign name="user" size={24} color="grey" />,
+          tabBarActiveTintColor: '#155e75',
+          tabBarInactiveTintColor: 'grey',
+          tabBarIcon: ({ focused }) => (
+            <AntDesign
+              name="user"
+              size={24}
+              color={focused ? '#155e75' : 'grey'}
+            />
+          ),
         }}
       />
     </Tabs>

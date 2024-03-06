@@ -30,7 +30,7 @@ export default function IdentifyScreen() {
     const response = await fetch(`${host}/api/users/${fullPhoneNumber}`);
     console.log(response);
     const data = await response.json();
-    console.log(data.exists);
+    console.log(data.message);
     if (data.exists) {
       router.navigate({
         pathname: '/login',
@@ -62,20 +62,18 @@ export default function IdentifyScreen() {
                 className="bg-white text-left text-md"
                 mode="outlined"
                 label="Country/Region"
-                outlineColor="rgb(30, 58, 138)"
-                activeOutlineColor="rgb(59, 130, 246)"
+                activeOutlineColor="#155e75"
                 value={`${countryName} ${countryCode}`}
                 right={<TextInput.Icon icon="chevron-down" />}
               />
             </View>
           </TouchableOpacity>
           <TextInput
-            className="bg-white text-left text-md w-11/12 my-3 border-blue border-blue"
+            className="bg-white text-left text-md w-11/12 my-3"
             mode="outlined"
             inputMode="tel"
             label="Phone number"
-            outlineColor="rgb(30, 58, 138)"
-            activeOutlineColor="rgb(59, 130, 246)"
+            activeOutlineColor="#155e75"
             value={lineNumber}
             onChangeText={(newText) => setLineNumber(newText)}
           />

@@ -11,14 +11,16 @@ export default function LoginScreen() {
   const [otp, setOtp] = useState('');
   const [isValid, setIsValid] = useState(null);
   const sendOTP = async () => {
-    const response = await fetch(`${host}/sms/otp/${local.fullPhoneNumber}`);
+    const response = await fetch(
+      `${host}/api/users/generate_otp/${local.fullPhoneNumber}`,
+    );
     const result = await response.json();
     console.log(result);
     setResult(result.message);
   };
   const validateOTP = async () => {
     const response = await fetch(
-      `${host}/api/login/${local.fullPhoneNumber}?otp=${otp}`,
+      `${host}/api/users/validate_otp/${local.fullPhoneNumber}?otp=${otp}`,
     );
     const result = await response.json();
     console.log(result);

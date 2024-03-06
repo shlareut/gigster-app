@@ -10,6 +10,7 @@ export default () => {
         options={{
           title: 'Log in or sign up',
           headerBackTitleVisible: false,
+          headerTintColor: 'black',
         }}
         initialParams={{ countryName: 'Austria', countryCode: '+43' }}
       />
@@ -18,6 +19,7 @@ export default () => {
         options={{
           title: 'Country/Region',
           headerBackTitleVisible: false,
+          headerTintColor: 'black',
           presentation: 'modal',
         }}
       />
@@ -26,6 +28,7 @@ export default () => {
         options={{
           title: 'Log in',
           headerBackTitleVisible: false,
+          headerTintColor: 'black',
         }}
       />
       <Stack.Screen
@@ -33,6 +36,7 @@ export default () => {
         options={{
           title: 'Sign up',
           headerBackTitleVisible: false,
+          headerTintColor: 'black',
         }}
       />
     </Stack>

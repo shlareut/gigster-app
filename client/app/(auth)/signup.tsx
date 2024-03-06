@@ -10,7 +10,9 @@ export default function SignUpScreen() {
   const [result, setResult] = useState('');
   const [otp, setOtp] = useState('');
   const sendOTP = async () => {
-    const response = await fetch(`${host}/sms/otp/${local.fullPhoneNumber}`);
+    const response = await fetch(
+      `${host}/api/users/generate_otp/${local.fullPhoneNumber}`,
+    );
     const result = await response.json();
     console.log(result);
     setResult(result.message);

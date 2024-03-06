@@ -13,11 +13,16 @@ export default () => {
           options={{
             title: 'Details',
             headerBackTitleVisible: false,
+            headerTintColor: 'black',
           }}
         />
         <Stack.Screen
           name="(auth)"
-          options={{ headerShown: false, presentation: 'modal' }}
+          options={{
+            headerShown: false,
+            presentation: 'modal',
+            headerTintColor: 'black',
+          }}
         />
       </Stack>
     </>

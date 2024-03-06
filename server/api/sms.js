@@ -27,15 +27,15 @@ const client = twilio(accountSid, authToken);
 //     });
 // }
 
-export async function sendOTP(phone, otp, otpHash, compareOtp) {
+export async function sendOTP(username, otp) {
   try {
     const message = await client.messages.create({
-      body: `Your OTP is ${otp}. Hashed OTP: ${otpHash}. Compare: ${compareOtp}`,
+      body: `Your final project OTP is ${otp}.`,
       from: '+16078004729',
-      to: `${phone}`,
+      to: `${username}`,
     });
 
-    console.log('SMS sent successfully:', message.sid);
+    console.log('OTP sent successfully:', message.sid);
     return { success: true, message: 'OTP sent successfully' };
   } catch (error) {
     console.error('Error:', error.code, error.message);

@@ -52,7 +52,7 @@ export default function DetailsScreen() {
               className="active:opacity-50"
               onPress={() => alert('Google map in progress!')}
             >
-              <Text className="font-bold text-blue-900">Open map</Text>
+              <Text className="font-bold text-cyan-800">Open map</Text>
             </Pressable>
           </View>
           <View className="my-5 border-t border-gray-200"></View>
