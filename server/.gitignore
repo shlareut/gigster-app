@@ -4,3 +4,6 @@
 # local env files
 .env*.local
 .env
+
+# compiled js files
+dist/
