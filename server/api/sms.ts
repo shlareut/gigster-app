@@ -29,11 +29,13 @@ const client = twilio(accountSid, authToken);
 
 export async function sendOTP(username: string, otp: string) {
   try {
-    const message = await client.messages.create({
-      body: `Your final project OTP is ${otp}.`,
-      from: '+16078004729',
-      to: `${username}`,
-    });
+    const message = await client.messages
+      .create({
+        body: `Your final project OTP is ${otp}.`,
+        from: '+16078004729',
+        to: `${username}`,
+      })
+      .catch(console.error);
 
     console.log('OTP sent successfully:', message.sid);
     return { success: true, message: 'OTP sent successfully' };

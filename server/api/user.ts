@@ -14,7 +14,7 @@ const userRouter = express.Router();
 // GET one single user
 userRouter.get('/api/users/:username', async (req, res) => {
   const { username } = req.params;
-  const data = await getSingleUserByUsername(username);
+  const data = await getSingleUserByUsername(username).catch(console.error);
   if (data[0]) {
     return res.json({
       exists: true,
@@ -31,17 +31,17 @@ userRouter.get('/api/users/:username', async (req, res) => {
 userRouter.get('/api/users/generate_otp/:username', async (req, res) => {
   const { username } = req.params;
   const otp = generateOtp();
-  const otpHash = await bcrypt.hash(otp, 12);
+  const otpHash = await bcrypt.hash(otp, 12).catch(console.error);
   try {
     // Send SMS
-    const sms = await sendOTP(username, otp);
+    const sms = await sendOTP(username, otp).catch(console.error);
     // Check if sending was successful
     if (sms.success) {
       // Check if user is existing
-      const user = await getSingleUserByUsername(username);
+      const user = await getSingleUserByUsername(username).catch(console.error);
       if (user[0]) {
         // If existing, update password
-        await updateUserPassword(username, otpHash);
+        await updateUserPassword(username, otpHash).catch(console.error);
         return res.status(200).json({
           success: true,
           existing_user: true,
@@ -49,7 +49,7 @@ userRouter.get('/api/users/generate_otp/:username', async (req, res) => {
         });
       } else {
         // If new user, create DB entry
-        await createUser(username, otpHash);
+        await createUser(username, otpHash).catch(console.error);
         return res.status(200).json({
           success: true,
           existing_user: false,
@@ -86,7 +86,7 @@ userRouter.get('/api/users/validate_otp/:username', async (req, res) => {
     const isOtpValid = await bcrypt
       .compare(typedOtp, hashedOtp)
       .catch(console.error);
-    console.log(isOtpValid);
+    console.log('OTP valid?:', isOtpValid);
     // check if password is correct
     if (!isOtpValid) {
       return res.status(401).json({
