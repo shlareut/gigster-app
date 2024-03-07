@@ -81,7 +81,7 @@ export default function SignUpScreen() {
               Send verification code
             </CustomButton>
           </View>
-          <Text>{sentOtp}</Text>
+          <Text className="text-red-700">{sentOtp}</Text>
         </View>
       </View>
     </TouchableWithoutFeedback>

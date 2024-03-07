@@ -50,7 +50,7 @@ export default () => {
           }}
         />
       </Stack>
-      <Toast visibilityTime={1500} />
+      <Toast visibilityTime={2000} />
     </>
   );
 };

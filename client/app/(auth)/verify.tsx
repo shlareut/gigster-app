@@ -18,9 +18,9 @@ export default function VerifyScreen() {
     console.log(data);
     setIsValid(data.message);
     if (data.success) {
-      // create session token
+      // create session token and add to DB
       await fetch(`${host}/api/users/create_session/${data.user_id}`);
-      // add error handling if session generation failed
+      // !!! add error handling if session generation failed !!!
       // redirect to profile screen
       router.navigate({
         pathname: '../(tabs)/profile',
