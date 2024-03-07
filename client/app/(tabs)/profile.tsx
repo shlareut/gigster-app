@@ -29,7 +29,7 @@ export default function ProfileScreen() {
       // success toaster message
       Toast.show({
         type: 'success',
-        text1: 'Successfully logged in!',
+        text1: 'Successfully logged in, session created!',
       });
     };
     // only trigger useEffect if there is a local.username

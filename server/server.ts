@@ -14,6 +14,9 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
+// serve hero image files for listings consumption
+app.use('/images', express.static('public/hero_images'));
+
 // Use listings APIs
 app.use('/', listingsRouter);
 
@@ -22,6 +25,3 @@ app.use('/', userRouter);
 
 // Use session APIs
 app.use('/', sessionRouter);
-
-// serve hero image files for listings consumption
-app.use('/images', express.static('public/hero_images'));
