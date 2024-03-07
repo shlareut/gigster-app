@@ -1,31 +1,67 @@
-import { router, useLocalSearchParams, useRouter } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import React, { useState } from 'react';
 import { Keyboard, Text, TouchableWithoutFeedback, View } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import { MD3Colors, ProgressBar, TextInput } from 'react-native-paper';
 import CustomButton from '../components/CustomButton';
 import { host } from '../constants';
 
 export default function SignUpScreen() {
   const local = useLocalSearchParams();
-  const [result, setResult] = useState('');
-  const [otp, setOtp] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [sentOtp, setSentOtp] = useState('');
   const sendOTP = async () => {
     const response = await fetch(
-      `${host}/api/users/generate_otp/${local.fullPhoneNumber}`,
+      `${host}/api/users/generate_otp/${local.username}?firstName=${firstName}&lastName=${lastName}`,
     );
     const result = await response.json();
     console.log(result);
-    setResult(result.message);
+    setSentOtp(result.message);
+    if (result.success) {
+      router.navigate({
+        pathname: '/verify',
+        params: {
+          username: local.username,
+          // firstName: firstName,
+          // lastName: lastName,
+        },
+      });
+    } else {
+      console.log('Error sending OTP. Not redirected!');
+    }
   };
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View className="flex-1 bg-white">
-        <View className="items-center mt-10">
+        <View className="items-center">
+          {/* // Progressbar */}
+          <View className="flex-1 w-11/12 mb-10">
+            <ProgressBar progress={0.6} color="#155e75" />
+          </View>
+          {/* // Progressbar */}
           <Text className="w-11/12 my-3">
-            You're signing up with:{' '}
-            <Text className="font-bold">{local.fullPhoneNumber}</Text>
+            You're signing up with{' '}
+            <Text className="font-bold">{local.username}</Text>. Please enter
+            your first and last name as per your ID card or passport for a
+            seamless experience.
           </Text>
           <TextInput
+            className="bg-white text-left text-md w-11/12 my-3 border-blue border-blue"
+            mode="outlined"
+            label="First name"
+            activeOutlineColor="#155e75"
+            value={firstName}
+            onChangeText={(newText) => setFirstName(newText)}
+          />
+          <TextInput
+            className="bg-white text-left text-md w-11/12 my-3 border-blue border-blue"
+            mode="outlined"
+            label="Last name"
+            activeOutlineColor="#155e75"
+            value={lastName}
+            onChangeText={(newText) => setLastName(newText)}
+          />
+          {/* <TextInput
             className="bg-white text-left text-md w-11/12 my-3 border-blue border-blue"
             mode="outlined"
             inputMode="tel"
@@ -34,11 +70,13 @@ export default function SignUpScreen() {
             activeOutlineColor="rgb(59, 130, 246)"
             value={otp}
             onChangeText={(newText) => setOtp(newText)}
-          />
+          /> */}
           <View className="w-11/12 my-3">
-            <CustomButton onPress={sendOTP}>Send OTP</CustomButton>
+            <CustomButton onPress={sendOTP}>
+              Send verification code
+            </CustomButton>
           </View>
-          <Text>{result}</Text>
+          <Text>{sentOtp}</Text>
         </View>
       </View>
     </TouchableWithoutFeedback>

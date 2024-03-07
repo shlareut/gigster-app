@@ -39,6 +39,14 @@ export default () => {
           headerTintColor: 'black',
         }}
       />
+      <Stack.Screen
+        name="verify"
+        options={{
+          title: 'Verify phone number',
+          headerBackTitleVisible: false,
+          headerTintColor: 'black',
+        }}
+      />
     </Stack>
   );
 };

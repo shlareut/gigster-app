@@ -30,6 +30,8 @@ userRouter.get('/api/users/:username', async (req, res) => {
 // Generate OTP, create new user or update existing user password.
 userRouter.get('/api/users/generate_otp/:username', async (req, res) => {
   const { username } = req.params;
+  const firstName: any = req.query.firstName;
+  const lastName: any = req.query.lastName;
   const otp = generateOtp();
   const otpHash = await bcrypt.hash(otp, 12).catch(console.error);
   try {
@@ -49,7 +51,9 @@ userRouter.get('/api/users/generate_otp/:username', async (req, res) => {
         });
       } else {
         // If new user, create DB entry
-        await createUser(username, otpHash).catch(console.error);
+        await createUser(username, otpHash, firstName, lastName).catch(
+          console.error,
+        );
         return res.status(200).json({
           success: true,
           existing_user: false,

@@ -5,14 +5,26 @@ setEnvironment();
 const sql = postgres();
 
 // Create single user.
-export async function createUser(username: string, password_hash: string) {
+export async function createUser(
+  username: string,
+  password_hash: string,
+  first_name: string,
+  last_name: string,
+) {
   const user = await sql`
     INSERT INTO
-      users (username, password_hash)
+      users (
+        username,
+        password_hash,
+        first_name,
+        last_name
+      )
     VALUES
       (
         ${username},
-        ${password_hash}
+        ${password_hash},
+        ${first_name},
+        ${last_name}
       )
     RETURNING
       id,

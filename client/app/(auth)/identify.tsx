@@ -1,4 +1,4 @@
-import { router, useLocalSearchParams, useRouter } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import {
   Keyboard,
@@ -7,7 +7,7 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import { Button, TextInput, TouchableRipple } from 'react-native-paper';
+import { ProgressBar, TextInput } from 'react-native-paper';
 import CustomButton from '../components/CustomButton';
 import { host } from '../constants';
 
@@ -16,37 +16,67 @@ export default function IdentifyScreen() {
   const [countryName, setCountryName] = useState('Austria');
   const [countryCode, setCountryCode] = useState('+43');
   const [lineNumber, setLineNumber] = useState('');
-  const [fullPhoneNumber, setFullPhoneNumber] = useState(null);
-  // set country code on change.
+  // username consists of country code + line number.
+  const [username, setUsername] = useState(null);
+
+  // update country code or country name if the user updates it.
   useEffect(() => {
     setCountryName(local.countryName);
     setCountryCode(local.countryCode);
   }, [local.countryName, local.countryCode]);
+
+  // update username if linenumber or country code change.
   useEffect(() => {
-    setFullPhoneNumber(`${countryCode}${lineNumber}`);
+    setUsername(`${countryCode}${lineNumber}`);
   }, [lineNumber, countryCode]);
-  // check user.
+
+  // login function to send otp and redirect to verify screen
+  const [sentOtp, setSentOtp] = useState('');
+  const sendOTP = async () => {
+    const response = await fetch(`${host}/api/users/generate_otp/${username}`);
+    const result = await response.json();
+    console.log(result);
+    setSentOtp(result.message);
+    if (result.success) {
+      router.navigate({
+        pathname: '/verify',
+        params: { username: username },
+      });
+    } else {
+      console.log('Error sending OTP. Not redirected!');
+    }
+  };
+
+  // check if user exists and route to login or signup screen.
   const checkIfUserExists = async () => {
-    const response = await fetch(`${host}/api/users/${fullPhoneNumber}`);
+    const response = await fetch(`${host}/api/users/${username}`);
     console.log(response);
     const data = await response.json();
     console.log(data.message);
     if (data.exists) {
-      router.navigate({
-        pathname: '/login',
-        params: { fullPhoneNumber: fullPhoneNumber },
-      });
+      // send OTP and direct to verify screen if sending success
+      sendOTP();
+      // commented out: plain redirect to interim login screen
+      // router.navigate({
+      //   pathname: '/login',
+      //   params: { username: username },
+      // });
     } else {
       router.navigate({
         pathname: '/signup',
-        params: { fullPhoneNumber: fullPhoneNumber },
+        params: { username: username },
       });
     }
   };
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View className="flex-1 bg-white">
-        <View className="items-center mt-10">
+        <View className="items-center">
+          {/* // Progressbar */}
+          <View className="flex-1 w-11/12 mb-10">
+            <ProgressBar progress={0.25} color="#155e75" />
+          </View>
+          {/* // Progressbar */}
           {/* // Input field. */}
           <TouchableOpacity
             className="w-11/12 my-3"
@@ -80,6 +110,7 @@ export default function IdentifyScreen() {
           <View className="my-3 w-11/12">
             <CustomButton onPress={checkIfUserExists}>Continue</CustomButton>
           </View>
+          <Text>{sentOtp}</Text>
         </View>
       </View>
     </TouchableWithoutFeedback>
