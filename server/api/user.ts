@@ -18,12 +18,13 @@ userRouter.get('/api/users/:username', async (req, res) => {
   if (data[0]) {
     return res.json({
       exists: true,
-      message: 'User already exists. Redirect to login.',
+      message: 'User found.',
+      details: data[0],
     });
   }
   return res.json({
     exists: false,
-    message: 'User does not exist. Redirect to sign-up.',
+    message: 'User does not exist.',
   });
 });
 

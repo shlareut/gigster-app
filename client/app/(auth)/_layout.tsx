@@ -23,14 +23,14 @@ export default () => {
           presentation: 'modal',
         }}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="login"
         options={{
           title: 'Log in',
           headerBackTitleVisible: false,
           headerTintColor: 'black',
         }}
-      />
+      /> */}
       <Stack.Screen
         name="signup"
         options={{

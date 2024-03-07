@@ -1,4 +1,4 @@
-import { useLocalSearchParams } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import React, { useState } from 'react';
 import { Keyboard, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { ProgressBar, TextInput } from 'react-native-paper';
@@ -13,9 +13,15 @@ export default function VerifyScreen() {
     const response = await fetch(
       `${host}/api/users/validate_otp/${local.username}?otp=${otp}`,
     );
-    const result = await response.json();
-    console.log(result);
-    setIsValid(result.message);
+    const data = await response.json();
+    console.log(data);
+    setIsValid(data.message);
+    if (data.success) {
+      router.navigate({
+        pathname: '../(tabs)/profile',
+        params: { username: local.username },
+      });
+    }
   };
   // THIS SHOULD REPLACE THE LOGIN.TSX SCREEN!
   // Need to redirect to this screen when sending OTP
