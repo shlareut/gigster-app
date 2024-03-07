@@ -1,7 +1,11 @@
-import { Link, Redirect } from 'expo-router';
+import { Redirect } from 'expo-router';
 
 export default function Screen() {
-  return <Redirect href={'./(tabs)/listings'} />;
+  return (
+    <>
+      <Redirect href={'./(tabs)/listings'} />
+    </>
+  );
 }
 
 // import { Link } from 'expo-router';

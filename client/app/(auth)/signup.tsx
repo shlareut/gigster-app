@@ -2,6 +2,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import React, { useState } from 'react';
 import { Keyboard, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { MD3Colors, ProgressBar, TextInput } from 'react-native-paper';
+import Toast from 'react-native-toast-message';
 import CustomButton from '../components/CustomButton';
 import { host } from '../constants';
 
@@ -28,6 +29,10 @@ export default function SignUpScreen() {
       });
     } else {
       console.log('Error sending OTP. Not redirected!');
+      Toast.show({
+        type: 'error',
+        text1: 'Error sending OTP!',
+      });
     }
   };
   return (

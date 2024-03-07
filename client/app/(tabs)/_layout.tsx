@@ -22,7 +22,7 @@ export default () => {
       <Tabs.Screen
         name="profile"
         // remove initial params once done!
-        initialParams={{ username: '+436764105889' }}
+        // initialParams={{ username: '+436764105889' }}
         options={{
           title: 'Profile',
           tabBarActiveTintColor: '#155e75',

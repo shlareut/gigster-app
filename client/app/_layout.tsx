@@ -1,6 +1,7 @@
 import { AntDesign } from '@expo/vector-icons';
 import { Slot, Stack, Tabs } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import Toast from 'react-native-toast-message';
 
 export default () => {
   return (
@@ -25,6 +26,7 @@ export default () => {
           }}
         />
       </Stack>
+      <Toast visibilityTime={1500} />
     </>
   );
 };

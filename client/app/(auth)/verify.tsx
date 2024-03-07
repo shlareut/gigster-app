@@ -2,6 +2,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import React, { useState } from 'react';
 import { Keyboard, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { ProgressBar, TextInput } from 'react-native-paper';
+import Toast from 'react-native-toast-message';
 import CustomButton from '../components/CustomButton';
 import { host } from '../constants';
 
@@ -17,6 +18,10 @@ export default function VerifyScreen() {
     console.log(data);
     setIsValid(data.message);
     if (data.success) {
+      // create session token
+      await fetch(`${host}/api/users/create_session/${data.user_id}`);
+      // add error handling if session generation failed
+      // redirect to profile screen
       router.navigate({
         pathname: '../(tabs)/profile',
         params: { username: local.username },

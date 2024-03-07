@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native';
 import { ProgressBar, TextInput } from 'react-native-paper';
+import Toast from 'react-native-toast-message';
 import CustomButton from '../components/CustomButton';
 import { host } from '../constants';
 

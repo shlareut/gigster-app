@@ -104,6 +104,7 @@ userRouter.get('/api/users/validate_otp/:username', async (req, res) => {
       // return success
       return res.status(200).json({
         success: true,
+        user_id: user[0].id,
         message: `Correct OTP: ${typedOtp}`,
       });
     }
