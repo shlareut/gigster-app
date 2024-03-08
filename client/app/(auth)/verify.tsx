@@ -11,26 +11,31 @@ export default function VerifyScreen() {
   const [otp, setOtp] = useState('');
   const [isValid, setIsValid] = useState(null);
   const validateOTP = async () => {
-    const response = await fetch(
+    const request = await fetch(
       `${host}/api/users/validate_otp/${local.username}?otp=${otp}`,
     );
-    const data = await response.json();
-    console.log(data);
-    setIsValid(data.message);
-    if (data.success) {
+    const response = await request.json();
+    console.log(response);
+    setIsValid(response.message);
+    if (response.success) {
       // create session token and add to DB
-      await fetch(`${host}/api/users/create_session/${data.user_id}`);
-      // !!! add error handling if session generation failed !!!
-      // redirect to profile screen
-      router.navigate({
-        pathname: '../(tabs)/profile',
-        params: { username: local.username },
-      });
+      const createSessionRequest = await fetch(
+        `${host}/api/create_session/${response.user_id}`,
+      );
+      const createSessionResponse = await createSessionRequest.json();
+      // check if session was created successfully
+      if (createSessionResponse.success) {
+        // redirect to profile screen if yes
+        router.navigate({
+          pathname: '../(tabs)/profile',
+          params: { username: local.username },
+        });
+      } else {
+        // log error if not
+        console.log(createSessionResponse.message);
+      }
     }
   };
-  // THIS SHOULD REPLACE THE LOGIN.TSX SCREEN!
-  // Need to redirect to this screen when sending OTP
-  // Need to pass OTP from prev screen into this screen to verify it?? Maybe no, because OTP from user is stored in DB
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View className="flex-1 bg-white">

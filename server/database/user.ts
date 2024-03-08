@@ -33,7 +33,7 @@ export async function createUser(
   return user;
 }
 
-// Read single user.
+// Read single user by username.
 export async function getSingleUserByUsername(username: string) {
   const user = await sql`
     SELECT
@@ -42,6 +42,19 @@ export async function getSingleUserByUsername(username: string) {
       users
     WHERE
       username = ${username}
+  `;
+  return user;
+}
+
+// Read single user by id.
+export async function getSingleUserById(id: number) {
+  const user = await sql`
+    SELECT
+      *
+    FROM
+      users
+    WHERE
+      id = ${id}
   `;
   return user;
 }

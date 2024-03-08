@@ -34,11 +34,11 @@ export default function IdentifyScreen() {
   // login function to send otp and redirect to verify screen
   const [sentOtp, setSentOtp] = useState('');
   const sendOTP = async () => {
-    const response = await fetch(`${host}/api/users/generate_otp/${username}`);
-    const result = await response.json();
-    console.log(result);
-    setSentOtp(result.message);
-    if (result.success) {
+    const request = await fetch(`${host}/api/users/generate_otp/${username}`);
+    const response = await request.json();
+    console.log(response);
+    setSentOtp(response.message);
+    if (response.success) {
       router.navigate({
         pathname: '/verify',
         params: { username: username },
@@ -50,11 +50,11 @@ export default function IdentifyScreen() {
 
   // check if user exists and route to login or signup screen.
   const checkIfUserExists = async () => {
-    const response = await fetch(`${host}/api/users/${username}`);
-    console.log(response);
-    const data = await response.json();
-    console.log(data.message);
-    if (data.exists) {
+    const request = await fetch(`${host}/api/users/${username}`);
+    console.log(request);
+    const response = await request.json();
+    console.log(response.message);
+    if (response.exists) {
       // send OTP and direct to verify screen if sending success
       sendOTP();
       // commented out: plain redirect to interim login screen

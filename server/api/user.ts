@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt';
 import express from 'express';
 import {
   createUser,
+  getSingleUserById,
   getSingleUserByUsername,
   updateUserLastLogin,
   updateUserPassword,
@@ -11,10 +12,27 @@ import { sendOTP } from './sms.js';
 
 const userRouter = express.Router();
 
-// GET one single user
+// GET one single user by username
 userRouter.get('/api/users/:username', async (req, res) => {
   const { username } = req.params;
   const data = await getSingleUserByUsername(username).catch(console.error);
+  if (data[0]) {
+    return res.json({
+      exists: true,
+      message: 'User found.',
+      details: data[0],
+    });
+  }
+  return res.json({
+    exists: false,
+    message: 'User does not exist.',
+  });
+});
+
+// GET one single user by id
+userRouter.get('/api/users/id/:id', async (req, res) => {
+  const { id } = req.params;
+  const data = await getSingleUserById(id).catch(console.error);
   if (data[0]) {
     return res.json({
       exists: true,
@@ -99,6 +117,7 @@ userRouter.get('/api/users/validate_otp/:username', async (req, res) => {
         message: `Wrong OTP: ${typedOtp}`,
       });
     } else {
+      // should create a session here!!!!!
       // call function to update last login
       await updateUserLastLogin(username).catch(console.error);
       // return success

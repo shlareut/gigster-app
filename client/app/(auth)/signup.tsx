@@ -12,13 +12,13 @@ export default function SignUpScreen() {
   const [lastName, setLastName] = useState('');
   const [sentOtp, setSentOtp] = useState('');
   const sendOTP = async () => {
-    const response = await fetch(
+    const request = await fetch(
       `${host}/api/users/generate_otp/${local.username}?firstName=${firstName}&lastName=${lastName}`,
     );
-    const result = await response.json();
-    console.log(result);
-    setSentOtp(result.message);
-    if (result.success) {
+    const response = await request.json();
+    console.log(response);
+    setSentOtp(response.message);
+    if (response.success) {
       router.navigate({
         pathname: '/verify',
         params: {

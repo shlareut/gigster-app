@@ -1,3 +1,4 @@
+import cookieParser from 'cookie-parser';
 import express from 'express';
 import listingsRouter from './api/listings.js';
 import sessionRouter from './api/session.js';
@@ -13,6 +14,9 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+// use cookie parser for server
+app.use(cookieParser());
 
 // serve hero image files for listings consumption
 app.use('/images', express.static('public/hero_images'));
