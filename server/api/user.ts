@@ -51,11 +51,23 @@ userRouter.get('/api/users/generate_otp/:username', async (req, res) => {
   const { username } = req.params;
   const firstName: any = req.query.firstName;
   const lastName: any = req.query.lastName;
-  const otp = generateOtp();
+
+  // real OTP generation
+  // disabled for testing purposes
+  // const otp = generateOtp();
+
+  // TESTING: hardcoded otp and sms validation for testing purposes
+  const otp = '123456';
+  const sms = {
+    success: true,
+  };
+
   const otpHash = await bcrypt.hash(otp, 12).catch(console.error);
   try {
-    // Send SMS
-    const sms = await sendOTP(username, otp).catch(console.error);
+    // real sms sending
+    // disabled for testing purposes
+    // const sms = await sendOTP(username, otp).catch(console.error);
+
     // Check if sending was successful
     if (sms.success) {
       // Check if user is existing

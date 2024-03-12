@@ -13,14 +13,15 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomButton from '../components/CustomButton';
-import { host } from '../constants';
+import { host, nextHost } from '../constants';
 
 export default function DetailsScreen() {
   const { id } = useLocalSearchParams();
   const [listing, setListing] = useState({});
   useEffect(() => {
     const loadVenue = async () => {
-      const response = await fetch(`${host}/api/listings/${id}/`);
+      // const response = await fetch(`${host}/api/listings/${id}/`);
+      const response = await fetch(`${nextHost}/api/listings/${id}`);
       const listing = await response.json();
       console.log(listing);
       setListing(listing);
@@ -37,7 +38,8 @@ export default function DetailsScreen() {
       <ScrollView>
         <Image
           className="w-screen h-60"
-          source={{ uri: `${host}/images/${listing.id}.jpeg` }}
+          // source={{ uri: `${host}/images/${listing.id}.jpeg` }}
+          source={{ uri: `${nextHost}/hero_images/${listing.id}.jpeg` }}
         />
         <View className="my-4 mx-3">
           <Text className="text-3xl font-bold">{listing.name}</Text>

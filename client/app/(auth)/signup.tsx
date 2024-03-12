@@ -4,17 +4,28 @@ import { Keyboard, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { MD3Colors, ProgressBar, TextInput } from 'react-native-paper';
 import Toast from 'react-native-toast-message';
 import CustomButton from '../components/CustomButton';
-import { host } from '../constants';
+import { host, nextHost } from '../constants';
 
 export default function SignUpScreen() {
   const local = useLocalSearchParams();
+  const username = local.username;
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [sentOtp, setSentOtp] = useState('');
   const sendOTP = async () => {
-    const request = await fetch(
-      `${host}/api/users/generate_otp/${local.username}?firstName=${firstName}&lastName=${lastName}`,
-    );
+    // const request = await fetch(
+    //   `${host}/api/users/generate_otp/${local.username}?firstName=${firstName}&lastName=${lastName}`,
+    // );
+    // next.js
+    // below should be a separate "redirect" api! because I also use it for registration with firstName and lastName
+    const request = await fetch(`${nextHost}/api/users/username/${username}`, {
+      method: 'POST',
+      body: JSON.stringify({
+        username,
+        firstName,
+        lastName,
+      }),
+    }).catch(console.error);
     const response = await request.json();
     console.log(response);
     setSentOtp(response.message);
@@ -35,6 +46,30 @@ export default function SignUpScreen() {
       });
     }
   };
+
+  // call sign-up api upon button click.
+  const signup = async () => {
+    const signUpRequest = await fetch(`${nextHost}/api/auth/signup`, {
+      method: 'POST',
+      body: JSON.stringify({
+        username,
+        firstName,
+        lastName,
+      }),
+    }).catch(console.error);
+    const signUpResponse = await signUpRequest.json();
+    console.log('SIGNUP API:', signUpResponse.message);
+
+    // check if it was successful
+    if (signUpResponse.success) {
+      // redirect to login screen
+      router.navigate({
+        pathname: '/login',
+        params: { username: username },
+      });
+    }
+  };
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View className="flex-1 bg-white">
@@ -77,7 +112,12 @@ export default function SignUpScreen() {
             onChangeText={(newText) => setOtp(newText)}
           /> */}
           <View className="w-11/12 my-3">
-            <CustomButton onPress={sendOTP}>
+            <CustomButton
+              onPress={() => {
+                // sendOTP();
+                signup();
+              }}
+            >
               Send verification code
             </CustomButton>
           </View>

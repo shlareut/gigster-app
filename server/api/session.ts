@@ -9,7 +9,7 @@ import generateSessionToken from '../utils/sessionTokenGenerator.js';
 const sessionRouter = express.Router();
 
 // create session for a particular user
-// should this be inside the otp directly? because now I can create a session without any auth!
+// move into OTP API directly later to avoid session token generation without otp
 sessionRouter.get('/api/create_session/:id', async (req, res) => {
   const { id } = req.params;
   const sessionToken = generateSessionToken();
@@ -24,6 +24,7 @@ sessionRouter.get('/api/create_session/:id', async (req, res) => {
     return res.json({
       success: true,
       message: 'Session created!',
+      token: data[0]?.token,
       data,
     });
   }
@@ -35,7 +36,7 @@ sessionRouter.get('/api/create_session/:id', async (req, res) => {
   });
 });
 
-// fetch session token from user
+// fetch session token from cookie
 sessionRouter.get('/api/get_session', async (req, res) => {
   const cookieSessionToken = req.cookies.sessionToken;
   if (!cookieSessionToken) {
@@ -96,6 +97,38 @@ sessionRouter.get('/api/delete_session', async (req, res) => {
         });
       }
     }
+  }
+});
+
+// TEST API for setting cookie
+sessionRouter.get('/api/set_cookie', async (req, res) => {
+  const sessionToken = 'TEST COOKIE';
+  // set session cookie
+  res.cookie('testCookie', sessionToken, {
+    httpOnly: true,
+    maxAge: 60 * 60 * 24,
+  });
+  return res.json({
+    success: true,
+    message: 'Cookie created!',
+    cookie: sessionToken,
+  });
+});
+
+// TEST API for getting cookie
+sessionRouter.get('/api/show_cookie', async (req, res) => {
+  const cookieSessionToken = req.cookies.testCookie;
+  if (!cookieSessionToken) {
+    return res.status(403).json({
+      success: false,
+      message: 'No cookie found.',
+    });
+  } else {
+    return res.status(200).json({
+      success: true,
+      message: 'Cookie found.',
+      cookieSessionToken,
+    });
   }
 });
 

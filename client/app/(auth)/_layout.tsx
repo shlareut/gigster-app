@@ -42,9 +42,9 @@ export default () => {
           }}
         />
         <Stack.Screen
-          name="verify"
+          name="login"
           options={{
-            title: 'Verify phone number',
+            title: 'Log in via OTP',
             headerBackTitleVisible: false,
             headerTintColor: 'black',
           }}
