@@ -4,7 +4,7 @@ import { setEnvironment } from '../utils/config.js';
 setEnvironment();
 const sql = postgres();
 
-// Query venues
+// Query all listings
 export async function getAllListings() {
   const listings = await sql`
     SELECT
@@ -15,7 +15,7 @@ export async function getAllListings() {
   return listings;
 }
 
-// Query single venue
+// Query single listing
 export async function getSingleListing(id: number) {
   const listings = await sql`
     SELECT
