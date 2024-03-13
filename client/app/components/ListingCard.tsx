@@ -3,7 +3,7 @@ import React from 'react';
 import { ImageBackground, Text, TouchableOpacity, View } from 'react-native';
 import { nextHost } from '../constants';
 
-const Card = (props) => {
+const ListingCard = (props) => {
   return (
     <TouchableOpacity
       activeOpacity={1}
@@ -43,4 +43,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default ListingCard;

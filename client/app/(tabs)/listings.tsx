@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FlatList, SafeAreaView } from 'react-native';
+import ListingCard from '../components/ListingCard';
 import LoadingScreen from '../components/LoadingScreen';
-import ProductCard from '../components/ProductCard';
 import { nextHost } from '../constants';
 
 export default function ListingsScreen() {
@@ -36,7 +36,7 @@ export default function ListingsScreen() {
         pagingEnabled={true}
         data={listings}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <ProductCard listing={item} />}
+        renderItem={({ item }) => <ListingCard listing={item} />}
       />
     </SafeAreaView>
   );
