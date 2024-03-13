@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
 import React from 'react';
 import { ImageBackground, Text, TouchableOpacity, View } from 'react-native';
-import { host, nextHost } from '../constants';
+import { nextHost } from '../constants';
 
 const Card = (props) => {
   return (

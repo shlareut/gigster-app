@@ -1,36 +1,52 @@
-import { Link, router, useLocalSearchParams } from 'expo-router';
-import { styled } from 'nativewind';
+import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import React, { useEffect, useState } from 'react';
-import {
-  Button,
-  Image,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  View,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Image, Pressable, ScrollView, Text, View } from 'react-native';
+import checkLoginStatus from '../../util/sessions';
 import CustomButton from '../components/CustomButton';
-import { host, nextHost } from '../constants';
+import LoadingScreen from '../components/LoadingScreen';
+import { nextHost } from '../constants';
 
 export default function DetailsScreen() {
+  // define local and state variables
   const { id } = useLocalSearchParams();
   const [listing, setListing] = useState({});
-  useEffect(() => {
-    const loadVenue = async () => {
-      // const response = await fetch(`${host}/api/listings/${id}/`);
-      const response = await fetch(`${nextHost}/api/listings/${id}`);
-      const listing = await response.json();
-      console.log(listing);
-      setListing(listing);
-    };
-    loadVenue().catch(console.error);
-  }, [id]);
 
-  if (!listing) {
-    return null;
+  //// START LOGIN SESSION CHECKING
+
+  // ensure login-status is checked before setting isLoaded to false
+  const [isLoginStatusChecked, setIsLoginStatusChecked] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [userId, setUserId] = useState(null);
+
+  // check login status on every screen load
+  useFocusEffect(() => {
+    checkLoginStatus().then((status) => {
+      setIsLoggedIn(status.isLoggedIn);
+      setUserId(status.userId);
+      setIsLoginStatusChecked(true);
+      console.log('LOGIN STATUS:', status.isLoggedIn);
+    });
+  });
+
+  //// END LOGIN SESSION CHECKING
+
+  // fetch details upon screen load
+  useEffect(() => {
+    if (isLoginStatusChecked) {
+      const fetchDetails = async () => {
+        const response = await fetch(`${nextHost}/api/listings/${id}`);
+        const listing = await response.json();
+        setListing(listing);
+        setIsLoading(false);
+      };
+      fetchDetails().catch(console.error);
+    }
+  }, [id, isLoginStatusChecked]);
+
+  // loading screen
+  if (isLoading) {
+    return <LoadingScreen />;
   }
 
   return (
@@ -38,7 +54,6 @@ export default function DetailsScreen() {
       <ScrollView>
         <Image
           className="w-screen h-60"
-          // source={{ uri: `${host}/images/${listing.id}.jpeg` }}
           source={{ uri: `${nextHost}/hero_images/${listing.id}.jpeg` }}
         />
         <View className="my-4 mx-3">
@@ -63,40 +78,15 @@ export default function DetailsScreen() {
       </ScrollView>
       <View className="h-28 border-t border-gray-200">
         <View className="self-end my-4 mx-3 align">
-          <CustomButton onPress={() => router.navigate('../(auth)/identify')}>
-            Log in to book
-          </CustomButton>
+          {isLoggedIn ? (
+            <CustomButton onPress={() => alert('WIP')}>Apply now</CustomButton>
+          ) : (
+            <CustomButton onPress={() => router.navigate('../(auth)/identify')}>
+              Log in to apply
+            </CustomButton>
+          )}
         </View>
       </View>
     </View>
-    // <SafeAreaView style={styles.mainWrapper}>
-    //   <View style={styles.productWrapper}>
-    //     <Text>{listing.name}</Text>
-    //     <Text>{JSON.stringify(listing)}</Text>
-    //     <Link href="/">Click me!</Link>
-    //   </View>
-    // </SafeAreaView>
   );
 }
-
-// const styles = StyleSheet.create({
-//   mainWrapper: {
-//     flex: 1,
-//     // justifyContent: 'center',
-//     // alignItems: 'center',
-//     backgroundColor: '#fff',
-//   },
-//   productWrapper: {
-//     // marginTop: '25%',
-//     flex: 1,
-//     width: '100%',
-//     height: '100%',
-//   },
-// });
-
-// style={({pressed}) => [
-//   {
-//     backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'white',
-//   },
-//   styles.wrapperCustom,
-// ]}>

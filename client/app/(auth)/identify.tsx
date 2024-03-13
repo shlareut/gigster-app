@@ -10,7 +10,8 @@ import {
 import { ProgressBar, TextInput } from 'react-native-paper';
 import Toast from 'react-native-toast-message';
 import CustomButton from '../components/CustomButton';
-import { host, nextHost } from '../constants';
+import LoadingScreen from '../components/LoadingScreen';
+import { nextHost } from '../constants';
 
 export default function IdentifyScreen() {
   // define local and state variables
@@ -19,6 +20,8 @@ export default function IdentifyScreen() {
   const [countryCode, setCountryCode] = useState('+43');
   const [lineNumber, setLineNumber] = useState('');
   const [username, setUsername] = useState(null); // username consists of country code + line number.
+  const [isButtonLoading, setIsButtonLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // update country code or country name if the user updates it.
   useEffect(() => {
@@ -33,6 +36,7 @@ export default function IdentifyScreen() {
 
   // identify existing users and direct to login screen, else direct to sign-up screen
   const identify = async () => {
+    setIsButtonLoading(true);
     const identifyRequest = await fetch(
       `${nextHost}/api/auth/identify/${username}`,
     );
@@ -52,7 +56,14 @@ export default function IdentifyScreen() {
         params: { username: username },
       });
     }
+    setIsButtonLoading(false);
   };
+
+  // check if someone is already logged in, if yes, redirect!
+  // // loading screen
+  // if (isLoading) {
+  //   return <LoadingScreen />;
+  // }
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -94,7 +105,11 @@ export default function IdentifyScreen() {
             onChangeText={(newText) => setLineNumber(newText)}
           />
           <View className="my-3 w-11/12">
-            <CustomButton onPress={identify}>Continue</CustomButton>
+            {isButtonLoading ? (
+              <CustomButton disabled={true}>...</CustomButton>
+            ) : (
+              <CustomButton onPress={identify}>Continue</CustomButton>
+            )}
           </View>
         </View>
       </View>

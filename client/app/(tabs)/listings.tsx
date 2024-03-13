@@ -1,20 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import { Dimensions, FlatList, SafeAreaView } from 'react-native';
+import { FlatList, SafeAreaView } from 'react-native';
+import LoadingScreen from '../components/LoadingScreen';
 import ProductCard from '../components/ProductCard';
-import { host, nextHost } from '../constants';
+import { nextHost } from '../constants';
 
 export default function ListingsScreen() {
+  // define state variables
   const [listings, setListings] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // fetch listings upon screen load
   useEffect(() => {
     const fetchListings = async () => {
-      // const response = await fetch(`${host}/api/listings`);
       const response = await fetch(`${nextHost}/api/listings`);
       const listings = await response.json();
-      console.log(listings);
       setListings(listings);
+      setIsLoading(false);
     };
     fetchListings().catch(console.error);
   }, []);
+
+  // loading screen
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       <FlatList

@@ -12,9 +12,11 @@ export default function SignUpScreen() {
   const username = local.username;
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [isButtonLoading, setIsButtonLoading] = useState(false);
 
   // call sign-up api upon button click.
   const signup = async () => {
+    setIsButtonLoading(true);
     const signUpRequest = await fetch(`${nextHost}/api/auth/signup`, {
       method: 'POST',
       body: JSON.stringify({
@@ -34,7 +36,14 @@ export default function SignUpScreen() {
         params: { username: username },
       });
     }
+    setIsButtonLoading(false);
   };
+
+  // check if someone is already logged in, if yes, redirect!
+  // // loading screen
+  // if (isLoading) {
+  //   return <LoadingScreen />;
+  // }
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -68,7 +77,13 @@ export default function SignUpScreen() {
             onChangeText={(newText) => setLastName(newText)}
           />
           <View className="w-11/12 my-3">
-            <CustomButton onPress={signup}>Send verification code</CustomButton>
+            {isButtonLoading ? (
+              <CustomButton disabled={true}>...</CustomButton>
+            ) : (
+              <CustomButton onPress={signup}>
+                Send verification code
+              </CustomButton>
+            )}
           </View>
         </View>
       </View>

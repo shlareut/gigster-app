@@ -13,6 +13,7 @@ export default function LoginScreen() {
   const local = useLocalSearchParams();
   const username = local.username;
   const [typedOtp, setTypedOtp] = useState('');
+  const [isButtonLoading, setIsButtonLoading] = useState(false);
 
   // call "create otp" API upon screen load.
   useEffect(() => {
@@ -36,6 +37,8 @@ export default function LoginScreen() {
 
   // call "verify otp" API upon button click.
   const verify = async () => {
+    // disable button while verifying
+    setIsButtonLoading(true);
     // call verify api
     const verifyRequest = await fetch(`${nextHost}/api/auth/otp/verify`, {
       method: 'POST',
@@ -69,7 +72,15 @@ export default function LoginScreen() {
         });
       }
     }
+    // enable button after checking
+    setIsButtonLoading(false);
   };
+
+  // check if someone is already logged in, if yes, redirect!
+  // // loading screen
+  // if (isLoading) {
+  //   return <LoadingScreen />;
+  // }
 
   // show screen content.
   return (
@@ -96,7 +107,11 @@ export default function LoginScreen() {
             />
           </View>
           <View className="w-11/12 my-3">
-            <CustomButton onPress={verify}>Verify now</CustomButton>
+            {isButtonLoading ? (
+              <CustomButton disabled={true}>...</CustomButton>
+            ) : (
+              <CustomButton onPress={verify}>Verify now</CustomButton>
+            )}
           </View>
         </View>
       </View>

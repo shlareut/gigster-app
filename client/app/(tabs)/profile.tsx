@@ -2,55 +2,56 @@ import { router, useFocusEffect } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Image, Text, View } from 'react-native';
 import Toast from 'react-native-toast-message';
+import checkLoginStatus from '../../util/sessions';
 import CustomButton from '../components/CustomButton';
-import { host, nextHost } from '../constants';
+import LoadingScreen from '../components/LoadingScreen';
+import { nextHost } from '../constants';
 
 export default function ProfileScreen() {
   // define local and state variables
   const emptyAvatarImage = require('../../assets/profile.jpg');
-  const [userId, setUserId] = useState(null);
   const [user, setUser] = useState(null);
 
-  // BETTER SOMETHING LIKE THAT?
-  const [loggedIn, setLoggedIn] = useState(false);
+  //// START LOGIN SESSION CHECKING
 
-  // call session api upon each screen load.
+  // ensure login-status is checked before setting isLoaded to false
+  const [isLoginStatusChecked, setIsLoginStatusChecked] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [userId, setUserId] = useState(null);
+
+  // check login status on every screen load
   useFocusEffect(() => {
-    // for later: move into util function "checkForActiveSession()" as I will have to use it repeatedly.
-    const checkForActiveSession = async () => {
-      const sessionRequest = await fetch(`${nextHost}/api/auth/login`).catch(
-        console.error,
-      );
-      const sessionResponse = await sessionRequest.json();
-      console.log('SESSION API:', sessionResponse.message);
-
-      // check if a session was found.
-      if (sessionResponse.success) {
-        //take user id from the returned session.
-        setUserId(sessionResponse.userId);
-      } else {
-        setUser(null);
-        setUserId(null);
-      }
-    };
-    checkForActiveSession().catch(console.error);
+    checkLoginStatus().then((status) => {
+      setIsLoggedIn(status.isLoggedIn);
+      setUserId(status.userId);
+      setIsLoginStatusChecked(true);
+      console.log('LOGIN STATUS:', status.isLoggedIn);
+    });
   });
+
+  //// END LOGIN SESSION CHECKING
 
   // call user-details api upon "userId" change
   useEffect(() => {
-    const queryUserDetails = async () => {
-      const userDetailsRequest = await fetch(
-        `${nextHost}/api/users/id/${userId}`,
-      );
-      const userDetailsResponse = await userDetailsRequest.json();
-      setUser(userDetailsResponse);
-    };
-    if (userId) {
-      queryUserDetails();
-    } else {
-      setUser(null);
+    if (isLoginStatusChecked) {
+      const queryUserDetails = async () => {
+        setIsLoading(true);
+        const userDetailsRequest = await fetch(
+          `${nextHost}/api/users/id/${userId}`,
+        );
+        const userDetailsResponse = await userDetailsRequest.json();
+        setUser(userDetailsResponse);
+        setIsLoading(false);
+      };
+      if (userId) {
+        queryUserDetails();
+      } else {
+        setUser(null);
+        setIsLoading(false);
+      }
     }
-  }, [userId]);
+  }, [userId, isLoginStatusChecked]);
 
   // call logout api on button click.
   const logout = async () => {
@@ -70,12 +71,12 @@ export default function ProfileScreen() {
     }
   };
 
-  // somehow I should set the user within the same function, how will I do the conditional rendering on other screens?
-  // SEE LOGGEDIN STATE VARIABLE ABOVE
-  // NOTE THAT IN THIS PARTICULAR SCREEN, USER PROFILE IS REQUIRED! IT RESULTS IN AN ERROR IF I ONLY CHECK FOR SESSION TOKEN
-
-  // conditional rendering
-  if (user) {
+  // loading screen
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+  // logged-in or non-logged-in rendering
+  if (user && isLoggedIn) {
     return (
       <View className="flex-1 h-screen w-screen items-center bg-white">
         <View className="bg-cyan-800  w-32 h-32 justify-center items-center rounded-full mt-10">
