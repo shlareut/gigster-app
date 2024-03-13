@@ -20,6 +20,21 @@ export default () => {
         }}
       />
       <Tabs.Screen
+        name="postings"
+        options={{
+          title: 'Postings',
+          tabBarActiveTintColor: '#155e75',
+          tabBarInactiveTintColor: 'grey',
+          tabBarIcon: ({ focused }) => (
+            <AntDesign
+              name="profile"
+              size={24}
+              color={focused ? '#155e75' : 'grey'}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="profile"
         // remove initial params once done!
         // initialParams={{ username: '+436764105889' }}

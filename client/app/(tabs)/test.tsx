@@ -34,7 +34,9 @@ export default function ProfileScreen() {
         className="w-fit justify-center items-center rounded-md bg-cyan-800 opacity-50"
         disabled={true}
       >
-        <Text className="my-2 mx-5 font-extrabold text-white text-lg">...</Text>
+        <Text className="my-2 mx-5 font-extrabold text-white text-lg">
+          .....
+        </Text>
       </Pressable>
     </View>
   );
