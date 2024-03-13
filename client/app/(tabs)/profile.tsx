@@ -7,7 +7,7 @@ import { host, nextHost } from '../constants';
 
 export default function ProfileScreen() {
   // define local and state variables
-  const staticImage = require('../../assets/profile.jpg');
+  const emptyAvatarImage = require('../../assets/profile.jpg');
   const [userId, setUserId] = useState(null);
   const [user, setUser] = useState(null);
 
@@ -96,7 +96,7 @@ export default function ProfileScreen() {
     // if user is null, show non-logged-in screen
     return (
       <View className="flex-1 h-screen w-screen items-center justify-center bg-white">
-        <Image className="w-48 h-48 mb-10" source={staticImage} />
+        <Image className="w-48 h-48 mb-10" source={emptyAvatarImage} />
         <CustomButton onPress={() => router.navigate('../(auth)/identify')}>
           Log in to view
         </CustomButton>

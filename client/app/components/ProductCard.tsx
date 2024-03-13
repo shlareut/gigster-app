@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
 import React from 'react';
 import { ImageBackground, Text, TouchableOpacity, View } from 'react-native';
-import { host } from '../constants';
+import { host, nextHost } from '../constants';
 
 const Card = (props) => {
   return (
@@ -17,7 +17,7 @@ const Card = (props) => {
       <View className="my-3 w-11/12 self-center">
         <View className="h-40 border-x border-t rounded-t-3xl">
           <ImageBackground
-            source={{ uri: `${host}/images/${props.listing.id}.jpeg` }}
+            source={{ uri: `${nextHost}/hero_images/${props.listing.id}.jpeg` }}
             className="flex-1"
             style={{
               borderTopLeftRadius: '25',

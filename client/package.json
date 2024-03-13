@@ -11,6 +11,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@lottiefiles/lottie-player": "^2.0.4",
     "@react-navigation/bottom-tabs": "^6.5.14",
     "@react-navigation/stack": "^6.3.23",
     "expo": "~50.0.7",

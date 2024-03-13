@@ -13,57 +13,6 @@ export default function LoginScreen() {
   const local = useLocalSearchParams();
   const username = local.username;
   const [typedOtp, setTypedOtp] = useState('');
-  const [isValid, setIsValid] = useState(null);
-
-  // old validate otp function
-  // const validateOTP = async () => {
-  //   // const request = await fetch(
-  //   //   `${host}/api/users/validate_otp/${local.username}?otp=${otp}`,
-  //   // );
-  //   // next.js
-  //   const request = await fetch(`${nextHost}/api/otp`, {
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       username: username,
-  //       typedOtp: typedOtp,
-  //     }),
-  //   }).catch(console.error);
-  //   const response = await request.json();
-  //   console.log(response);
-  //   setIsValid(response.message);
-  //   if (response.success) {
-  //     // create session token and add to DB
-  //     // const createSessionRequest = await fetch(
-  //     //   `${host}/api/create_session/${response.user_id}`,
-  //     // );
-  //     // next.js
-  //     const createSessionRequest = await fetch(`${nextHost}/api/sessions`, {
-  //       method: 'POST',
-  //       body: JSON.stringify({
-  //         userId: response.userId,
-  //       }),
-  //     }).catch(console.error);
-  //     const createSessionResponse = await createSessionRequest.json();
-  //     // check if session was created successfully
-  //     if (createSessionResponse.success) {
-  //       // log response
-  //       console.log('Session token:', createSessionResponse.value);
-  //       // save token in expo secure storage (alternative to cookie)
-  //       await SecureStore.setItemAsync(
-  //         'sessionToken',
-  //         createSessionResponse.value,
-  //       );
-  //       // redirect to profile screen if yes
-  //       router.navigate({
-  //         pathname: '../(tabs)/profile',
-  //         params: { username: local.username },
-  //       });
-  //     } else {
-  //       // log error if not
-  //       console.log(createSessionResponse.message);
-  //     }
-  //   }
-  // };
 
   // call "create otp" API upon screen load.
   useEffect(() => {
@@ -137,15 +86,6 @@ export default function LoginScreen() {
             <Text className="font-bold">{local.username}</Text>. Please enter it
             below to continue.
           </Text>
-          {/* <TextInput
-            className="bg-white text-left text-md w-11/12 my-3 border-blue border-blue"
-            mode="outlined"
-            inputMode="tel"
-            label="OTP"
-            activeOutlineColor="#155e75"
-            value={otp}
-            onChangeText={(newText) => setOtp(newText)}
-          /> */}
           <View className="w-9/12 my-3">
             <OtpInput
               numberOfDigits={6}
@@ -156,16 +96,8 @@ export default function LoginScreen() {
             />
           </View>
           <View className="w-11/12 my-3">
-            <CustomButton
-              onPress={() => {
-                // validateOTP();
-                verify();
-              }}
-            >
-              Verify now
-            </CustomButton>
+            <CustomButton onPress={verify}>Verify now</CustomButton>
           </View>
-          {/* <Text>{isValid}</Text> */}
         </View>
       </View>
     </TouchableWithoutFeedback>

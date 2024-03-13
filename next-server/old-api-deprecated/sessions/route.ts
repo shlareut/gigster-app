@@ -4,8 +4,8 @@ import {
   createSession,
   getAllSessions,
   getSession,
-} from '../../../database/sessions';
-import generateSessionToken from '../../../utils/sessionTokenGenerator';
+} from '../../database/sessions';
+import generateSessionToken from '../../utils/sessionTokenGenerator';
 
 // type SessionParams = {
 //   params: {

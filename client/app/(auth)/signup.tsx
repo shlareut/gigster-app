@@ -7,45 +7,11 @@ import CustomButton from '../components/CustomButton';
 import { host, nextHost } from '../constants';
 
 export default function SignUpScreen() {
+  // define local and state variables
   const local = useLocalSearchParams();
   const username = local.username;
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [sentOtp, setSentOtp] = useState('');
-  const sendOTP = async () => {
-    // const request = await fetch(
-    //   `${host}/api/users/generate_otp/${local.username}?firstName=${firstName}&lastName=${lastName}`,
-    // );
-    // next.js
-    // below should be a separate "redirect" api! because I also use it for registration with firstName and lastName
-    const request = await fetch(`${nextHost}/api/users/username/${username}`, {
-      method: 'POST',
-      body: JSON.stringify({
-        username,
-        firstName,
-        lastName,
-      }),
-    }).catch(console.error);
-    const response = await request.json();
-    console.log(response);
-    setSentOtp(response.message);
-    if (response.success) {
-      router.navigate({
-        pathname: '/verify',
-        params: {
-          username: local.username,
-          // firstName: firstName,
-          // lastName: lastName,
-        },
-      });
-    } else {
-      console.log('Error sending OTP. Not redirected!');
-      Toast.show({
-        type: 'error',
-        text1: 'Error sending OTP!',
-      });
-    }
-  };
 
   // call sign-up api upon button click.
   const signup = async () => {
@@ -101,27 +67,9 @@ export default function SignUpScreen() {
             value={lastName}
             onChangeText={(newText) => setLastName(newText)}
           />
-          {/* <TextInput
-            className="bg-white text-left text-md w-11/12 my-3 border-blue border-blue"
-            mode="outlined"
-            inputMode="tel"
-            label="OTP"
-            outlineColor="rgb(30, 58, 138)"
-            activeOutlineColor="rgb(59, 130, 246)"
-            value={otp}
-            onChangeText={(newText) => setOtp(newText)}
-          /> */}
           <View className="w-11/12 my-3">
-            <CustomButton
-              onPress={() => {
-                // sendOTP();
-                signup();
-              }}
-            >
-              Send verification code
-            </CustomButton>
+            <CustomButton onPress={signup}>Send verification code</CustomButton>
           </View>
-          <Text className="text-red-700">{sentOtp}</Text>
         </View>
       </View>
     </TouchableWithoutFeedback>

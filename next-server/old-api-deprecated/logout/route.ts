@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
-import { deleteSession } from '../../../database/sessions';
+import { deleteSession } from '../../database/sessions';
 
 export async function GET(request: NextRequest) {
   // checking if the sessionToken cookie exists

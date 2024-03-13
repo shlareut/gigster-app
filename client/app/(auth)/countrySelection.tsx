@@ -5,7 +5,6 @@ import { RadioButton } from 'react-native-paper';
 import countries from '../../assets/countrycodes.json';
 
 export default function CountryRadioButtons() {
-  // const [country, setCountry] = useState('Afghanistan');
   const local = useLocalSearchParams();
   return (
     <View className="flex-1 bg-white">
@@ -23,7 +22,6 @@ export default function CountryRadioButtons() {
         renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() => {
-              // setCountry(item.name);
               router.navigate({
                 pathname: '/identify',
                 params: { countryName: item.name, countryCode: item.dial_code },

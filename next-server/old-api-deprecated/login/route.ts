@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import {
   getSingleUserByUsername,
   updateUserPassword,
-} from '../../../database/users';
+} from '../../database/users';
 
 // generate otp and prepare login
 export async function POST(request: NextRequest) {

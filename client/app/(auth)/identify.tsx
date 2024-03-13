@@ -13,12 +13,12 @@ import CustomButton from '../components/CustomButton';
 import { host, nextHost } from '../constants';
 
 export default function IdentifyScreen() {
+  // define local and state variables
   const local = useLocalSearchParams();
   const [countryName, setCountryName] = useState('Austria');
   const [countryCode, setCountryCode] = useState('+43');
   const [lineNumber, setLineNumber] = useState('');
-  // username consists of country code + line number.
-  const [username, setUsername] = useState(null);
+  const [username, setUsername] = useState(null); // username consists of country code + line number.
 
   // update country code or country name if the user updates it.
   useEffect(() => {
@@ -31,60 +31,7 @@ export default function IdentifyScreen() {
     setUsername(`${countryCode}${lineNumber}`);
   }, [lineNumber, countryCode]);
 
-  // login function to send otp and redirect to verify screen
-  // sending OTP should happen only on verify screen, not identify AND signup screen!
-  // comment out OTP generation // sms sending for dev purposes
-  const [sentOtp, setSentOtp] = useState('');
-  const sendOTP = async () => {
-    // express.js server
-    // const request = await fetch(`${host}/api/users/generate_otp/${username}`);
-    // next.js
-    // below should be a separate "redirect" api! because I also use it for registration with firstName and lastName
-    const request = await fetch(`${nextHost}/api/users/username/${username}`, {
-      method: 'POST',
-      body: JSON.stringify({
-        username,
-      }),
-    }).catch(console.error);
-    const response = await request.json();
-    // console.log(response);
-    setSentOtp(response.message);
-    if (response.success) {
-      router.navigate({
-        pathname: '/login',
-        params: { username: username },
-      });
-    } else {
-      console.log('Error sending OTP. Not redirected!');
-    }
-  };
-
-  // check if user exists and route to login or signup screen.
-  const checkIfUserExists = async () => {
-    // express.js server
-    // const request = await fetch(`${host}/api/users/${username}`);
-    // below next.js server
-    const request = await fetch(`${nextHost}/api/users/username/${username}`);
-    // console.log(request);
-    const response = await request.json();
-    // console.log(response.success);
-    if (response.success) {
-      // send OTP and direct to verify screen if sending success
-      sendOTP();
-      // commented out: plain redirect to interim login screen
-      // router.navigate({
-      //   pathname: '/login',
-      //   params: { username: username },
-      // });
-    } else {
-      router.navigate({
-        pathname: '/signup',
-        params: { username: username },
-      });
-    }
-  };
-  // new identify function.
-  // check if user exists or not.
+  // identify existing users and direct to login screen, else direct to sign-up screen
   const identify = async () => {
     const identifyRequest = await fetch(
       `${nextHost}/api/auth/identify/${username}`,
@@ -106,9 +53,7 @@ export default function IdentifyScreen() {
       });
     }
   };
-  // next step should be OTP API - it should be called when landing on the OTP / verify screen
-  // to the API, it should not matter if the user was just created or not, it will always query the user and update the password.
-  // Q: how will i treat new users? I HAVE to create a password when creating a user
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View className="flex-1 bg-white">
@@ -149,16 +94,8 @@ export default function IdentifyScreen() {
             onChangeText={(newText) => setLineNumber(newText)}
           />
           <View className="my-3 w-11/12">
-            <CustomButton
-              onPress={() => {
-                identify();
-                // checkIfUserExists();
-              }}
-            >
-              Continue
-            </CustomButton>
+            <CustomButton onPress={identify}>Continue</CustomButton>
           </View>
-          <Text>{sentOtp}</Text>
         </View>
       </View>
     </TouchableWithoutFeedback>
