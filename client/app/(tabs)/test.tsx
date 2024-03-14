@@ -38,6 +38,7 @@ export default function ProfileScreen() {
           .....
         </Text>
       </Pressable>
+      <Text> Hello</Text>
     </View>
   );
 }

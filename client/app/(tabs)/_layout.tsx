@@ -22,7 +22,7 @@ export default () => {
       <Tabs.Screen
         name="postings"
         options={{
-          title: 'Postings',
+          title: 'Contributions',
           tabBarActiveTintColor: '#155e75',
           tabBarInactiveTintColor: 'grey',
           tabBarIcon: ({ focused }) => (
