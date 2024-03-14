@@ -114,7 +114,7 @@ export default function BookingsScreen() {
       <View className="flex-1 bg-white">
         {bookings.length > 0 ? (
           <FlatList
-            className="w-screen my-3"
+            className="w-screen mb-10"
             snapToInterval={1}
             bounces={false}
             showsVerticalScrollIndicator={false}

@@ -14,7 +14,7 @@ export default function BookingCard(props) {
         });
       }}
     >
-      <View className="w-11/12 my-3 self-center">
+      <View className="w-11/12 my-5 self-center">
         <View className="items-center h-fit flex-row">
           <View className="h-24 w-24 mr-3">
             <Image
