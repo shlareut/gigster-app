@@ -21,6 +21,10 @@ function BookingStatusDisplay(props) {
       return (
         <Text className="text-gray-700 opacity-50 font-bold">Cancelled</Text>
       );
+    case 'Declined':
+      return (
+        <Text className="text-gray-700 opacity-50 font-bold">Declined</Text>
+      );
     default:
       return <Text>Invalid status</Text>;
   }

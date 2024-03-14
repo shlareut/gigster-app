@@ -115,6 +115,10 @@ export default function BookingsScreen() {
         {bookings.length > 0 ? (
           <FlatList
             className="w-screen my-3"
+            snapToInterval={1}
+            bounces={false}
+            showsVerticalScrollIndicator={false}
+            pagingEnabled={true}
             data={bookings}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => <BookingCard booking={item} />}
