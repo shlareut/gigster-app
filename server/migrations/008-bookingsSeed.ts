@@ -25,6 +25,12 @@ const seedBookings = [
     user_id: 1,
     option_id: 8,
   },
+  {
+    id: 5,
+    status: 'CANCELLED',
+    user_id: 1,
+    option_id: 6,
+  },
 ];
 
 export async function up(sql: Sql) {

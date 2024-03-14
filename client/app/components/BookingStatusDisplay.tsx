@@ -11,13 +11,13 @@ function BookingStatusDisplay(props) {
       );
     case 'Rejected':
       return (
-        <Text className="text-red-700 opacity-50 font-bold">Rejected</Text>
+        <Text className="text-gray-700 opacity-50 font-bold">Rejected</Text>
       );
     case 'Offer':
       return <Text className="text-blue-700 opacity-50 font-bold">Offer</Text>;
-    case 'Offer':
+    case 'Hired':
       return <Text className="text-green-700 opacity-50 font-bold">Hired</Text>;
-    case 'Offer':
+    case 'Cancelled':
       return (
         <Text className="text-gray-700 opacity-50 font-bold">Cancelled</Text>
       );
