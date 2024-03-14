@@ -29,7 +29,6 @@ export default function ListingsScreen() {
     <SafeAreaView className="flex-1 bg-white">
       <FlatList
         className="w-screen mb-10"
-        decelerationRate={'fast'}
         snapToInterval={1}
         bounces={false}
         showsVerticalScrollIndicator={false}

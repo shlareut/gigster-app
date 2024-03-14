@@ -40,6 +40,45 @@ const seedListings = [
     description:
       'Beisl mit Fass- und Flaschenbieren der eigenen Wiener Craftbrauerei.',
   },
+  {
+    id: 4,
+    name: '7Stern Bräu',
+    type: 'Brewery',
+    address_line_one: 'Siebensterngasse 19',
+    address_line_two: '',
+    postal_code: '1070',
+    city: 'Vienna',
+    city_district: 'Neubau',
+    country: 'Austria',
+    description:
+      'Rustikales Brauhaus mit herzhaften regionalen Snacks und Mahlzeiten, eigenem Bier und österreichischen Weinen.',
+  },
+  {
+    id: 5,
+    name: 'Bierteufl',
+    type: 'Restaurant',
+    address_line_one: 'Ungargasse 5',
+    address_line_two: '',
+    postal_code: '1030',
+    city: 'Vienna',
+    city_district: 'Landstraße',
+    country: 'Austria',
+    description:
+      'Rustikales Lokal mit österreichischer Küche, wechselnde Spezialitätenkarte (Mo–Fr 11–14 2 MM € 9,40 und € 9,90; Fr Fischmenü € 10,90/11–14 Tagesschnitzel € 10,90), Spezialität des Hauses: Pfandlgerichte; 80 Biersorten, 2 Hausbiere, 12 Fassbiere. 2 Kindersessel. Leinwand für Sportübertragungen. Schanigarten für 60 Pers.',
+  },
+  {
+    id: 6,
+    name: 'Ammutsøn Craft Beer Dive',
+    type: 'Bar',
+    address_line_one: 'Barnabitengasse 10',
+    address_line_two: '',
+    postal_code: '1060',
+    city: 'Vienna',
+    city_district: 'Mariahilf',
+    country: 'Austria',
+    description:
+      'Bierbar; wechselndes Angebot an internationalen Craft-Bieren von unabhängigen Brauereien; 12 offene Biere, an einem Monitor sieht man, welche Sorten angezapft sind; mehr als 80 Lambic-Flaschenbiere. Chili con Carne, Quiche und weitere kleine Speisen. Mi Pub-Quiz. Gastgarten in der verkehrsberuhigten Barnabitengasse.',
+  },
 ];
 
 export async function up(sql: Sql) {
