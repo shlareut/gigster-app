@@ -59,7 +59,7 @@ const ListingCard = (props) => {
       <View className="w-11/12 my-5 self-center">
         <View className="w-full h-auto aspect-square">
           <Image
-            className="flex-1 rounded-3xl"
+            className="flex-1 rounded-xl"
             source={{
               uri: `${nextHost}/hero_images/${props.listing.id}.jpeg`,
             }}

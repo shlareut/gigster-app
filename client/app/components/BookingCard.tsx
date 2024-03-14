@@ -18,7 +18,7 @@ export default function BookingCard(props) {
         <View className="items-center h-fit flex-row">
           <View className="h-24 w-24 mr-3">
             <Image
-              className="flex-1 rounded-xl"
+              className="flex-1 rounded-lg"
               source={{
                 uri: `${nextHost}/hero_images/${props.booking.listing_id}.jpeg`,
               }}
