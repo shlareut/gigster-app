@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAllListings } from '../../../database/listings';
+import { getAllListings, getListings } from '../../../database/listings';
 
 // const seedListings = [
 //   {
@@ -43,7 +43,12 @@ import { getAllListings } from '../../../database/listings';
 //   },
 // ];
 
+// export async function GET() {
+//   const data = await getAllListings().catch(console.error);
+//   return NextResponse.json(data);
+// }
+
 export async function GET() {
-  const data = await getAllListings().catch(console.error);
+  const data = await getListings().catch(console.error);
   return NextResponse.json(data);
 }

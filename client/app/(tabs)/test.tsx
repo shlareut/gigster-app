@@ -23,6 +23,7 @@ export default function TestScreen() {
           <Text className="text-xl font-bold">Café Menta</Text>
           <Text className="text-base">Café in Landstraße, Vienna</Text>
           <Text className="text-base underline">
+            <Text>From </Text>
             <Text className="font-bold">15.50 EUR</Text> per hour
           </Text>
         </View>

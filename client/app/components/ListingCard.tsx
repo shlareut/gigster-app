@@ -68,12 +68,23 @@ const ListingCard = (props) => {
         <View className="mt-3">
           <Text className="text-xl font-bold">{props.listing.name}</Text>
           <Text className="text-base">
-            {props.listing.type} in {props.listing.city_district},{' '}
+            {props.listing.type} in {props.listing.district},{' '}
             {props.listing.city}
           </Text>
-          <Text className="text-base underline">
-            <Text className="font-bold">15.50 EUR</Text> per hour
-          </Text>
+          {/* // start price */}
+          {props.listing.min_price ? (
+            <Text className="text-base underline">
+              <Text className="font-bold">
+                {props.listing.options_count > 1 ? 'From ' : ''}
+                {''}
+                {props.listing.min_price} {props.listing.currency}
+              </Text>{' '}
+              per hour
+            </Text>
+          ) : (
+            <Text className="text-base underline">Apply speculatively</Text>
+          )}
+          {/* // end price */}
         </View>
       </View>
     </TouchableOpacity>
