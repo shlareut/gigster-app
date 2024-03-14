@@ -96,6 +96,7 @@ export default function DetailsScreen() {
           {options.length > 0 ? (
             <View>
               <Text className="text-xl font-bold mb-10">Available roles</Text>
+              {/* // option rendering */}
               {options.map((option) => (
                 <View className="" key={option.id}>
                   <Text className="mb-5 text-lg font-semibold">
@@ -111,9 +112,18 @@ export default function DetailsScreen() {
                       </Text>
                       <Text className="">per hour</Text>
                     </View>
-                    <CustomButton onPress={() => alert('Work in progress')}>
-                      Apply now
-                    </CustomButton>
+                    {/* // conditional button rendering */}
+                    {isLoggedIn ? (
+                      <CustomButton onPress={() => alert('Work in progress')}>
+                        Apply now
+                      </CustomButton>
+                    ) : (
+                      <CustomButton
+                        onPress={() => router.navigate('../(auth)/identify')}
+                      >
+                        Log in to apply
+                      </CustomButton>
+                    )}
                   </View>
                   <View className="my-10 border-t border-gray-200"></View>
                 </View>

@@ -20,9 +20,9 @@ export default () => {
         }}
       />
       <Tabs.Screen
-        name="postings"
+        name="bookings"
         options={{
-          title: 'Contributions',
+          title: 'Applications',
           tabBarActiveTintColor: '#155e75',
           tabBarInactiveTintColor: 'grey',
           tabBarIcon: ({ focused }) => (
