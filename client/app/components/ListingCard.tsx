@@ -6,7 +6,7 @@ import { nextHost } from '../constants';
 const ListingCard = (props) => {
   return (
     <TouchableOpacity
-      activeOpacity={1}
+      activeOpacity={0.75}
       onPress={() => {
         router.navigate({
           pathname: '../(stack)/[details]',

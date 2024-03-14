@@ -130,7 +130,7 @@ export default function DetailsScreen() {
               ))}
             </View>
           ) : (
-            <Text>No options available!</Text>
+            <Text className="text-xl font-bold mb-10">No roles available</Text>
           )}
         </View>
       </ScrollView>

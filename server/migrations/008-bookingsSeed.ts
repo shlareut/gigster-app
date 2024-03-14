@@ -3,19 +3,19 @@ import { Sql } from 'postgres';
 const seedBookings = [
   {
     id: 1,
-    status: 'PENDING',
+    status: 'IN_REVIEW',
     user_id: 1,
     option_id: 2,
   },
   {
     id: 2,
-    status: 'PENDING',
+    status: 'REJECTED',
     user_id: 1,
     option_id: 3,
   },
   {
     id: 3,
-    status: 'PENDING',
+    status: 'OFFER',
     user_id: 1,
     option_id: 1,
   },

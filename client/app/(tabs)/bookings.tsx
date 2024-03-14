@@ -120,7 +120,15 @@ export default function BookingsScreen() {
             renderItem={({ item }) => <BookingCard booking={item} />}
           />
         ) : (
-          <Text>No bookings!</Text>
+          <View className="flex-1 h-screen w-screen items-center justify-center bg-white">
+            <Image className="w-48 h-48 mb-10" source={emptyScreenImage} />
+            <Text className="mb-5 text-base text-gray-400">
+              You don't have any applications yet.
+            </Text>
+            <CustomButton onPress={() => router.navigate('listings')}>
+              Explore now
+            </CustomButton>
+          </View>
         )}
         {/* <View className="my-3">
           <BookingCard />

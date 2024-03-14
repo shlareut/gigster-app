@@ -18,6 +18,15 @@ export default () => {
           }}
         />
         <Stack.Screen
+          name="(stack)/bookingDetails"
+          options={{
+            title: 'Booking details',
+            headerBackTitleVisible: false,
+            presentation: 'modal',
+            headerTintColor: 'black',
+          }}
+        />
+        <Stack.Screen
           name="(auth)"
           options={{
             headerShown: false,
