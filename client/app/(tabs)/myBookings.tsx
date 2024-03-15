@@ -65,8 +65,9 @@ export default function MyBookingsScreen() {
 
   // helper to re-trigger useEffect
   const local = useLocalSearchParams();
-  const helperToTriggerUseEffect = local.helperToTriggerUseEffect;
-  console.log('REFRESH HELPER:', helperToTriggerUseEffect);
+  const helperToTriggerMyBookingsUseEffect =
+    local.helperToTriggerMyBookingsUseEffect;
+  console.log('REFRESH HELPER:', helperToTriggerMyBookingsUseEffect);
 
   //// START LOGIN SESSION CHECKING
 
@@ -107,7 +108,7 @@ export default function MyBookingsScreen() {
         setIsLoading(false);
       }
     }
-  }, [userId, isLoginStatusChecked, helperToTriggerUseEffect]);
+  }, [userId, isLoginStatusChecked, helperToTriggerMyBookingsUseEffect]);
 
   // loading screen
   if (isLoading) {

@@ -63,7 +63,7 @@ export default function SubmitBookingScreen() {
       // redirect to login screen
       router.navigate({
         pathname: '/myBookings',
-        params: { ...local, helperToTriggerUseEffect: Math.random() },
+        params: { ...local, helperToTriggerMyBookingsUseEffect: Math.random() },
       });
     }
     setIsButtonLoading(false);
@@ -84,11 +84,8 @@ export default function SubmitBookingScreen() {
         <ScrollView>
           <View className="items-center">
             <Text className="w-11/12 my-3">
-              You're applying for the{' '}
-              <Text className="font-bold">{option.name}</Text> role at{' '}
-              <Text className="font-bold">{listing.name}</Text> in{' '}
-              {listing.city_district}, {listing.city}. Please check and confirm
-              your details before submitting.
+              Make sure all the details are correct before submitting your
+              application.
             </Text>
             {/* // Input field. */}
             <TextInput
@@ -96,8 +93,8 @@ export default function SubmitBookingScreen() {
               disabled={true}
               mode="outlined"
               inputMode="text"
-              label="First name"
-              value="Donald"
+              label="Role"
+              value={option.name}
               activeOutlineColor="#155e75"
             />
             <TextInput
@@ -105,17 +102,26 @@ export default function SubmitBookingScreen() {
               disabled={true}
               mode="outlined"
               inputMode="text"
-              label="Last name"
-              value="Duck"
+              label="Venue"
+              value={listing.name}
               activeOutlineColor="#155e75"
             />
             <TextInput
               className="bg-white text-left text-md w-11/12 my-3"
               disabled={true}
               mode="outlined"
-              inputMode="numeric"
-              label="Phone number"
-              value="+4312345"
+              inputMode="text"
+              label="Location"
+              value={`${listing.city_district}, ${listing.city}`}
+              activeOutlineColor="#155e75"
+            />
+            <TextInput
+              className="bg-white text-left text-md w-11/12 my-3"
+              disabled={true}
+              mode="outlined"
+              inputMode="text"
+              label="Wage"
+              value={`${option.price} ${option.currency} per hour`}
               activeOutlineColor="#155e75"
             />
             <TextInput
