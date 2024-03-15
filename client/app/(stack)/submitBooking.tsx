@@ -13,14 +13,15 @@ import CustomButton from '../components/CustomButton';
 import LoadingScreen from '../components/LoadingScreen';
 import { nextHost } from '../constants';
 
-export default function BookingScreen() {
+export default function SubmitBookingScreen() {
   // define local and state variables
   const local = useLocalSearchParams();
-  const [isButtonLoading, setIsButtonLoading] = useState(false);
-  const [experience, setExperience] = useState('');
-  const [remarks, setRemarks] = useState('');
   const option = JSON.parse(local.option);
   const listing = JSON.parse(local.listing);
+  const optionId = option.id;
+  const experience = local.experience;
+  const remarks = local.remarks;
+  const [isButtonLoading, setIsButtonLoading] = useState(false);
 
   //// START LOGIN SESSION CHECKING
 
@@ -42,13 +43,41 @@ export default function BookingScreen() {
 
   //// END LOGIN SESSION CHECKING
 
+  // call submitBooking api upon button click.
+  const submitBooking = async () => {
+    setIsButtonLoading(true);
+    const bookingRequest = await fetch(`${nextHost}/api/bookings`, {
+      method: 'POST',
+      body: JSON.stringify({
+        userId,
+        optionId,
+        experience,
+        remarks,
+      }),
+    }).catch(console.error);
+    const bookingResponse = await bookingRequest.json();
+    console.log('BOOKING API:', bookingResponse.message);
+
+    // check if booking was created successfully
+    if (bookingResponse.success) {
+      // redirect to login screen
+      router.navigate({
+        pathname: '/myBookings',
+        params: { ...local, helperToTriggerUseEffect: Math.random() },
+      });
+    }
+    setIsButtonLoading(false);
+  };
+
+  console.log(option.id);
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View className="flex-1 bg-white">
         <View className="items-center">
           {/* // Progressbar */}
           <View className="flex-1 w-11/12 mb-10">
-            <ProgressBar progress={0.5} color="#155e75" />
+            <ProgressBar progress={0.9} color="#155e75" />
           </View>
         </View>
         {/* // Progressbar */}
@@ -58,11 +87,11 @@ export default function BookingScreen() {
               You're applying for the{' '}
               <Text className="font-bold">{option.name}</Text> role at{' '}
               <Text className="font-bold">{listing.name}</Text> in{' '}
-              {listing.city_district}, {listing.city}. Please enter your details
-              below to complete your application.
+              {listing.city_district}, {listing.city}. Please check and confirm
+              your details before submitting.
             </Text>
             {/* // Input field. */}
-            {/* <TextInput
+            <TextInput
               className="bg-white text-left text-md w-11/12 my-3"
               disabled={true}
               mode="outlined"
@@ -84,48 +113,34 @@ export default function BookingScreen() {
               className="bg-white text-left text-md w-11/12 my-3"
               disabled={true}
               mode="outlined"
-              inputMode="tel"
+              inputMode="numeric"
               label="Phone number"
               value="+4312345"
-              activeOutlineColor="#155e75"
-            /> */}
-            <TextInput
-              className="bg-white text-left text-md w-11/12 my-3"
-              mode="outlined"
-              inputMode="numeric"
-              label="Years of experience in role"
-              value={experience}
-              onChangeText={(newText) => setExperience(newText)}
               activeOutlineColor="#155e75"
             />
             <TextInput
               className="bg-white text-left text-md w-11/12 my-3"
+              disabled={true}
               mode="outlined"
-              multiline={true}
+              inputMode="tel"
+              label="Years of experience in role"
+              value={local.experience}
+              activeOutlineColor="#155e75"
+            />
+            <TextInput
+              className="bg-white text-left text-md w-11/12 my-3"
+              disabled={true}
+              mode="outlined"
               inputMode="text"
               label="Tell us why you are the best fit"
-              value={remarks}
-              onChangeText={(newText) => setRemarks(newText)}
+              value={local.remarks}
               activeOutlineColor="#155e75"
             />
             <View className="my-3 w-11/12">
               {isButtonLoading ? (
                 <CustomButton disabled={true}>...</CustomButton>
               ) : (
-                <CustomButton
-                  onPress={() => {
-                    router.navigate({
-                      pathname: '/submitBooking',
-                      params: {
-                        ...local,
-                        experience: experience,
-                        remarks: remarks,
-                      },
-                    });
-                  }}
-                >
-                  Continue
-                </CustomButton>
+                <CustomButton onPress={submitBooking}>Submit</CustomButton>
               )}
             </View>
           </View>

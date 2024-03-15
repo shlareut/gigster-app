@@ -26,6 +26,14 @@ export default () => {
           }}
         />
         <Stack.Screen
+          name="(stack)/submitBooking"
+          options={{
+            title: 'Submit application',
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+          }}
+        />
+        <Stack.Screen
           name="(stack)/myBookingDetails"
           options={{
             title: 'Application details',

@@ -4,6 +4,36 @@ import { setEnvironment } from '../utils/config.js';
 setEnvironment();
 const sql = postgres();
 
+// Create new booking
+export async function createBooking(
+  user_id: number,
+  option_id: number,
+  experience: number,
+  remarks: string,
+) {
+  const booking = await sql`
+    INSERT INTO
+      bookings (
+        user_id,
+        option_id,
+        experience,
+        remarks
+      )
+    VALUES
+      (
+        ${user_id},
+        ${option_id},
+        ${experience},
+        ${remarks}
+      )
+    RETURNING
+      id,
+      user_id,
+      option_id
+  `;
+  return booking;
+}
+
 // Query all bookings
 export async function getAllBookings() {
   const bookings = await sql`
@@ -21,6 +51,8 @@ export async function getBookingsByUserId(id: number) {
     SELECT
       bookings.id as id,
       bookings.status as status,
+      bookings.experience as experience,
+      bookings.remarks as remarks,
       bookings.user_id as user_id,
       bookings.booking_timestamp as timestamp,
       TO_CHAR(bookings.booking_timestamp, 'DD Mon YYYY') as date,

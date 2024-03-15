@@ -1,4 +1,4 @@
-import { router, useFocusEffect } from 'expo-router';
+import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { FlatList, Image, Text, View } from 'react-native';
 import checkLoginStatus from '../../util/sessions';
@@ -63,6 +63,11 @@ export default function MyBookingsScreen() {
   const emptyScreenImage = require('../../assets/bookings.jpg');
   const [bookings, setBookings] = useState([]);
 
+  // helper to re-trigger useEffect
+  const local = useLocalSearchParams();
+  const helperToTriggerUseEffect = local.helperToTriggerUseEffect;
+  console.log('REFRESH HELPER:', helperToTriggerUseEffect);
+
   //// START LOGIN SESSION CHECKING
 
   // ensure login-status is checked before setting isLoaded to false
@@ -102,7 +107,7 @@ export default function MyBookingsScreen() {
         setIsLoading(false);
       }
     }
-  }, [userId, isLoginStatusChecked]);
+  }, [userId, isLoginStatusChecked, helperToTriggerUseEffect]);
 
   // loading screen
   if (isLoading) {

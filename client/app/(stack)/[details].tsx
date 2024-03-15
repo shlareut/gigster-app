@@ -123,6 +123,8 @@ export default function DetailsScreen() {
                             params: {
                               entryPoint: '/[details]',
                               listingId: local.listingId,
+                              listing: JSON.stringify(listing),
+                              option: JSON.stringify(option),
                             },
                           })
                         }
