@@ -10,6 +10,7 @@ import {
 import { nextHost } from '../constants';
 
 const ListingCard = (props) => {
+  const hiring = props.listing.options_count > 0;
   return (
     // <TouchableOpacity
     //   activeOpacity={0.75}
@@ -50,20 +51,43 @@ const ListingCard = (props) => {
     <TouchableOpacity
       activeOpacity={0.75}
       onPress={() => {
-        router.navigate({
-          pathname: '../(stack)/[details]',
-          params: { id: props.listing.id },
-        });
+        if (hiring) {
+          router.navigate({
+            pathname: '/[details]',
+            params: { id: props.listing.id },
+          });
+        } else {
+          alert("This venue isn't hiring at the moment.");
+        }
       }}
     >
-      <View className="w-11/12 my-5 self-center">
+      <View
+        className={`w-11/12 my-5 self-center ${hiring ? '' : 'opacity-25'}`}
+      >
         <View className="w-full h-auto aspect-square">
-          <Image
+          {/* <Image
             className="flex-1 rounded-xl"
             source={{
               uri: `${nextHost}/hero_images/${props.listing.id}.jpeg`,
             }}
-          />
+          /> */}
+          <ImageBackground
+            source={{ uri: `${nextHost}/hero_images/${props.listing.id}.jpeg` }}
+            className="flex-1"
+            style={{
+              borderRadius: '12',
+              overflow: 'hidden',
+            }}
+          >
+            {/* // interim logic to show urgent hire label */}
+            {props.listing.options_count > 1 ? (
+              <View className="rounded-3xl w-fit h-fit ml-3 mt-3 bg-white self-start">
+                <Text className="mx-4 my-2 font-bold">Urgent hire</Text>
+              </View>
+            ) : (
+              ''
+            )}
+          </ImageBackground>
         </View>
         <View className="mt-3">
           <Text className="text-xl font-bold">{props.listing.name}</Text>
@@ -72,7 +96,7 @@ const ListingCard = (props) => {
             {props.listing.city}
           </Text>
           {/* // start price */}
-          {props.listing.min_price ? (
+          {hiring ? (
             <Text className="text-base underline">
               <Text className="font-bold">
                 {props.listing.options_count > 1 ? 'From ' : ''}
@@ -82,7 +106,7 @@ const ListingCard = (props) => {
               per hour
             </Text>
           ) : (
-            <Text className="text-base underline">Apply speculatively</Text>
+            <Text className="text-base underline">Currently not hiring</Text>
           )}
           {/* // end price */}
         </View>

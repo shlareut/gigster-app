@@ -10,7 +10,7 @@ export default function TestScreen() {
   return (
     <>
       {/* // LISTING CARD */}
-      <View className="w-11/12 my-3 self-center">
+      <View className={`w-11/12 my-3 self-center opacity-50`}>
         <View className="w-full h-auto aspect-square">
           <Image
             className="flex-1 rounded-3xl"

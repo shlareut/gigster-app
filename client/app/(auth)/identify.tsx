@@ -47,13 +47,13 @@ export default function IdentifyScreen() {
       // redirect to sign up screen.
       router.navigate({
         pathname: '/signup',
-        params: { username: username },
+        params: { ...local, username: username },
       });
     } else {
       // redirect to login screen.
       router.navigate({
         pathname: '/login',
-        params: { username: username },
+        params: { ...local, username: username },
       });
     }
     setIsButtonLoading(false);
@@ -64,6 +64,9 @@ export default function IdentifyScreen() {
   // if (isLoading) {
   //   return <LoadingScreen />;
   // }
+
+  // Logging params for testing
+  console.log('Identify screen params:', local);
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -79,7 +82,7 @@ export default function IdentifyScreen() {
             className="w-11/12 my-3"
             onPress={() => {
               router.navigate({
-                pathname: '../(auth)/countrySelection',
+                pathname: '/countrySelection',
                 params: { countryName: countryName, countryCode: countryCode },
               });
             }}

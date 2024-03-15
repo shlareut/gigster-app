@@ -33,7 +33,7 @@ export default function SignUpScreen() {
       // redirect to login screen
       router.navigate({
         pathname: '/login',
-        params: { username: username },
+        params: local,
       });
     }
     setIsButtonLoading(false);
@@ -44,6 +44,9 @@ export default function SignUpScreen() {
   // if (isLoading) {
   //   return <LoadingScreen />;
   // }
+
+  // Logging params for testing
+  console.log('Signup screen params:', local);
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>

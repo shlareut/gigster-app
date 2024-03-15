@@ -67,8 +67,8 @@ export default function LoginScreen() {
       if (loginResponse.success) {
         // if login success, redirect to profile screen
         router.navigate({
-          pathname: '../(tabs)/profile',
-          params: { username: local.username },
+          pathname: `${local.entryPoint}`,
+          params: local,
         });
       }
     }
@@ -81,6 +81,9 @@ export default function LoginScreen() {
   // if (isLoading) {
   //   return <LoadingScreen />;
   // }
+
+  // Logging params for testing
+  console.log('Login screen params:', local);
 
   // show screen content.
   return (

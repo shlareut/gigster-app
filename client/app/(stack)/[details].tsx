@@ -15,7 +15,7 @@ import { nextHost } from '../constants';
 
 export default function DetailsScreen() {
   // define local and state variables
-  const { id } = useLocalSearchParams();
+  const local = useLocalSearchParams();
   const [listing, setListing] = useState({});
   const [options, setOptions] = useState([]);
 
@@ -44,11 +44,13 @@ export default function DetailsScreen() {
     if (isLoginStatusChecked) {
       const fetchDetails = async () => {
         // fetch details
-        const listingsRequest = await fetch(`${nextHost}/api/listings/${id}`);
+        const listingsRequest = await fetch(
+          `${nextHost}/api/listings/${local.id}`,
+        );
         const listingResponse = await listingsRequest.json();
         // fetch options
         const optionsRequest = await fetch(
-          `${nextHost}/api/listings/${id}/options`,
+          `${nextHost}/api/listings/${local.id}/options`,
         );
         const optionsResponse = await optionsRequest.json();
         // set state variables
@@ -58,7 +60,7 @@ export default function DetailsScreen() {
       };
       fetchDetails().catch(console.error);
     }
-  }, [id, isLoginStatusChecked]);
+  }, [local.id, isLoginStatusChecked]);
 
   // loading screen
   if (isLoading) {
@@ -119,7 +121,12 @@ export default function DetailsScreen() {
                       </CustomButton>
                     ) : (
                       <CustomButton
-                        onPress={() => router.navigate('../(auth)/identify')}
+                        onPress={() =>
+                          router.navigate({
+                            pathname: '/identify',
+                            params: { entryPoint: '/[details]', id: local.id },
+                          })
+                        }
                       >
                         Log in to apply
                       </CustomButton>

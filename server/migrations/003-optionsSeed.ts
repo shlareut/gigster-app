@@ -73,6 +73,15 @@ const seedOptions = [
       'Are you passionate about beer and eager to contribute to a dynamic craft beer bar environment? Join our team as a Beer Sommelier, where you will play a vital role in curating an exceptional beer selection and providing expert guidance to our guests. Embrace the opportunity to showcase your knowledge and passion for beer, elevating the overall dining experience for our patrons. Join us in delivering outstanding service and fostering a culture of beer appreciation!',
     listing_id: 6,
   },
+  {
+    id: 9,
+    name: 'Server',
+    price: 13.5,
+    currency: 'EUR',
+    description:
+      'Are you passionate about providing exceptional hospitality and creating memorable experiences for guests? Join our team as a Server at our vibrant brewpub! As a Server, you will play a key role in delivering outstanding service and showcasing our unique selection of craft brews and culinary delights to our diverse clientele.',
+    listing_id: 1,
+  },
 ];
 
 export async function up(sql: Sql) {
