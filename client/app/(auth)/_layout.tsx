@@ -17,7 +17,7 @@ export default () => {
           initialParams={{ countryName: 'Austria', countryCode: '+43' }}
         />
         <Stack.Screen
-          name="countrySelection"
+          name="selectCountry"
           options={{
             title: 'Country/Region',
             headerBackTitleVisible: false,

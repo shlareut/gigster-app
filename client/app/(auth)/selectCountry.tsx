@@ -4,7 +4,7 @@ import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 import { RadioButton } from 'react-native-paper';
 import countries from '../../assets/countrycodes.json';
 
-export default function CountryRadioButtons() {
+export default function SelectCountryScreen() {
   const local = useLocalSearchParams();
   return (
     <View className="flex-1 bg-white">
@@ -24,7 +24,11 @@ export default function CountryRadioButtons() {
             onPress={() => {
               router.navigate({
                 pathname: '/identify',
-                params: { countryName: item.name, countryCode: item.dial_code },
+                params: {
+                  ...local,
+                  countryName: item.name,
+                  countryCode: item.dial_code,
+                },
               });
             }}
           >

@@ -20,7 +20,7 @@ export default () => {
         }}
       />
       <Tabs.Screen
-        name="bookings"
+        name="myBookings"
         options={{
           title: 'Applications',
           tabBarActiveTintColor: '#155e75',
@@ -35,7 +35,7 @@ export default () => {
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="myProfile"
         // remove initial params once done!
         // initialParams={{ username: '+436764105889' }}
         options={{

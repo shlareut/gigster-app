@@ -54,7 +54,7 @@ const ListingCard = (props) => {
         if (hiring) {
           router.navigate({
             pathname: '/[details]',
-            params: { id: props.listing.id },
+            params: { listingId: props.listing.id },
           });
         } else {
           alert("This venue isn't hiring at the moment.");

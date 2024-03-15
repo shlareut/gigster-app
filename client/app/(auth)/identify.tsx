@@ -82,8 +82,12 @@ export default function IdentifyScreen() {
             className="w-11/12 my-3"
             onPress={() => {
               router.navigate({
-                pathname: '/countrySelection',
-                params: { countryName: countryName, countryCode: countryCode },
+                pathname: '/selectCountry',
+                params: {
+                  ...local,
+                  countryName: countryName,
+                  countryCode: countryCode,
+                },
               });
             }}
           >

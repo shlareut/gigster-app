@@ -7,7 +7,7 @@ import CustomButton from '../components/CustomButton';
 import LoadingScreen from '../components/LoadingScreen';
 import { nextHost } from '../constants';
 
-export default function BookingsScreen() {
+export default function MyBookingsScreen() {
   // // define local and state variables
   // const emptyScreenImage = require('../../assets/postings.jpg');
 
@@ -145,7 +145,14 @@ export default function BookingsScreen() {
     return (
       <View className="flex-1 h-screen w-screen items-center justify-center bg-white">
         <Image className="w-48 h-48 mb-10" source={emptyScreenImage} />
-        <CustomButton onPress={() => router.navigate('../(auth)/identify')}>
+        <CustomButton
+          onPress={() =>
+            router.navigate({
+              pathname: '/identify',
+              params: { entryPoint: '/myBookings' },
+            })
+          }
+        >
           Log in to view
         </CustomButton>
       </View>

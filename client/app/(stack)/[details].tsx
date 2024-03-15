@@ -45,12 +45,12 @@ export default function DetailsScreen() {
       const fetchDetails = async () => {
         // fetch details
         const listingsRequest = await fetch(
-          `${nextHost}/api/listings/${local.id}`,
+          `${nextHost}/api/listings/${local.listingId}`,
         );
         const listingResponse = await listingsRequest.json();
         // fetch options
         const optionsRequest = await fetch(
-          `${nextHost}/api/listings/${local.id}/options`,
+          `${nextHost}/api/listings/${local.listingId}/options`,
         );
         const optionsResponse = await optionsRequest.json();
         // set state variables
@@ -60,7 +60,7 @@ export default function DetailsScreen() {
       };
       fetchDetails().catch(console.error);
     }
-  }, [local.id, isLoginStatusChecked]);
+  }, [local.listingId, isLoginStatusChecked]);
 
   // loading screen
   if (isLoading) {
@@ -116,7 +116,17 @@ export default function DetailsScreen() {
                     </View>
                     {/* // conditional button rendering */}
                     {isLoggedIn ? (
-                      <CustomButton onPress={() => alert('Work in progress')}>
+                      <CustomButton
+                        onPress={() =>
+                          router.navigate({
+                            pathname: '/booking',
+                            params: {
+                              entryPoint: '/[details]',
+                              listingId: local.listingId,
+                            },
+                          })
+                        }
+                      >
                         Apply now
                       </CustomButton>
                     ) : (
@@ -124,7 +134,10 @@ export default function DetailsScreen() {
                         onPress={() =>
                           router.navigate({
                             pathname: '/identify',
-                            params: { entryPoint: '/[details]', id: local.id },
+                            params: {
+                              entryPoint: '/[details]',
+                              listingId: local.listingId,
+                            },
                           })
                         }
                       >

@@ -11,7 +11,6 @@ export default function ProfileScreen() {
   // define local and state variables
   const emptyScreenImage = require('../../assets/profile.jpg');
   const [user, setUser] = useState(null);
-  const currentScreen = '(tabs)/profile';
 
   //// START LOGIN SESSION CHECKING
 
@@ -102,8 +101,8 @@ export default function ProfileScreen() {
         <CustomButton
           onPress={() => {
             router.navigate({
-              pathname: '../identify',
-              params: { entryPoint: '../profile' },
+              pathname: '/identify',
+              params: { entryPoint: '/myProfile' },
             });
           }}
         >

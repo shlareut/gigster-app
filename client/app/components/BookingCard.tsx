@@ -10,7 +10,7 @@ export default function BookingCard(props) {
       activeOpacity={0.75}
       onPress={() => {
         router.navigate({
-          pathname: '../(stack)/bookingDetails',
+          pathname: '/myBookingDetails',
         });
       }}
     >
