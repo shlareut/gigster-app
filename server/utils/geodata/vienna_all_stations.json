@@ -1,0 +1,6925 @@
+[
+  {
+    "long": 16.35945352,
+    "lat": 48.18089963,
+    "station_city": "Vienna",
+    "station_name": "Matzleinsdorfer Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35869892,
+    "lat": 48.18063003,
+    "station_city": "Vienna",
+    "station_name": "Matzleinsdorfer Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.42042181,
+    "lat": 48.17023664,
+    "station_city": "Vienna",
+    "station_name": "Simmering",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.42026911,
+    "lat": 48.17015274,
+    "station_city": "Vienna",
+    "station_name": "Simmering",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41148366,
+    "lat": 48.17459193,
+    "station_city": "Vienna",
+    "station_name": "Polkorabplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41312755,
+    "lat": 48.17443023,
+    "station_city": "Vienna",
+    "station_name": "Polkorabplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34917692,
+    "lat": 48.21520947,
+    "station_city": "Vienna",
+    "station_name": "Skodagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3700806,
+    "lat": 48.20232652,
+    "station_city": "Vienna",
+    "station_name": "Oper/Karlsplatz U",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36867921,
+    "lat": 48.20242832,
+    "station_city": "Vienna",
+    "station_name": "Oper/Karlsplatz U",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3703051,
+    "lat": 48.20202712,
+    "station_city": "Vienna",
+    "station_name": "Oper/Karlsplatz U",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32945001,
+    "lat": 48.21386869,
+    "station_city": "Vienna",
+    "station_name": "Frauengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32875832,
+    "lat": 48.21368309,
+    "station_city": "Vienna",
+    "station_name": "Frauengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26239093,
+    "lat": 48.13327092,
+    "station_city": "Vienna",
+    "station_name": "Rodaun",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30205139,
+    "lat": 48.16894262,
+    "station_city": "Vienna",
+    "station_name": "Rosenhügelstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30206039,
+    "lat": 48.16906852,
+    "station_city": "Vienna",
+    "station_name": "Rosenhügelstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32705153,
+    "lat": 48.21923777,
+    "station_city": "Vienna",
+    "station_name": "Rosensteingasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32751863,
+    "lat": 48.21864517,
+    "station_city": "Vienna",
+    "station_name": "Rosensteingasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36999065,
+    "lat": 48.16915828,
+    "station_city": "Vienna",
+    "station_name": "Laxenburger Str./Troststr.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36884086,
+    "lat": 48.16940398,
+    "station_city": "Vienna",
+    "station_name": "Laxenburger Str./Troststr.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35161131,
+    "lat": 48.21858535,
+    "station_city": "Vienna",
+    "station_name": "Lazarettgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35180891,
+    "lat": 48.21921375,
+    "station_city": "Vienna",
+    "station_name": "Lazarettgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29588005,
+    "lat": 48.1943928,
+    "station_city": "Vienna",
+    "station_name": "Linzer Str./Lützowgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29514345,
+    "lat": 48.19431491,
+    "station_city": "Vienna",
+    "station_name": "Linzer Str./Lützowgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34223292,
+    "lat": 48.1882844,
+    "station_city": "Vienna",
+    "station_name": "Margaretengürtel",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34170292,
+    "lat": 48.1883204,
+    "station_city": "Vienna",
+    "station_name": "Margaretengürtel",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34437998,
+    "lat": 48.24475263,
+    "station_city": "Vienna",
+    "station_name": "Oberdöbling",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34429008,
+    "lat": 48.24470473,
+    "station_city": "Vienna",
+    "station_name": "Oberdöbling",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3748955,
+    "lat": 48.22239782,
+    "station_city": "Vienna",
+    "station_name": "Obere Augartenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3747787,
+    "lat": 48.22244572,
+    "station_city": "Vienna",
+    "station_name": "Obere Augartenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37120342,
+    "lat": 48.21951904,
+    "station_city": "Vienna",
+    "station_name": "Obere Donaustraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37111362,
+    "lat": 48.21954894,
+    "station_city": "Vienna",
+    "station_name": "Obere Donaustraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.47821922,
+    "lat": 48.24005027,
+    "station_city": "Vienna",
+    "station_name": "Ziegelhofstraße/Oberfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.47835402,
+    "lat": 48.23999637,
+    "station_city": "Vienna",
+    "station_name": "Ziegelhofstraße/Oberfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.47379065,
+    "lat": 48.24106727,
+    "station_city": "Vienna",
+    "station_name": "Oberfeldgasse/Spargelfeldstr.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.47387144,
+    "lat": 48.24096557,
+    "station_city": "Vienna",
+    "station_name": "Oberfeldgasse/Spargelfeldstr.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32520993,
+    "lat": 48.21083371,
+    "station_city": "Vienna",
+    "station_name": "Feßtgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38315998,
+    "lat": 48.23365426,
+    "station_city": "Vienna",
+    "station_name": "Traisengasse S (Dresdner Str.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38322288,
+    "lat": 48.23374396,
+    "station_city": "Vienna",
+    "station_name": "Traisengasse S (Dresdner Str.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3493835,
+    "lat": 48.20219473,
+    "station_city": "Vienna",
+    "station_name": "Westbahnstraße/Neubaugasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3487008,
+    "lat": 48.20173974,
+    "station_city": "Vienna",
+    "station_name": "Westbahnstraße/Neubaugasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38643881,
+    "lat": 48.19489575,
+    "station_city": "Vienna",
+    "station_name": "Rennweg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38603451,
+    "lat": 48.19459035,
+    "station_city": "Vienna",
+    "station_name": "Rennweg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38645671,
+    "lat": 48.19432685,
+    "station_city": "Vienna",
+    "station_name": "Rennweg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38681611,
+    "lat": 48.19437475,
+    "station_city": "Vienna",
+    "station_name": "Rennweg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36777191,
+    "lat": 48.19875194,
+    "station_city": "Vienna",
+    "station_name": "Resselgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36765511,
+    "lat": 48.19876994,
+    "station_city": "Vienna",
+    "station_name": "Resselgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33892714,
+    "lat": 48.19320108,
+    "station_city": "Vienna",
+    "station_name": "Mariahilfer Gürtel",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33881034,
+    "lat": 48.19323108,
+    "station_city": "Vienna",
+    "station_name": "Mariahilfer Gürtel",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37741078,
+    "lat": 48.21317426,
+    "station_city": "Vienna",
+    "station_name": "Marienbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30710902,
+    "lat": 48.21343171,
+    "station_city": "Vienna",
+    "station_name": "Maroltingergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30597713,
+    "lat": 48.21346761,
+    "station_city": "Vienna",
+    "station_name": "Maroltingergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30637233,
+    "lat": 48.21383871,
+    "station_city": "Vienna",
+    "station_name": "Maroltingergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30653403,
+    "lat": 48.21315031,
+    "station_city": "Vienna",
+    "station_name": "Maroltingergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30576153,
+    "lat": 48.2144074,
+    "station_city": "Vienna",
+    "station_name": "Maroltingergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34262819,
+    "lat": 48.24637383,
+    "station_city": "Vienna",
+    "station_name": "Sieveringer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3424486,
+    "lat": 48.24635583,
+    "station_city": "Vienna",
+    "station_name": "Sieveringer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34830556,
+    "lat": 48.24296984,
+    "station_city": "Vienna",
+    "station_name": "Silbergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34827856,
+    "lat": 48.24289804,
+    "station_city": "Vienna",
+    "station_name": "Silbergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2763597,
+    "lat": 48.15955368,
+    "station_city": "Vienna",
+    "station_name": "Sillerplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2762699,
+    "lat": 48.15958958,
+    "station_city": "Vienna",
+    "station_name": "Sillerplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35380314,
+    "lat": 48.17295057,
+    "station_city": "Vienna",
+    "station_name": "Knöllgasse/Troststraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35359654,
+    "lat": 48.17259107,
+    "station_city": "Vienna",
+    "station_name": "Knöllgasse/Troststraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36481638,
+    "lat": 48.16994908,
+    "station_city": "Vienna",
+    "station_name": "Troststraße/Neilreichgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36434928,
+    "lat": 48.16973348,
+    "station_city": "Vienna",
+    "station_name": "Troststraße/Neilreichgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32706045,
+    "lat": 48.23520399,
+    "station_city": "Vienna",
+    "station_name": "Türkenschanzplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32697966,
+    "lat": 48.23517409,
+    "station_city": "Vienna",
+    "station_name": "Türkenschanzplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37759042,
+    "lat": 48.17466985,
+    "station_city": "Vienna",
+    "station_name": "Reumannplatz U (Buchengasse)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37724903,
+    "lat": 48.17534074,
+    "station_city": "Vienna",
+    "station_name": "Reumannplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37815632,
+    "lat": 48.17534674,
+    "station_city": "Vienna",
+    "station_name": "Reumannplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27981819,
+    "lat": 48.16344846,
+    "station_city": "Vienna",
+    "station_name": "Riedelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27934209,
+    "lat": 48.16301707,
+    "station_city": "Vienna",
+    "station_name": "Riedelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26314552,
+    "lat": 48.13242552,
+    "station_city": "Vienna",
+    "station_name": "Rodaun",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34176587,
+    "lat": 48.22664102,
+    "station_city": "Vienna",
+    "station_name": "Martinstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34276297,
+    "lat": 48.22659312,
+    "station_city": "Vienna",
+    "station_name": "Martinstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3439307,
+    "lat": 48.18036054,
+    "station_city": "Vienna",
+    "station_name": "Marx-Meidlinger-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34451459,
+    "lat": 48.18058214,
+    "station_city": "Vienna",
+    "station_name": "Marx-Meidlinger-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38655563,
+    "lat": 48.20791228,
+    "station_city": "Vienna",
+    "station_name": "Marxergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38654663,
+    "lat": 48.20716999,
+    "station_city": "Vienna",
+    "station_name": "Marxergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39498185,
+    "lat": 48.25372526,
+    "station_city": "Vienna",
+    "station_name": "Matthäus-Jiszda-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39489195,
+    "lat": 48.25381496,
+    "station_city": "Vienna",
+    "station_name": "Matthäus-Jiszda-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35921992,
+    "lat": 48.18050423,
+    "station_city": "Vienna",
+    "station_name": "Matzleinsdorfer Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37042194,
+    "lat": 48.23249938,
+    "station_city": "Vienna",
+    "station_name": "Brigittaplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37021534,
+    "lat": 48.23303197,
+    "station_city": "Vienna",
+    "station_name": "Brigittaplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33574708,
+    "lat": 48.20903181,
+    "station_city": "Vienna",
+    "station_name": "Thaliastraße/Brunnengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33507338,
+    "lat": 48.20904981,
+    "station_city": "Vienna",
+    "station_name": "Thaliastraße/Brunnengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33572018,
+    "lat": 48.2110791,
+    "station_city": "Vienna",
+    "station_name": "Neulerchenfelder Straße/Brunnengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33638488,
+    "lat": 48.2110971,
+    "station_city": "Vienna",
+    "station_name": "Neulerchenfelder Straße/Brunnengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40390203,
+    "lat": 48.26840708,
+    "station_city": "Vienna",
+    "station_name": "Brünner Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40422542,
+    "lat": 48.26868818,
+    "station_city": "Vienna",
+    "station_name": "Brünner Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41231016,
+    "lat": 48.17791061,
+    "station_city": "Vienna",
+    "station_name": "Hauffgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32429363,
+    "lat": 48.20772672,
+    "station_city": "Vienna",
+    "station_name": "Panikengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32435653,
+    "lat": 48.20846312,
+    "station_city": "Vienna",
+    "station_name": "Panikengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2794409,
+    "lat": 48.16893074,
+    "station_city": "Vienna",
+    "station_name": "Klinik Hietzing",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2788121,
+    "lat": 48.16922424,
+    "station_city": "Vienna",
+    "station_name": "Klinik Hietzing",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33192927,
+    "lat": 48.1917759,
+    "station_city": "Vienna",
+    "station_name": "Mariahilfer Straße/Geibelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33198317,
+    "lat": 48.19172799,
+    "station_city": "Vienna",
+    "station_name": "Mariahilfer Straße/Geibelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44983267,
+    "lat": 48.24849135,
+    "station_city": "Vienna",
+    "station_name": "Kraygasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36300181,
+    "lat": 48.1858349,
+    "station_city": "Vienna",
+    "station_name": "Laurenzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35349783,
+    "lat": 48.23624507,
+    "station_city": "Vienna",
+    "station_name": "Guneschgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35357863,
+    "lat": 48.23681347,
+    "station_city": "Vienna",
+    "station_name": "Guneschgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3616455,
+    "lat": 48.24488422,
+    "station_city": "Vienna",
+    "station_name": "Gunoldstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3617443,
+    "lat": 48.24443552,
+    "station_city": "Vienna",
+    "station_name": "Gunoldstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32668311,
+    "lat": 48.20206305,
+    "station_city": "Vienna",
+    "station_name": "Guntherstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32690771,
+    "lat": 48.20275755,
+    "station_city": "Vienna",
+    "station_name": "Guntherstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29029258,
+    "lat": 48.19461441,
+    "station_city": "Vienna",
+    "station_name": "Gusenleithnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28971768,
+    "lat": 48.19460841,
+    "station_city": "Vienna",
+    "station_name": "Gusenleithnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3092649,
+    "lat": 48.20742143,
+    "station_city": "Vienna",
+    "station_name": "Gutraterplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30887861,
+    "lat": 48.20774473,
+    "station_city": "Vienna",
+    "station_name": "Gutraterplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37547037,
+    "lat": 48.19713524,
+    "station_city": "Vienna",
+    "station_name": "Gußhausstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37511107,
+    "lat": 48.19816514,
+    "station_city": "Vienna",
+    "station_name": "Gußhausstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33612438,
+    "lat": 48.21481438,
+    "station_city": "Vienna",
+    "station_name": "Yppengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33518119,
+    "lat": 48.21462288,
+    "station_city": "Vienna",
+    "station_name": "Yppengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4157867,
+    "lat": 48.28902638,
+    "station_city": "Vienna",
+    "station_name": "Anton-Schall-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.415661,
+    "lat": 48.28902638,
+    "station_city": "Vienna",
+    "station_name": "Anton-Schall-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35463863,
+    "lat": 48.23871616,
+    "station_city": "Vienna",
+    "station_name": "Döblinger Hauptstraße/Gatterburggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35463863,
+    "lat": 48.23908706,
+    "station_city": "Vienna",
+    "station_name": "Döblinger Hauptstraße/Gatterburggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37367375,
+    "lat": 48.17797054,
+    "station_city": "Vienna",
+    "station_name": "Laxenburger Str./Gudrunstr.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37380855,
+    "lat": 48.17868933,
+    "station_city": "Vienna",
+    "station_name": "Laxenburger Str./Gudrunstr.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30374933,
+    "lat": 48.20879233,
+    "station_city": "Vienna",
+    "station_name": "Joachimsthalerplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30510573,
+    "lat": 48.20933113,
+    "station_city": "Vienna",
+    "station_name": "Joachimsthalerplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30444103,
+    "lat": 48.20893603,
+    "station_city": "Vienna",
+    "station_name": "Joachimsthalerplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30495303,
+    "lat": 48.20867863,
+    "station_city": "Vienna",
+    "station_name": "Joachimsthalerplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30866302,
+    "lat": 48.2138567,
+    "station_city": "Vienna",
+    "station_name": "Johannes-Krawarik-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32509313,
+    "lat": 48.2131863,
+    "station_city": "Vienna",
+    "station_name": "Johann-Nepomuk-Berger-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32531773,
+    "lat": 48.2129049,
+    "station_city": "Vienna",
+    "station_name": "Johann-Nepomuk-Berger-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32551533,
+    "lat": 48.2134437,
+    "station_city": "Vienna",
+    "station_name": "Johann-Nepomuk-Berger-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32691673,
+    "lat": 48.21340769,
+    "station_city": "Vienna",
+    "station_name": "Johann-Nepomuk-Berger-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32659333,
+    "lat": 48.21403029,
+    "station_city": "Vienna",
+    "station_name": "Johann-Nepomuk-Berger-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3657417,
+    "lat": 48.18941629,
+    "station_city": "Vienna",
+    "station_name": "Johann-Strauß-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3854147,
+    "lat": 48.18830238,
+    "station_city": "Vienna",
+    "station_name": "Fasangasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38514521,
+    "lat": 48.18864378,
+    "station_city": "Vienna",
+    "station_name": "Fasangasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38469601,
+    "lat": 48.18824848,
+    "station_city": "Vienna",
+    "station_name": "Fasangasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3627594,
+    "lat": 48.2491494,
+    "station_city": "Vienna",
+    "station_name": "Heiligenstadt S+U/12.-Februar-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3626875,
+    "lat": 48.2487247,
+    "station_city": "Vienna",
+    "station_name": "Heiligenstadt S+U/12.-Februar-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3067227,
+    "lat": 48.193788,
+    "station_city": "Vienna",
+    "station_name": "Diesterweggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3055639,
+    "lat": 48.1937341,
+    "station_city": "Vienna",
+    "station_name": "Diesterweggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.42382649,
+    "lat": 48.16702536,
+    "station_city": "Vienna",
+    "station_name": "Fickeysstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.42366479,
+    "lat": 48.16694746,
+    "station_city": "Vienna",
+    "station_name": "Fickeysstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30826783,
+    "lat": 48.22619215,
+    "station_city": "Vienna",
+    "station_name": "Dornbach",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30821394,
+    "lat": 48.22613835,
+    "station_city": "Vienna",
+    "station_name": "Dornbach",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30789054,
+    "lat": 48.22613835,
+    "station_city": "Vienna",
+    "station_name": "Dornbach",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33054591,
+    "lat": 48.2117855,
+    "station_city": "Vienna",
+    "station_name": "Neulerchenfelder Straße/Haberlgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3315969,
+    "lat": 48.2116897,
+    "station_city": "Vienna",
+    "station_name": "Neulerchenfelder Straße/Haberlgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33254018,
+    "lat": 48.19951846,
+    "station_city": "Vienna",
+    "station_name": "Beingasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33184848,
+    "lat": 48.19924296,
+    "station_city": "Vienna",
+    "station_name": "Beingasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36858938,
+    "lat": 48.18425371,
+    "station_city": "Vienna",
+    "station_name": "Blechturmgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36822098,
+    "lat": 48.18411601,
+    "station_city": "Vienna",
+    "station_name": "Blechturmgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34044526,
+    "lat": 48.2107439,
+    "station_city": "Vienna",
+    "station_name": "Blindengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34078665,
+    "lat": 48.2110013,
+    "station_city": "Vienna",
+    "station_name": "Blindengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33173171,
+    "lat": 48.22123075,
+    "station_city": "Vienna",
+    "station_name": "Blumengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33181251,
+    "lat": 48.22167965,
+    "station_city": "Vienna",
+    "station_name": "Blumengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3664514,
+    "lat": 48.19061408,
+    "station_city": "Vienna",
+    "station_name": "Johann-Strauß-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31948764,
+    "lat": 48.19906937,
+    "station_city": "Vienna",
+    "station_name": "Johnstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31946974,
+    "lat": 48.19901547,
+    "station_city": "Vienna",
+    "station_name": "Johnstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43082437,
+    "lat": 48.25129675,
+    "station_city": "Vienna",
+    "station_name": "Josef-Baumann-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43027647,
+    "lat": 48.25089005,
+    "station_city": "Vienna",
+    "station_name": "Josef-Baumann-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.42962968,
+    "lat": 48.25140445,
+    "station_city": "Vienna",
+    "station_name": "Josef-Baumann-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39530506,
+    "lat": 48.19173986,
+    "station_city": "Vienna",
+    "station_name": "Oberzellergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39525116,
+    "lat": 48.19169796,
+    "station_city": "Vienna",
+    "station_name": "Oberzellergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3165862,
+    "lat": 48.23336701,
+    "station_city": "Vienna",
+    "station_name": "Eckpergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3639452,
+    "lat": 48.25218809,
+    "station_city": "Vienna",
+    "station_name": "Halteraugasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3638553,
+    "lat": 48.25166169,
+    "station_city": "Vienna",
+    "station_name": "Halteraugasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41902052,
+    "lat": 48.17157264,
+    "station_city": "Vienna",
+    "station_name": "Braunhubergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41840962,
+    "lat": 48.17203994,
+    "station_city": "Vienna",
+    "station_name": "Braunhubergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30648011,
+    "lat": 48.19890168,
+    "station_city": "Vienna",
+    "station_name": "Breitensee",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30645321,
+    "lat": 48.19881788,
+    "station_city": "Vienna",
+    "station_name": "Breitensee",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30657,
+    "lat": 48.19850648,
+    "station_city": "Vienna",
+    "station_name": "Breitensee",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33925056,
+    "lat": 48.2111629,
+    "station_city": "Vienna",
+    "station_name": "Josefstädter Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33880137,
+    "lat": 48.2113126,
+    "station_city": "Vienna",
+    "station_name": "Josefstädter Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33901696,
+    "lat": 48.2110432,
+    "station_city": "Vienna",
+    "station_name": "Josefstädter Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33952006,
+    "lat": 48.2116239,
+    "station_city": "Vienna",
+    "station_name": "Josefstädter Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38255815,
+    "lat": 48.21033677,
+    "station_city": "Vienna",
+    "station_name": "Julius-Raab-Platz (Stubenring)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38277365,
+    "lat": 48.21061817,
+    "station_city": "Vienna",
+    "station_name": "Julius-Raab-Platz (Stubenring)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38333065,
+    "lat": 48.21118087,
+    "station_city": "Vienna",
+    "station_name": "Julius-Raab-Platz (Uraniastr.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38333965,
+    "lat": 48.21126467,
+    "station_city": "Vienna",
+    "station_name": "Julius-Raab-Platz (Uraniastr.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3651759,
+    "lat": 48.25446698,
+    "station_city": "Vienna",
+    "station_name": "Grinzinger Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3653196,
+    "lat": 48.25447288,
+    "station_city": "Vienna",
+    "station_name": "Grinzinger Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40884281,
+    "lat": 48.27679574,
+    "station_city": "Vienna",
+    "station_name": "Großjedlersdorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40876191,
+    "lat": 48.27684954,
+    "station_city": "Vienna",
+    "station_name": "Großjedlersdorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28316901,
+    "lat": 48.19529701,
+    "station_city": "Vienna",
+    "station_name": "Gruschaplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28312401,
+    "lat": 48.19521921,
+    "station_city": "Vienna",
+    "station_name": "Gruschaplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33796594,
+    "lat": 48.1902069,
+    "station_city": "Vienna",
+    "station_name": "Gumpendorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36069327,
+    "lat": 48.22109314,
+    "station_city": "Vienna",
+    "station_name": "Bauernfeldplatz (Porzellangasse)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36088187,
+    "lat": 48.22067414,
+    "station_city": "Vienna",
+    "station_name": "Bauernfeldplatz (Porzellangasse)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27739284,
+    "lat": 48.19663231,
+    "station_city": "Vienna",
+    "station_name": "Linzer Straße/Hochsatzengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27659335,
+    "lat": 48.1969916,
+    "station_city": "Vienna",
+    "station_name": "Linzer Straße/Hochsatzengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40453972,
+    "lat": 48.19307534,
+    "station_city": "Vienna",
+    "station_name": "Baumgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40490802,
+    "lat": 48.19348854,
+    "station_city": "Vienna",
+    "station_name": "Baumgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36269651,
+    "lat": 48.25951475,
+    "station_city": "Vienna",
+    "station_name": "Nußdorf, Beethovengang",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36276841,
+    "lat": 48.25976595,
+    "station_city": "Vienna",
+    "station_name": "Nußdorf, Beethovengang",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38646576,
+    "lat": 48.23071618,
+    "station_city": "Vienna",
+    "station_name": "Innstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38708565,
+    "lat": 48.23030928,
+    "station_city": "Vienna",
+    "station_name": "Innstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28367199,
+    "lat": 48.1769223,
+    "station_city": "Vienna",
+    "station_name": "Jagdschloßgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28370789,
+    "lat": 48.17729369,
+    "station_city": "Vienna",
+    "station_name": "Jagdschloßgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33780424,
+    "lat": 48.1907878,
+    "station_city": "Vienna",
+    "station_name": "Gumpendorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37229035,
+    "lat": 48.17310626,
+    "station_city": "Vienna",
+    "station_name": "Arthaberplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37194005,
+    "lat": 48.17183627,
+    "station_city": "Vienna",
+    "station_name": "Arthaberplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39189159,
+    "lat": 48.26904099,
+    "station_city": "Vienna",
+    "station_name": "Hopfengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39203538,
+    "lat": 48.26853869,
+    "station_city": "Vienna",
+    "station_name": "Hopfengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40785459,
+    "lat": 48.25501715,
+    "station_city": "Vienna",
+    "station_name": "Hoßplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40784559,
+    "lat": 48.25496935,
+    "station_city": "Vienna",
+    "station_name": "Hoßplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39212516,
+    "lat": 48.25058498,
+    "station_city": "Vienna",
+    "station_name": "Hubertusdamm",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38664554,
+    "lat": 48.29145899,
+    "station_city": "Vienna",
+    "station_name": "Strebersdorf, Edmund-Hawranek-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34989547,
+    "lat": 48.18042644,
+    "station_city": "Vienna",
+    "station_name": "Eichenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34985057,
+    "lat": 48.18037254,
+    "station_city": "Vienna",
+    "station_name": "Eichenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41071117,
+    "lat": 48.179486,
+    "station_city": "Vienna",
+    "station_name": "Zippererstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39146927,
+    "lat": 48.18784128,
+    "station_city": "Vienna",
+    "station_name": "Heinrich-Drimmel-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39149627,
+    "lat": 48.18793708,
+    "station_city": "Vienna",
+    "station_name": "Heinrich-Drimmel-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35342592,
+    "lat": 48.23301399,
+    "station_city": "Vienna",
+    "station_name": "Glatzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35284203,
+    "lat": 48.23391748,
+    "station_city": "Vienna",
+    "station_name": "Glatzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29216105,
+    "lat": 48.18295406,
+    "station_city": "Vienna",
+    "station_name": "Gloriettegasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29111006,
+    "lat": 48.18300196,
+    "station_city": "Vienna",
+    "station_name": "Gloriettegasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29590702,
+    "lat": 48.17050032,
+    "station_city": "Vienna",
+    "station_name": "Atzgersdorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29689511,
+    "lat": 48.17054832,
+    "station_city": "Vienna",
+    "station_name": "Atzgersdorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3569832,
+    "lat": 48.2298485,
+    "station_city": "Vienna",
+    "station_name": "Augasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3573156,
+    "lat": 48.2299862,
+    "station_city": "Vienna",
+    "station_name": "Augasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3574324,
+    "lat": 48.2299562,
+    "station_city": "Vienna",
+    "station_name": "Augasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3363131,
+    "lat": 48.22841232,
+    "station_city": "Vienna",
+    "station_name": "Aumannplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3368251,
+    "lat": 48.22798152,
+    "station_city": "Vienna",
+    "station_name": "Aumannplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39203536,
+    "lat": 48.25062688,
+    "station_city": "Vienna",
+    "station_name": "Hubertusdamm",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32527281,
+    "lat": 48.19783587,
+    "station_city": "Vienna",
+    "station_name": "Huglgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32518301,
+    "lat": 48.19781197,
+    "station_city": "Vienna",
+    "station_name": "Huglgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28205501,
+    "lat": 48.18568526,
+    "station_city": "Vienna",
+    "station_name": "Unter St. Veit, Hummelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33195631,
+    "lat": 48.21816637,
+    "station_city": "Vienna",
+    "station_name": "Elterleinplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33094121,
+    "lat": 48.21872297,
+    "station_city": "Vienna",
+    "station_name": "Elterleinplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3328725,
+    "lat": 48.21808257,
+    "station_city": "Vienna",
+    "station_name": "Elterleinplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33091421,
+    "lat": 48.21839377,
+    "station_city": "Vienna",
+    "station_name": "Elterleinplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4083576,
+    "lat": 48.19500953,
+    "station_city": "Vienna",
+    "station_name": "Erdbergstr./Schlachthausgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37950387,
+    "lat": 48.21388056,
+    "station_city": "Vienna",
+    "station_name": "Gredlerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41662203,
+    "lat": 48.17395693,
+    "station_city": "Vienna",
+    "station_name": "Enkplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41598424,
+    "lat": 48.17444223,
+    "station_city": "Vienna",
+    "station_name": "Enkplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41586744,
+    "lat": 48.17390303,
+    "station_city": "Vienna",
+    "station_name": "Enkplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34184671,
+    "lat": 48.25510099,
+    "station_city": "Vienna",
+    "station_name": "Grinzing",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34189161,
+    "lat": 48.25529239,
+    "station_city": "Vienna",
+    "station_name": "Grinzing",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38810082,
+    "lat": 48.27714245,
+    "station_city": "Vienna",
+    "station_name": "Autokaderstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38820861,
+    "lat": 48.27716045,
+    "station_city": "Vienna",
+    "station_name": "Autokaderstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33786712,
+    "lat": 48.17847365,
+    "station_city": "Vienna",
+    "station_name": "Aßmayergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33802882,
+    "lat": 48.17887505,
+    "station_city": "Vienna",
+    "station_name": "Aßmayergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26231023,
+    "lat": 48.20160209,
+    "station_city": "Vienna",
+    "station_name": "Rettichgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26230122,
+    "lat": 48.20153619,
+    "station_city": "Vienna",
+    "station_name": "Rettichgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35562683,
+    "lat": 48.24426203,
+    "station_city": "Vienna",
+    "station_name": "Barawitzkagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35570763,
+    "lat": 48.24487823,
+    "station_city": "Vienna",
+    "station_name": "Barawitzkagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37645862,
+    "lat": 48.23897334,
+    "station_city": "Vienna",
+    "station_name": "Höchstädtplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37733001,
+    "lat": 48.23900924,
+    "station_city": "Vienna",
+    "station_name": "Höchstädtplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37705152,
+    "lat": 48.23966144,
+    "station_city": "Vienna",
+    "station_name": "Höchstädtplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32242518,
+    "lat": 48.23747168,
+    "station_city": "Vienna",
+    "station_name": "Erndtgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32330558,
+    "lat": 48.23713058,
+    "station_city": "Vienna",
+    "station_name": "Erndtgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45303963,
+    "lat": 48.22966894,
+    "station_city": "Vienna",
+    "station_name": "Erzherzog-Karl-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45296773,
+    "lat": 48.22960314,
+    "station_city": "Vienna",
+    "station_name": "Erzherzog-Karl-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37998893,
+    "lat": 48.18778138,
+    "station_city": "Vienna",
+    "station_name": "Quartier Belvedere",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38138132,
+    "lat": 48.18763758,
+    "station_city": "Vienna",
+    "station_name": "Quartier Belvedere",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37474275,
+    "lat": 48.1860745,
+    "station_city": "Vienna",
+    "station_name": "Hauptbahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37459005,
+    "lat": 48.1861224,
+    "station_city": "Vienna",
+    "station_name": "Hauptbahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37471585,
+    "lat": 48.18611639,
+    "station_city": "Vienna",
+    "station_name": "Hauptbahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37454516,
+    "lat": 48.18617629,
+    "station_city": "Vienna",
+    "station_name": "Hauptbahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3606843,
+    "lat": 48.24122894,
+    "station_city": "Vienna",
+    "station_name": "Rampengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3604327,
+    "lat": 48.24067854,
+    "station_city": "Vienna",
+    "station_name": "Rampengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39456848,
+    "lat": 48.20587679,
+    "station_city": "Vienna",
+    "station_name": "Löwengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39543988,
+    "lat": 48.20575109,
+    "station_city": "Vienna",
+    "station_name": "Löwengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35556388,
+    "lat": 48.2093012,
+    "station_city": "Vienna",
+    "station_name": "Rathaus U (Stadiongasse)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35478228,
+    "lat": 48.2091695,
+    "station_city": "Vienna",
+    "station_name": "Rathaus U (Josefstädter Str.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39005003,
+    "lat": 48.22042872,
+    "station_city": "Vienna",
+    "station_name": "Mühlfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28587288,
+    "lat": 48.18162437,
+    "station_city": "Vienna",
+    "station_name": "Stadlergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28580098,
+    "lat": 48.18165437,
+    "station_city": "Vienna",
+    "station_name": "Stadlergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33558536,
+    "lat": 48.19442868,
+    "station_city": "Vienna",
+    "station_name": "Staglgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33485776,
+    "lat": 48.19389578,
+    "station_city": "Vienna",
+    "station_name": "Staglgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.42030529,
+    "lat": 48.29785973,
+    "station_city": "Vienna",
+    "station_name": "Stammersdorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32601846,
+    "lat": 48.23164971,
+    "station_city": "Vienna",
+    "station_name": "Schöffelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35603997,
+    "lat": 48.20699041,
+    "station_city": "Vienna",
+    "station_name": "Auerspergstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35522248,
+    "lat": 48.20675691,
+    "station_city": "Vienna",
+    "station_name": "Auerspergstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31570575,
+    "lat": 48.19027271,
+    "station_city": "Vienna",
+    "station_name": "Penzinger Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31485235,
+    "lat": 48.18990141,
+    "station_city": "Vienna",
+    "station_name": "Penzinger Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35517764,
+    "lat": 48.24871271,
+    "station_city": "Vienna",
+    "station_name": "Perntergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35497104,
+    "lat": 48.24938271,
+    "station_city": "Vienna",
+    "station_name": "Perntergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2874449,
+    "lat": 48.1968838,
+    "station_city": "Vienna",
+    "station_name": "Seckendorfstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2867802,
+    "lat": 48.1968359,
+    "station_city": "Vienna",
+    "station_name": "Seckendorfstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38733711,
+    "lat": 48.20142241,
+    "station_city": "Vienna",
+    "station_name": "Sechskrügelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3696583,
+    "lat": 48.20040453,
+    "station_city": "Vienna",
+    "station_name": "Karlsplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38039317,
+    "lat": 48.21597565,
+    "station_city": "Vienna",
+    "station_name": "Karmeliterplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38033927,
+    "lat": 48.21549075,
+    "station_city": "Vienna",
+    "station_name": "Karmeliterplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44887148,
+    "lat": 48.24864685,
+    "station_city": "Vienna",
+    "station_name": "Kraygasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35207839,
+    "lat": 48.20223673,
+    "station_city": "Vienna",
+    "station_name": "Siebensterngasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35141369,
+    "lat": 48.20220673,
+    "station_city": "Vienna",
+    "station_name": "Siebensterngasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43597174,
+    "lat": 48.25071055,
+    "station_city": "Vienna",
+    "station_name": "Saikogasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43594474,
+    "lat": 48.25058495,
+    "station_city": "Vienna",
+    "station_name": "Saikogasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3737457,
+    "lat": 48.21414396,
+    "station_city": "Vienna",
+    "station_name": "Salztorbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37420379,
+    "lat": 48.21383866,
+    "station_city": "Vienna",
+    "station_name": "Salztorbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40136873,
+    "lat": 48.19068596,
+    "station_city": "Vienna",
+    "station_name": "Viehmarktgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40129683,
+    "lat": 48.19072786,
+    "station_city": "Vienna",
+    "station_name": "Viehmarktgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38059072,
+    "lat": 48.1845053,
+    "station_city": "Vienna",
+    "station_name": "Hauptbahnhof Ost",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38048292,
+    "lat": 48.1845173,
+    "station_city": "Vienna",
+    "station_name": "Hauptbahnhof Ost",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31195988,
+    "lat": 48.19685388,
+    "station_city": "Vienna",
+    "station_name": "Reinlgasse/Märzstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31203167,
+    "lat": 48.19638679,
+    "station_city": "Vienna",
+    "station_name": "Reinlgasse/Märzstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34459546,
+    "lat": 48.22619812,
+    "station_city": "Vienna",
+    "station_name": "Kutschkergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34497275,
+    "lat": 48.22611432,
+    "station_city": "Vienna",
+    "station_name": "Kutschkergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37528181,
+    "lat": 48.23067428,
+    "station_city": "Vienna",
+    "station_name": "Rauscherstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37534471,
+    "lat": 48.23072818,
+    "station_city": "Vienna",
+    "station_name": "Rauscherstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36515777,
+    "lat": 48.1660608,
+    "station_city": "Vienna",
+    "station_name": "Raxstr./Rudolfshügelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36346898,
+    "lat": 48.1653598,
+    "station_city": "Vienna",
+    "station_name": "Raxstr./Rudolfshügelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36337008,
+    "lat": 48.1653658,
+    "station_city": "Vienna",
+    "station_name": "Raxstr./Rudolfshügelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36443908,
+    "lat": 48.16674379,
+    "station_city": "Vienna",
+    "station_name": "Raxstr./Rudolfshügelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38838815,
+    "lat": 48.22819689,
+    "station_city": "Vienna",
+    "station_name": "Rebhanngasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38812765,
+    "lat": 48.22776599,
+    "station_city": "Vienna",
+    "station_name": "Rebhanngasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31441229,
+    "lat": 48.2133239,
+    "station_city": "Vienna",
+    "station_name": "Redtenbachergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31500508,
+    "lat": 48.213318,
+    "station_city": "Vienna",
+    "station_name": "Redtenbachergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31141187,
+    "lat": 48.1935305,
+    "station_city": "Vienna",
+    "station_name": "Linzer Straße/Reinlgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31187897,
+    "lat": 48.193243,
+    "station_city": "Vienna",
+    "station_name": "Linzer Straße/Reinlgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39028359,
+    "lat": 48.19368615,
+    "station_city": "Vienna",
+    "station_name": "Kleistgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39020269,
+    "lat": 48.19363825,
+    "station_city": "Vienna",
+    "station_name": "Kleistgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3642235,
+    "lat": 48.18272642,
+    "station_city": "Vienna",
+    "station_name": "Kliebergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3646996,
+    "lat": 48.18288812,
+    "station_city": "Vienna",
+    "station_name": "Kliebergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3641157,
+    "lat": 48.18308582,
+    "station_city": "Vienna",
+    "station_name": "Kliebergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36592138,
+    "lat": 48.17618545,
+    "station_city": "Vienna",
+    "station_name": "Neilreichgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35463853,
+    "lat": 48.16841539,
+    "station_city": "Vienna",
+    "station_name": "Stefan-Fadinger-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3080342,
+    "lat": 48.20373355,
+    "station_city": "Vienna",
+    "station_name": "Kendlerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3080612,
+    "lat": 48.20423645,
+    "station_city": "Vienna",
+    "station_name": "Kendlerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31106147,
+    "lat": 48.1933029,
+    "station_city": "Vienna",
+    "station_name": "Linzer Straße/Reinlgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38718442,
+    "lat": 48.20246421,
+    "station_city": "Vienna",
+    "station_name": "Sechskrügelgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3555369,
+    "lat": 48.22069814,
+    "station_city": "Vienna",
+    "station_name": "Sensengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40575262,
+    "lat": 48.27128317,
+    "station_city": "Vienna",
+    "station_name": "Shuttleworthstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40593222,
+    "lat": 48.27176157,
+    "station_city": "Vienna",
+    "station_name": "Shuttleworthstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36707129,
+    "lat": 48.25813926,
+    "station_city": "Vienna",
+    "station_name": "Sickenberggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36699939,
+    "lat": 48.25785816,
+    "station_city": "Vienna",
+    "station_name": "Sickenberggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35105431,
+    "lat": 48.21455697,
+    "station_city": "Vienna",
+    "station_name": "Lange Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35137771,
+    "lat": 48.21497007,
+    "station_city": "Vienna",
+    "station_name": "Lange Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35094651,
+    "lat": 48.21520347,
+    "station_city": "Vienna",
+    "station_name": "Lange Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35041651,
+    "lat": 48.21498197,
+    "station_city": "Vienna",
+    "station_name": "Lange Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45514161,
+    "lat": 48.22428296,
+    "station_city": "Vienna",
+    "station_name": "Langobardenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45491702,
+    "lat": 48.22481566,
+    "station_city": "Vienna",
+    "station_name": "Langobardenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33110285,
+    "lat": 48.17444818,
+    "station_city": "Vienna",
+    "station_name": "Meidling",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33074345,
+    "lat": 48.17445418,
+    "station_city": "Vienna",
+    "station_name": "Meidling",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38157891,
+    "lat": 48.18205561,
+    "station_city": "Vienna",
+    "station_name": "Alfred-Adler-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38150701,
+    "lat": 48.18204361,
+    "station_city": "Vienna",
+    "station_name": "Alfred-Adler-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31476256,
+    "lat": 48.192728,
+    "station_city": "Vienna",
+    "station_name": "Linzer Straße/Johnstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31478056,
+    "lat": 48.1927939,
+    "station_city": "Vienna",
+    "station_name": "Linzer Straße/Johnstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31857147,
+    "lat": 48.2134197,
+    "station_city": "Vienna",
+    "station_name": "Familienplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31943376,
+    "lat": 48.2135574,
+    "station_city": "Vienna",
+    "station_name": "Familienplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34985961,
+    "lat": 48.21323408,
+    "station_city": "Vienna",
+    "station_name": "Laudongasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34802702,
+    "lat": 48.21325208,
+    "station_city": "Vienna",
+    "station_name": "Laudongasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3079085,
+    "lat": 48.20194936,
+    "station_city": "Vienna",
+    "station_name": "Laurentiusplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3085822,
+    "lat": 48.20175176,
+    "station_city": "Vienna",
+    "station_name": "Laurentiusplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36291201,
+    "lat": 48.1858768,
+    "station_city": "Vienna",
+    "station_name": "Laurenzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46984693,
+    "lat": 48.21883068,
+    "station_city": "Vienna",
+    "station_name": "Kapellenweg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30288692,
+    "lat": 48.19823708,
+    "station_city": "Vienna",
+    "station_name": "Leyserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30187183,
+    "lat": 48.19798558,
+    "station_city": "Vienna",
+    "station_name": "Leyserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3303393,
+    "lat": 48.20985791,
+    "station_city": "Vienna",
+    "station_name": "Thaliastraße/Haberlgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32970151,
+    "lat": 48.20986991,
+    "station_city": "Vienna",
+    "station_name": "Thaliastraße/Haberlgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30690234,
+    "lat": 48.22246966,
+    "station_city": "Vienna",
+    "station_name": "Liebknechtgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30660594,
+    "lat": 48.22284676,
+    "station_city": "Vienna",
+    "station_name": "Liebknechtgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35649811,
+    "lat": 48.23257118,
+    "station_city": "Vienna",
+    "station_name": "Liechtenwerder Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36426855,
+    "lat": 48.21868705,
+    "station_city": "Vienna",
+    "station_name": "Schlickgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36438525,
+    "lat": 48.21874095,
+    "station_city": "Vienna",
+    "station_name": "Schlickgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38567521,
+    "lat": 48.19133266,
+    "station_city": "Vienna",
+    "station_name": "Kölblgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38573811,
+    "lat": 48.19088357,
+    "station_city": "Vienna",
+    "station_name": "Kölblgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35684848,
+    "lat": 48.21454507,
+    "station_city": "Vienna",
+    "station_name": "Landesgerichtsstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35707298,
+    "lat": 48.21443727,
+    "station_city": "Vienna",
+    "station_name": "Landesgerichtsstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38541473,
+    "lat": 48.2055595,
+    "station_city": "Vienna",
+    "station_name": "Mitte-Landstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38564833,
+    "lat": 48.20598459,
+    "station_city": "Vienna",
+    "station_name": "Mitte-Landstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35665981,
+    "lat": 48.23251138,
+    "station_city": "Vienna",
+    "station_name": "Liechtenwerder Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.47071833,
+    "lat": 48.21877678,
+    "station_city": "Vienna",
+    "station_name": "Kapellenweg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4048991,
+    "lat": 48.18451728,
+    "station_city": "Vienna",
+    "station_name": "Litfaßstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4060938,
+    "lat": 48.18333139,
+    "station_city": "Vienna",
+    "station_name": "Litfaßstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26914622,
+    "lat": 48.15109193,
+    "station_city": "Vienna",
+    "station_name": "Maurer Hauptplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26862522,
+    "lat": 48.14988123,
+    "station_city": "Vienna",
+    "station_name": "Maurer Hauptplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26822102,
+    "lat": 48.14742985,
+    "station_city": "Vienna",
+    "station_name": "Maurer Lange Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26811322,
+    "lat": 48.14742985,
+    "station_city": "Vienna",
+    "station_name": "Maurer Lange Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3669275,
+    "lat": 48.19269807,
+    "station_city": "Vienna",
+    "station_name": "Mayerhofgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3669993,
+    "lat": 48.19269807,
+    "station_city": "Vienna",
+    "station_name": "Mayerhofgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32546144,
+    "lat": 48.21623898,
+    "station_city": "Vienna",
+    "station_name": "Mayssengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32588363,
+    "lat": 48.21599958,
+    "station_city": "Vienna",
+    "station_name": "Mayssengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32492244,
+    "lat": 48.21598168,
+    "station_city": "Vienna",
+    "station_name": "Mayssengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34915892,
+    "lat": 48.21513167,
+    "station_city": "Vienna",
+    "station_name": "Skodagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37894684,
+    "lat": 48.19209326,
+    "station_city": "Vienna",
+    "station_name": "Schloss Belvedere",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37932414,
+    "lat": 48.19171597,
+    "station_city": "Vienna",
+    "station_name": "Schloss Belvedere",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30863605,
+    "lat": 48.16727113,
+    "station_city": "Vienna",
+    "station_name": "Schloss Hetzendorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36531049,
+    "lat": 48.17614345,
+    "station_city": "Vienna",
+    "station_name": "Neilreichgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4819922,
+    "lat": 48.23999637,
+    "station_city": "Vienna",
+    "station_name": "Prinzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4820371,
+    "lat": 48.23991857,
+    "station_city": "Vienna",
+    "station_name": "Prinzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39345467,
+    "lat": 48.2656744,
+    "station_city": "Vienna",
+    "station_name": "Koloniestraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39305048,
+    "lat": 48.2662843,
+    "station_city": "Vienna",
+    "station_name": "Koloniestraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45755811,
+    "lat": 48.22767025,
+    "station_city": "Vienna",
+    "station_name": "Konstanziagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33151612,
+    "lat": 48.22597073,
+    "station_city": "Vienna",
+    "station_name": "Sommarugagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33202812,
+    "lat": 48.22610243,
+    "station_city": "Vienna",
+    "station_name": "Sommarugagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33137232,
+    "lat": 48.22619213,
+    "station_city": "Vienna",
+    "station_name": "Sommarugagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3189307,
+    "lat": 48.16752872,
+    "station_city": "Vienna",
+    "station_name": "Sonnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3193798,
+    "lat": 48.16812782,
+    "station_city": "Vienna",
+    "station_name": "Sonnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46545426,
+    "lat": 48.21943518,
+    "station_city": "Vienna",
+    "station_name": "Donauspital",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46555306,
+    "lat": 48.21976438,
+    "station_city": "Vienna",
+    "station_name": "Donauspital",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35001233,
+    "lat": 48.22896891,
+    "station_city": "Vienna",
+    "station_name": "Sternwartestraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35487217,
+    "lat": 48.20250013,
+    "station_city": "Vienna",
+    "station_name": "Stiftgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35421638,
+    "lat": 48.20233843,
+    "station_city": "Vienna",
+    "station_name": "Stiftgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37460808,
+    "lat": 48.20181162,
+    "station_city": "Vienna",
+    "station_name": "Schwarzenbergplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37466197,
+    "lat": 48.20062013,
+    "station_city": "Vienna",
+    "station_name": "Schwarzenbergplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37467988,
+    "lat": 48.20167982,
+    "station_city": "Vienna",
+    "station_name": "Schwarzenbergplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37479668,
+    "lat": 48.20162002,
+    "station_city": "Vienna",
+    "station_name": "Schwarzenbergplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37473377,
+    "lat": 48.20108712,
+    "station_city": "Vienna",
+    "station_name": "Schwarzenbergplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35944457,
+    "lat": 48.21708896,
+    "station_city": "Vienna",
+    "station_name": "Schwarzspanierstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35904037,
+    "lat": 48.21733436,
+    "station_city": "Vienna",
+    "station_name": "Schwarzspanierstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37772517,
+    "lat": 48.21179147,
+    "station_city": "Vienna",
+    "station_name": "Schwedenplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37785097,
+    "lat": 48.21156997,
+    "station_city": "Vienna",
+    "station_name": "Schwedenplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37778807,
+    "lat": 48.21164177,
+    "station_city": "Vienna",
+    "station_name": "Schwedenplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45745031,
+    "lat": 48.22771815,
+    "station_city": "Vienna",
+    "station_name": "Konstanziagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41295686,
+    "lat": 48.17749131,
+    "station_city": "Vienna",
+    "station_name": "Hauffgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3090763,
+    "lat": 48.20470345,
+    "station_city": "Vienna",
+    "station_name": "Kendlerstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.3716257,
+    "lat": 48.20812779,
+    "station_city": "Vienna",
+    "station_name": "Stephansplatz",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.37640464,
+    "lat": 48.1851821,
+    "station_city": "Vienna",
+    "station_name": "Hauptbahnhof",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.37026919,
+    "lat": 48.19387176,
+    "station_city": "Vienna",
+    "station_name": "Taubstummengasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.33842406,
+    "lat": 48.20855891,
+    "station_city": "Vienna",
+    "station_name": "Thaliastraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.32789585,
+    "lat": 48.16507223,
+    "station_city": "Vienna",
+    "station_name": "Tscherttegasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.33118366,
+    "lat": 48.18105535,
+    "station_city": "Vienna",
+    "station_name": "Niederhofstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.50846536,
+    "lat": 48.22638352,
+    "station_city": "Vienna",
+    "station_name": "Seestadt",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.39954507,
+    "lat": 48.14238889,
+    "station_city": "Vienna",
+    "station_name": "Oberlaa",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.35287792,
+    "lat": 48.23147619,
+    "station_city": "Vienna",
+    "station_name": "Nußdorfer Straße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.27571295,
+    "lat": 48.19228493,
+    "station_city": "Vienna",
+    "station_name": "Ober St. Veit",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.3116634,
+    "lat": 48.21201901,
+    "station_city": "Vienna",
+    "station_name": "Ottakring",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.31338808,
+    "lat": 48.13680197,
+    "station_city": "Vienna",
+    "station_name": "Perfektastraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.33198315,
+    "lat": 48.17433438,
+    "station_city": "Vienna",
+    "station_name": "Meidling",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.3114298,
+    "lat": 48.21276131,
+    "station_city": "Vienna",
+    "station_name": "Ottakring",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3116993,
+    "lat": 48.21258171,
+    "station_city": "Vienna",
+    "station_name": "Ottakring",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34936543,
+    "lat": 48.15396256,
+    "station_city": "Vienna",
+    "station_name": "Otto-Probst-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35477331,
+    "lat": 48.15632365,
+    "station_city": "Vienna",
+    "station_name": "Otto-Probst-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35548291,
+    "lat": 48.15620385,
+    "station_city": "Vienna",
+    "station_name": "Otto-Probst-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33666338,
+    "lat": 48.21769347,
+    "station_city": "Vienna",
+    "station_name": "Palffygasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32632384,
+    "lat": 48.21923777,
+    "station_city": "Vienna",
+    "station_name": "Rosensteingasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32696163,
+    "lat": 48.21912397,
+    "station_city": "Vienna",
+    "station_name": "Rosensteingasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34108304,
+    "lat": 48.19854836,
+    "station_city": "Vienna",
+    "station_name": "Stollgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34102914,
+    "lat": 48.19888965,
+    "station_city": "Vienna",
+    "station_name": "Stollgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37692566,
+    "lat": 48.19471015,
+    "station_city": "Vienna",
+    "station_name": "Plößlgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37733885,
+    "lat": 48.19435085,
+    "station_city": "Vienna",
+    "station_name": "Plößlgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35374032,
+    "lat": 48.23157789,
+    "station_city": "Vienna",
+    "station_name": "Nußdorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35424342,
+    "lat": 48.23152399,
+    "station_city": "Vienna",
+    "station_name": "Nußdorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35409062,
+    "lat": 48.23241559,
+    "station_city": "Vienna",
+    "station_name": "Nußdorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35367742,
+    "lat": 48.23238569,
+    "station_city": "Vienna",
+    "station_name": "Nußdorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37781497,
+    "lat": 48.21170767,
+    "station_city": "Vienna",
+    "station_name": "Schwedenplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35446786,
+    "lat": 48.19262018,
+    "station_city": "Vienna",
+    "station_name": "Pilgramgasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.31220238,
+    "lat": 48.19911727,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorfer Straße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.39232271,
+    "lat": 48.21850753,
+    "station_city": "Vienna",
+    "station_name": "Praterstern",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.3583576,
+    "lat": 48.23560487,
+    "station_city": "Vienna",
+    "station_name": "Spittelau",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.37818332,
+    "lat": 48.17414865,
+    "station_city": "Vienna",
+    "station_name": "Reumannplatz",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.3913166,
+    "lat": 48.20251811,
+    "station_city": "Vienna",
+    "station_name": "Rochusgasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.36749344,
+    "lat": 48.22213453,
+    "station_city": "Vienna",
+    "station_name": "Roßauer Lände",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.37112261,
+    "lat": 48.21691535,
+    "station_city": "Vienna",
+    "station_name": "Schottenring",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.36225625,
+    "lat": 48.21393447,
+    "station_city": "Vienna",
+    "station_name": "Schottentor",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.37788687,
+    "lat": 48.21174357,
+    "station_city": "Vienna",
+    "station_name": "Schwedenplatz",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.4074413,
+    "lat": 48.19402744,
+    "station_city": "Vienna",
+    "station_name": "Schlachthausgasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.3283899,
+    "lat": 48.19788377,
+    "station_city": "Vienna",
+    "station_name": "Schweglerstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.31946972,
+    "lat": 48.18589483,
+    "station_city": "Vienna",
+    "station_name": "Schönbrunn",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.30969599,
+    "lat": 48.1298834,
+    "station_city": "Vienna",
+    "station_name": "Siebenhirten",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.41999961,
+    "lat": 48.17015274,
+    "station_city": "Vienna",
+    "station_name": "Simmering",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.46598425,
+    "lat": 48.21955488,
+    "station_city": "Vienna",
+    "station_name": "Donauspital",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.44831444,
+    "lat": 48.21916579,
+    "station_city": "Vienna",
+    "station_name": "Stadlau",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.37909956,
+    "lat": 48.20250611,
+    "station_city": "Vienna",
+    "station_name": "Stadtpark",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.45162928,
+    "lat": 48.26356348,
+    "station_city": "Vienna",
+    "station_name": "Aderklaaer Straße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.44806301,
+    "lat": 48.27062545,
+    "station_city": "Vienna",
+    "station_name": "Großfeldsiedlung",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.44943739,
+    "lat": 48.25734971,
+    "station_city": "Vienna",
+    "station_name": "Rennbahnweg",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.38082437,
+    "lat": 48.21896833,
+    "station_city": "Vienna",
+    "station_name": "Taborstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.40568965,
+    "lat": 48.21778322,
+    "station_city": "Vienna",
+    "station_name": "Messe-Prater",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.4141158,
+    "lat": 48.21448514,
+    "station_city": "Vienna",
+    "station_name": "Krieau",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.41975717,
+    "lat": 48.21107315,
+    "station_city": "Vienna",
+    "station_name": "Stadion",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.28674419,
+    "lat": 48.19099743,
+    "station_city": "Vienna",
+    "station_name": "Unter St. Veit",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.30756713,
+    "lat": 48.21751999,
+    "station_city": "Vienna",
+    "station_name": "Sandleitengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30799832,
+    "lat": 48.21782519,
+    "station_city": "Vienna",
+    "station_name": "Sandleitengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30745933,
+    "lat": 48.21816038,
+    "station_city": "Vienna",
+    "station_name": "Sandleitengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35545612,
+    "lat": 48.24085795,
+    "station_city": "Vienna",
+    "station_name": "Pokornygasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35546513,
+    "lat": 48.24139644,
+    "station_city": "Vienna",
+    "station_name": "Pokornygasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44994045,
+    "lat": 48.23105723,
+    "station_city": "Vienna",
+    "station_name": "Polgarstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44988655,
+    "lat": 48.23100333,
+    "station_city": "Vienna",
+    "station_name": "Polgarstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31219338,
+    "lat": 48.19962617,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorfer Straße (Breitenseer Str.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30957925,
+    "lat": 48.16725313,
+    "station_city": "Vienna",
+    "station_name": "Schloss Hetzendorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31346896,
+    "lat": 48.18827252,
+    "station_city": "Vienna",
+    "station_name": "Schloss Schönbrunn",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31273236,
+    "lat": 48.18805692,
+    "station_city": "Vienna",
+    "station_name": "Schloss Schönbrunn",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31104364,
+    "lat": 48.24104347,
+    "station_city": "Vienna",
+    "station_name": "Pötzleinsdorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35796236,
+    "lat": 48.20513442,
+    "station_city": "Vienna",
+    "station_name": "Volkstheater",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.40188077,
+    "lat": 48.2240855,
+    "station_city": "Vienna",
+    "station_name": "Vorgartenstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.33764255,
+    "lat": 48.19665027,
+    "station_city": "Vienna",
+    "station_name": "Westbahnhof",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.38647464,
+    "lat": 48.14573958,
+    "station_city": "Vienna",
+    "station_name": "Neulaa",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.31697239,
+    "lat": 48.1508821,
+    "station_city": "Vienna",
+    "station_name": "Alterlaa",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.34932063,
+    "lat": 48.22526452,
+    "station_city": "Vienna",
+    "station_name": "Währinger Straße-Volksoper",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.34535901,
+    "lat": 48.19696166,
+    "station_city": "Vienna",
+    "station_name": "Zieglergasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.3803033,
+    "lat": 48.16903847,
+    "station_city": "Vienna",
+    "station_name": "Troststraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.36946075,
+    "lat": 48.23522786,
+    "station_city": "Vienna",
+    "station_name": "Jägerstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.39523334,
+    "lat": 48.24669079,
+    "station_city": "Vienna",
+    "station_name": "Neue Donau",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.38521718,
+    "lat": 48.24179122,
+    "station_city": "Vienna",
+    "station_name": "Handelskai",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.41775384,
+    "lat": 48.18552347,
+    "station_city": "Vienna",
+    "station_name": "Gasometer",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.33626813,
+    "lat": 48.17554447,
+    "station_city": "Vienna",
+    "station_name": "Dörfelstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33520813,
+    "lat": 48.17541867,
+    "station_city": "Vienna",
+    "station_name": "Dörfelstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34315816,
+    "lat": 48.22202084,
+    "station_city": "Vienna",
+    "station_name": "Michelbeuern-AKH (Kreuzgasse)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34318516,
+    "lat": 48.22207464,
+    "station_city": "Vienna",
+    "station_name": "Michelbeuern-AKH (Kreuzgasse)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34373314,
+    "lat": 48.20754111,
+    "station_city": "Vienna",
+    "station_name": "Schottenfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34309534,
+    "lat": 48.20763091,
+    "station_city": "Vienna",
+    "station_name": "Schottenfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37123041,
+    "lat": 48.21679565,
+    "station_city": "Vienna",
+    "station_name": "Schottenring",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37119451,
+    "lat": 48.21658615,
+    "station_city": "Vienna",
+    "station_name": "Schottenring",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37089802,
+    "lat": 48.21702315,
+    "station_city": "Vienna",
+    "station_name": "Schottenring",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37129331,
+    "lat": 48.21683155,
+    "station_city": "Vienna",
+    "station_name": "Schottenring",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38731911,
+    "lat": 48.19930882,
+    "station_city": "Vienna",
+    "station_name": "Ungargasse/Neulinggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38741791,
+    "lat": 48.19881783,
+    "station_city": "Vienna",
+    "station_name": "Ungargasse/Neulinggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31097174,
+    "lat": 48.24075627,
+    "station_city": "Vienna",
+    "station_name": "Pötzleinsdorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37352105,
+    "lat": 48.17605964,
+    "station_city": "Vienna",
+    "station_name": "Quellenplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37398814,
+    "lat": 48.17568225,
+    "station_city": "Vienna",
+    "station_name": "Quellenplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37309885,
+    "lat": 48.17561035,
+    "station_city": "Vienna",
+    "station_name": "Quellenplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37343125,
+    "lat": 48.17532875,
+    "station_city": "Vienna",
+    "station_name": "Quellenplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35846532,
+    "lat": 48.17725765,
+    "station_city": "Vienna",
+    "station_name": "Knöllgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35793532,
+    "lat": 48.17713185,
+    "station_city": "Vienna",
+    "station_name": "Knöllgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35815992,
+    "lat": 48.17763505,
+    "station_city": "Vienna",
+    "station_name": "Knöllgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35675861,
+    "lat": 48.23598777,
+    "station_city": "Vienna",
+    "station_name": "Spittelau S+U (Radelmayerg.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35688441,
+    "lat": 48.23597587,
+    "station_city": "Vienna",
+    "station_name": "Spittelau S+U (Radelmayerg.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32892887,
+    "lat": 48.18366084,
+    "station_city": "Vienna",
+    "station_name": "Meidling Hauptstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.34393075,
+    "lat": 48.22097945,
+    "station_city": "Vienna",
+    "station_name": "Michelbeuern-AKH",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.3038571,
+    "lat": 48.18778743,
+    "station_city": "Vienna",
+    "station_name": "Hietzing",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.50408159,
+    "lat": 48.23460548,
+    "station_city": "Vienna",
+    "station_name": "Aspern Nord",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.38464215,
+    "lat": 48.21480835,
+    "station_city": "Vienna",
+    "station_name": "Nestroyplatz",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.28510928,
+    "lat": 48.17392111,
+    "station_city": "Vienna",
+    "station_name": "Preyergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28505537,
+    "lat": 48.17381321,
+    "station_city": "Vienna",
+    "station_name": "Preyergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35366841,
+    "lat": 48.22205674,
+    "station_city": "Vienna",
+    "station_name": "Spitalgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35317441,
+    "lat": 48.22202084,
+    "station_city": "Vienna",
+    "station_name": "Spitalgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35334501,
+    "lat": 48.22256543,
+    "station_city": "Vienna",
+    "station_name": "Spitalgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35299471,
+    "lat": 48.22239784,
+    "station_city": "Vienna",
+    "station_name": "Spitalgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29157723,
+    "lat": 48.23328932,
+    "station_city": "Vienna",
+    "station_name": "Neuwaldegg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29136163,
+    "lat": 48.23365432,
+    "station_city": "Vienna",
+    "station_name": "Neuwaldegg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45406365,
+    "lat": 48.24763595,
+    "station_city": "Vienna",
+    "station_name": "Forstnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45399185,
+    "lat": 48.24754625,
+    "station_city": "Vienna",
+    "station_name": "Forstnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38879244,
+    "lat": 48.22372051,
+    "station_city": "Vienna",
+    "station_name": "Nordbahnstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3496709,
+    "lat": 48.20641561,
+    "station_city": "Vienna",
+    "station_name": "Strozzigasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4074772,
+    "lat": 48.19412924,
+    "station_city": "Vienna",
+    "station_name": "Schlachthausgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32896489,
+    "lat": 48.19853046,
+    "station_city": "Vienna",
+    "station_name": "Schweglerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32900979,
+    "lat": 48.19845856,
+    "station_city": "Vienna",
+    "station_name": "Schweglerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3185625,
+    "lat": 48.23874608,
+    "station_city": "Vienna",
+    "station_name": "Scheibenbergstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31768211,
+    "lat": 48.23893148,
+    "station_city": "Vienna",
+    "station_name": "Scheibenbergstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34162203,
+    "lat": 48.19666827,
+    "station_city": "Vienna",
+    "station_name": "Mariahilfer Straße/Kaiserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34013085,
+    "lat": 48.20402083,
+    "station_city": "Vienna",
+    "station_name": "Burggasse/Kaiserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33994225,
+    "lat": 48.20451783,
+    "station_city": "Vienna",
+    "station_name": "Burggasse/Kaiserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26106152,
+    "lat": 48.19738081,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorf",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.29544885,
+    "lat": 48.18948223,
+    "station_city": "Vienna",
+    "station_name": "Braunschweiggasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.31963144,
+    "lat": 48.19766817,
+    "station_city": "Vienna",
+    "station_name": "Johnstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.33730116,
+    "lat": 48.20229054,
+    "station_city": "Vienna",
+    "station_name": "Burggasse-Stadthalle",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.33915176,
+    "lat": 48.2113784,
+    "station_city": "Vienna",
+    "station_name": "Josefstädter Straße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.43356425,
+    "lat": 48.24346039,
+    "station_city": "Vienna",
+    "station_name": "Kagran",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.44329291,
+    "lat": 48.25029785,
+    "station_city": "Vienna",
+    "station_name": "Kagraner Platz",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.41549022,
+    "lat": 48.23233185,
+    "station_city": "Vienna",
+    "station_name": "Kaisermühlen-VIC",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.40052434,
+    "lat": 48.19732683,
+    "station_city": "Vienna",
+    "station_name": "Kardinal-Nagl-Platz",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.3689397,
+    "lat": 48.20094943,
+    "station_city": "Vienna",
+    "station_name": "Karlsplatz",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.37653043,
+    "lat": 48.17812623,
+    "station_city": "Vienna",
+    "station_name": "Keplerplatz",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.41097174,
+    "lat": 48.22899277,
+    "station_city": "Vienna",
+    "station_name": "Donauinsel",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.38026736,
+    "lat": 48.20706219,
+    "station_city": "Vienna",
+    "station_name": "Stubentor",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.35898645,
+    "lat": 48.19681195,
+    "station_city": "Vienna",
+    "station_name": "Kettenbrückengasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.43095911,
+    "lat": 48.20611626,
+    "station_city": "Vienna",
+    "station_name": "Donaumarina",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.31652318,
+    "lat": 48.14184344,
+    "station_city": "Vienna",
+    "station_name": "Erlaaer Straße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.33663648,
+    "lat": 48.21758577,
+    "station_city": "Vienna",
+    "station_name": "Palffygasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3418826,
+    "lat": 48.24891012,
+    "station_city": "Vienna",
+    "station_name": "Paradisgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3417299,
+    "lat": 48.24904772,
+    "station_city": "Vienna",
+    "station_name": "Paradisgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36010036,
+    "lat": 48.2082655,
+    "station_city": "Vienna",
+    "station_name": "Parlament",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36005546,
+    "lat": 48.208954,
+    "station_city": "Vienna",
+    "station_name": "Parlament",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3672059,
+    "lat": 48.19617125,
+    "station_city": "Vienna",
+    "station_name": "Paulanergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3670981,
+    "lat": 48.19617715,
+    "station_city": "Vienna",
+    "station_name": "Paulanergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34900621,
+    "lat": 48.20645751,
+    "station_city": "Vienna",
+    "station_name": "Strozzigasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38007873,
+    "lat": 48.18770348,
+    "station_city": "Vienna",
+    "station_name": "Quartier Belvedere",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38150702,
+    "lat": 48.18769748,
+    "station_city": "Vienna",
+    "station_name": "Quartier Belvedere",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31182508,
+    "lat": 48.19904537,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31213948,
+    "lat": 48.19957227,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorfer Straße (Breitenseer Str.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31182508,
+    "lat": 48.19894957,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33979845,
+    "lat": 48.20577502,
+    "station_city": "Vienna",
+    "station_name": "Neustiftgasse/Kaiserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33960985,
+    "lat": 48.20623602,
+    "station_city": "Vienna",
+    "station_name": "Neustiftgasse/Kaiserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34084054,
+    "lat": 48.20186544,
+    "station_city": "Vienna",
+    "station_name": "Westbahnstraße/Kaiserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34058004,
+    "lat": 48.20160204,
+    "station_city": "Vienna",
+    "station_name": "Westbahnstraße/Kaiserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34017574,
+    "lat": 48.20178164,
+    "station_city": "Vienna",
+    "station_name": "Westbahnstraße/Kaiserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34040934,
+    "lat": 48.20204514,
+    "station_city": "Vienna",
+    "station_name": "Westbahnstraße/Kaiserstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41398997,
+    "lat": 48.19151834,
+    "station_city": "Vienna",
+    "station_name": "Erdberg",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.44012187,
+    "lat": 48.21178543,
+    "station_city": "Vienna",
+    "station_name": "Donaustadtbrücke",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.47494941,
+    "lat": 48.22263116,
+    "station_city": "Vienna",
+    "station_name": "Aspernstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.38457933,
+    "lat": 48.20603849,
+    "station_city": "Vienna",
+    "station_name": "Mitte-Landstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.40029083,
+    "lat": 48.25678754,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorf",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.44983271,
+    "lat": 48.27772231,
+    "station_city": "Vienna",
+    "station_name": "Leopoldau",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.36487036,
+    "lat": 48.22702401,
+    "station_city": "Vienna",
+    "station_name": "Friedensbrücke",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.33535184,
+    "lat": 48.18511022,
+    "station_city": "Vienna",
+    "station_name": "Längenfeldgasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.41111537,
+    "lat": 48.1794919,
+    "station_city": "Vienna",
+    "station_name": "Zippererstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.34249341,
+    "lat": 48.1882844,
+    "station_city": "Vienna",
+    "station_name": "Margaretengürtel",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.38231547,
+    "lat": 48.15388464,
+    "station_city": "Vienna",
+    "station_name": "Alaudagasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.34199036,
+    "lat": 48.21713687,
+    "station_city": "Vienna",
+    "station_name": "Alser Straße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.42422178,
+    "lat": 48.23795022,
+    "station_city": "Vienna",
+    "station_name": "Alte Donau",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.38342038,
+    "lat": 48.16165681,
+    "station_city": "Vienna",
+    "station_name": "Altes Landgut",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.41530144,
+    "lat": 48.17433433,
+    "station_city": "Vienna",
+    "station_name": "Enkplatz",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.33755274,
+    "lat": 48.1907219,
+    "station_city": "Vienna",
+    "station_name": "Gumpendorfer Straße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.38576505,
+    "lat": 48.22047062,
+    "station_city": "Vienna",
+    "station_name": "Rueppgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38633105,
+    "lat": 48.22054842,
+    "station_city": "Vienna",
+    "station_name": "Rueppgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32767129,
+    "lat": 48.1913986,
+    "station_city": "Vienna",
+    "station_name": "Rustengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32727599,
+    "lat": 48.1913088,
+    "station_city": "Vienna",
+    "station_name": "Rustengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38356435,
+    "lat": 48.2876815,
+    "station_city": "Vienna",
+    "station_name": "Rußbergstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38341165,
+    "lat": 48.28774131,
+    "station_city": "Vienna",
+    "station_name": "Rußbergstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31396309,
+    "lat": 48.21690939,
+    "station_city": "Vienna",
+    "station_name": "Römergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3132355,
+    "lat": 48.21687349,
+    "station_city": "Vienna",
+    "station_name": "Römergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39159512,
+    "lat": 48.21820223,
+    "station_city": "Vienna",
+    "station_name": "Praterstern",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39135262,
+    "lat": 48.21826213,
+    "station_city": "Vienna",
+    "station_name": "Praterstern",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39159512,
+    "lat": 48.21835183,
+    "station_city": "Vienna",
+    "station_name": "Praterstern",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37167061,
+    "lat": 48.21637665,
+    "station_city": "Vienna",
+    "station_name": "Schottenring",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36191495,
+    "lat": 48.21401227,
+    "station_city": "Vienna",
+    "station_name": "Schottentor U (Tiefgeschoß)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36213945,
+    "lat": 48.21371897,
+    "station_city": "Vienna",
+    "station_name": "Schottentor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36179815,
+    "lat": 48.21372497,
+    "station_city": "Vienna",
+    "station_name": "Schottentor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36200476,
+    "lat": 48.21398237,
+    "station_city": "Vienna",
+    "station_name": "Schottentor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35067693,
+    "lat": 48.15511916,
+    "station_city": "Vienna",
+    "station_name": "Tesarekplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35073083,
+    "lat": 48.15573645,
+    "station_city": "Vienna",
+    "station_name": "Tesarekplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33834326,
+    "lat": 48.20862471,
+    "station_city": "Vienna",
+    "station_name": "Thaliastraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33865766,
+    "lat": 48.20850501,
+    "station_city": "Vienna",
+    "station_name": "Thaliastraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32588363,
+    "lat": 48.21054041,
+    "station_city": "Vienna",
+    "station_name": "Feßtgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32515603,
+    "lat": 48.21022311,
+    "station_city": "Vienna",
+    "station_name": "Feßtgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32446433,
+    "lat": 48.21063621,
+    "station_city": "Vienna",
+    "station_name": "Feßtgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39042731,
+    "lat": 48.21130656,
+    "station_city": "Vienna",
+    "station_name": "Radetzkyplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38952902,
+    "lat": 48.21097137,
+    "station_city": "Vienna",
+    "station_name": "Radetzkyplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39064291,
+    "lat": 48.21039667,
+    "station_city": "Vienna",
+    "station_name": "Radetzkyplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32459906,
+    "lat": 48.16122545,
+    "station_city": "Vienna",
+    "station_name": "Am Schöpfwerk",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.35019199,
+    "lat": 48.19828495,
+    "station_city": "Vienna",
+    "station_name": "Neubaugasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.4577827,
+    "lat": 48.22088358,
+    "station_city": "Vienna",
+    "station_name": "Hardeggasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.48670827,
+    "lat": 48.2334627,
+    "station_city": "Vienna",
+    "station_name": "Hausfeldstraße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.36576869,
+    "lat": 48.2490896,
+    "station_city": "Vienna",
+    "station_name": "Heiligenstadt",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.3795129,
+    "lat": 48.23697505,
+    "station_city": "Vienna",
+    "station_name": "Dresdner Straße",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.36584053,
+    "lat": 48.20948079,
+    "station_city": "Vienna",
+    "station_name": "Herrengasse",
+    "station_type": "subway"
+  },
+  {
+    "long": 16.36206758,
+    "lat": 48.16203432,
+    "station_city": "Vienna",
+    "station_name": "Sahulkastraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36220228,
+    "lat": 48.16239382,
+    "station_city": "Vienna",
+    "station_name": "Sahulkastraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40822278,
+    "lat": 48.1815884,
+    "station_city": "Vienna",
+    "station_name": "Molitorgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40767479,
+    "lat": 48.18197169,
+    "station_city": "Vienna",
+    "station_name": "Molitorgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33580093,
+    "lat": 48.17626337,
+    "station_city": "Vienna",
+    "station_name": "Murlingengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40014713,
+    "lat": 48.26169162,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorfer Markt",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39987764,
+    "lat": 48.26237942,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorfer Markt",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40046153,
+    "lat": 48.26250501,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorfer Markt",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31994586,
+    "lat": 48.21148021,
+    "station_city": "Vienna",
+    "station_name": "Schuhmeierplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31834687,
+    "lat": 48.21159991,
+    "station_city": "Vienna",
+    "station_name": "Schuhmeierplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38948413,
+    "lat": 48.22326561,
+    "station_city": "Vienna",
+    "station_name": "Nordbahnstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38996923,
+    "lat": 48.22378631,
+    "station_city": "Vienna",
+    "station_name": "Nordbahnstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39570946,
+    "lat": 48.26104582,
+    "station_city": "Vienna",
+    "station_name": "Nordbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39555676,
+    "lat": 48.26101593,
+    "station_city": "Vienna",
+    "station_name": "Nordbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38074358,
+    "lat": 48.22799939,
+    "station_city": "Vienna",
+    "station_name": "Nordwestbahnstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38083338,
+    "lat": 48.22807119,
+    "station_city": "Vienna",
+    "station_name": "Nordwestbahnstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3668288,
+    "lat": 48.26012485,
+    "station_city": "Vienna",
+    "station_name": "Nußdorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36736769,
+    "lat": 48.25984375,
+    "station_city": "Vienna",
+    "station_name": "Nußdorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2672419,
+    "lat": 48.2000992,
+    "station_city": "Vienna",
+    "station_name": "Deutschordenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2671431,
+    "lat": 48.1999855,
+    "station_city": "Vienna",
+    "station_name": "Deutschordenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4775725,
+    "lat": 48.21784908,
+    "station_city": "Vienna",
+    "station_name": "Trondheimgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4768179,
+    "lat": 48.21790288,
+    "station_city": "Vienna",
+    "station_name": "Trondheimgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32697057,
+    "lat": 48.17216579,
+    "station_city": "Vienna",
+    "station_name": "Wienerbergbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32786886,
+    "lat": 48.17244739,
+    "station_city": "Vienna",
+    "station_name": "Wienerbergbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36036079,
+    "lat": 48.15832514,
+    "station_city": "Vienna",
+    "station_name": "Wienerfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36026199,
+    "lat": 48.15834314,
+    "station_city": "Vienna",
+    "station_name": "Wienerfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.48033928,
+    "lat": 48.21748388,
+    "station_city": "Vienna",
+    "station_name": "Aspern, Oberdorfstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.48032128,
+    "lat": 48.21743008,
+    "station_city": "Vienna",
+    "station_name": "Aspern, Oberdorfstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41445704,
+    "lat": 48.17489742,
+    "station_city": "Vienna",
+    "station_name": "Gottschalkgasse/Enkplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46219341,
+    "lat": 48.24560206,
+    "station_city": "Vienna",
+    "station_name": "Gewerbepark Stadlau",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46225631,
+    "lat": 48.24567976,
+    "station_city": "Vienna",
+    "station_name": "Gewerbepark Stadlau",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39656275,
+    "lat": 48.18606848,
+    "station_city": "Vienna",
+    "station_name": "Wildgansplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39665255,
+    "lat": 48.18601458,
+    "station_city": "Vienna",
+    "station_name": "Wildgansplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30564473,
+    "lat": 48.21118692,
+    "station_city": "Vienna",
+    "station_name": "Rankgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30547403,
+    "lat": 48.21069002,
+    "station_city": "Vienna",
+    "station_name": "Rankgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31994586,
+    "lat": 48.21624499,
+    "station_city": "Vienna",
+    "station_name": "Wilhelminenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31902057,
+    "lat": 48.21617319,
+    "station_city": "Vienna",
+    "station_name": "Wilhelminenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35809706,
+    "lat": 48.20654731,
+    "station_city": "Vienna",
+    "station_name": "Schmerlingplatz/Volkstheater U",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37685386,
+    "lat": 48.19865613,
+    "station_city": "Vienna",
+    "station_name": "Am Heumarkt",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37677296,
+    "lat": 48.19861423,
+    "station_city": "Vienna",
+    "station_name": "Am Heumarkt",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32069142,
+    "lat": 48.19009311,
+    "station_city": "Vienna",
+    "station_name": "Winckelmannstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35163815,
+    "lat": 48.17068008,
+    "station_city": "Vienna",
+    "station_name": "Windtenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35178194,
+    "lat": 48.17038648,
+    "station_city": "Vienna",
+    "station_name": "Windtenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3898704,
+    "lat": 48.27347747,
+    "station_city": "Vienna",
+    "station_name": "Winkeläckerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3897806,
+    "lat": 48.27342967,
+    "station_city": "Vienna",
+    "station_name": "Winkeläckerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39939246,
+    "lat": 48.20611028,
+    "station_city": "Vienna",
+    "station_name": "Wittelsbachstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39938346,
+    "lat": 48.20616418,
+    "station_city": "Vienna",
+    "station_name": "Wittelsbachstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34898823,
+    "lat": 48.22431303,
+    "station_city": "Vienna",
+    "station_name": "Währinger Straße-Volksoper",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36973025,
+    "lat": 48.23623906,
+    "station_city": "Vienna",
+    "station_name": "Jägerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37030514,
+    "lat": 48.23531766,
+    "station_city": "Vienna",
+    "station_name": "Jägerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36981115,
+    "lat": 48.23617326,
+    "station_city": "Vienna",
+    "station_name": "Jägerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37020634,
+    "lat": 48.23532956,
+    "station_city": "Vienna",
+    "station_name": "Jägerstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45530322,
+    "lat": 48.15484339,
+    "station_city": "Vienna",
+    "station_name": "Pantucekgasse/Widholzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45545592,
+    "lat": 48.15477149,
+    "station_city": "Vienna",
+    "station_name": "Pantucekgasse/Widholzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4593546,
+    "lat": 48.15513109,
+    "station_city": "Vienna",
+    "station_name": "Leberberg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4593546,
+    "lat": 48.15501719,
+    "station_city": "Vienna",
+    "station_name": "Leberberg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46645126,
+    "lat": 48.15465169,
+    "station_city": "Vienna",
+    "station_name": "Svetelskystraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46541827,
+    "lat": 48.15428009,
+    "station_city": "Vienna",
+    "station_name": "Svetelskystraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34928473,
+    "lat": 48.22481573,
+    "station_city": "Vienna",
+    "station_name": "Währinger Straße-Volksoper",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34929363,
+    "lat": 48.22552782,
+    "station_city": "Vienna",
+    "station_name": "Währinger Straße-Volksoper",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34926673,
+    "lat": 48.22464813,
+    "station_city": "Vienna",
+    "station_name": "Währinger Straße-Volksoper",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34937453,
+    "lat": 48.22485763,
+    "station_city": "Vienna",
+    "station_name": "Währinger Straße-Volksoper",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27422173,
+    "lat": 48.17515511,
+    "station_city": "Vienna",
+    "station_name": "Lainz, Wolkersbergenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27406003,
+    "lat": 48.17563441,
+    "station_city": "Vienna",
+    "station_name": "Lainz, Wolkersbergenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26793351,
+    "lat": 48.13879829,
+    "station_city": "Vienna",
+    "station_name": "Rodaunbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26786171,
+    "lat": 48.13882229,
+    "station_city": "Vienna",
+    "station_name": "Rodaunbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34922183,
+    "lat": 48.22561762,
+    "station_city": "Vienna",
+    "station_name": "Währinger Straße-Volksoper",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.286358,
+    "lat": 48.19461441,
+    "station_city": "Vienna",
+    "station_name": "Linzer Straße/Zehetnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2858998,
+    "lat": 48.19456051,
+    "station_city": "Vienna",
+    "station_name": "Linzer Straße/Zehetnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43313293,
+    "lat": 48.15919999,
+    "station_city": "Vienna",
+    "station_name": "Zentralfriedhof 1.Tor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43307903,
+    "lat": 48.15915809,
+    "station_city": "Vienna",
+    "station_name": "Zentralfriedhof 1.Tor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44233168,
+    "lat": 48.1544419,
+    "station_city": "Vienna",
+    "station_name": "Zentralfriedhof 2.Tor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44155008,
+    "lat": 48.1546397,
+    "station_city": "Vienna",
+    "station_name": "Zentralfriedhof 2.Tor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44994034,
+    "lat": 48.15230841,
+    "station_city": "Vienna",
+    "station_name": "Zentralfriedhof 3.Tor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44959894,
+    "lat": 48.15247621,
+    "station_city": "Vienna",
+    "station_name": "Zentralfriedhof 3.Tor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45283292,
+    "lat": 48.15160721,
+    "station_city": "Vienna",
+    "station_name": "Zentralfriedhof 4.Tor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45358742,
+    "lat": 48.15179301,
+    "station_city": "Vienna",
+    "station_name": "Zentralfriedhof 4.Tor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4574502,
+    "lat": 48.14977322,
+    "station_city": "Vienna",
+    "station_name": "Hauptwerkstätte",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4572616,
+    "lat": 48.14973132,
+    "station_city": "Vienna",
+    "station_name": "Hauptwerkstätte",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32856064,
+    "lat": 48.22770023,
+    "station_city": "Vienna",
+    "station_name": "Simonygasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32825524,
+    "lat": 48.22760453,
+    "station_city": "Vienna",
+    "station_name": "Simonygasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34540392,
+    "lat": 48.20184154,
+    "station_city": "Vienna",
+    "station_name": "Westbahnstraße/Zieglergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.25896844,
+    "lat": 48.20184159,
+    "station_city": "Vienna",
+    "station_name": "Satzberggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43024947,
+    "lat": 48.24669677,
+    "station_city": "Vienna",
+    "station_name": "Prandaugasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43002487,
+    "lat": 48.24667887,
+    "station_city": "Vienna",
+    "station_name": "Prandaugasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38085137,
+    "lat": 48.21925563,
+    "station_city": "Vienna",
+    "station_name": "Taborstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38089627,
+    "lat": 48.21873494,
+    "station_city": "Vienna",
+    "station_name": "Taborstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34464932,
+    "lat": 48.20179364,
+    "station_city": "Vienna",
+    "station_name": "Westbahnstraße/Zieglergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39055306,
+    "lat": 48.17564624,
+    "station_city": "Vienna",
+    "station_name": "Absberggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39137046,
+    "lat": 48.17590983,
+    "station_city": "Vienna",
+    "station_name": "Absberggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39036436,
+    "lat": 48.17647293,
+    "station_city": "Vienna",
+    "station_name": "Absberggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39013087,
+    "lat": 48.17620333,
+    "station_city": "Vienna",
+    "station_name": "Absberggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3828814,
+    "lat": 48.17914452,
+    "station_city": "Vienna",
+    "station_name": "Hlawkagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3828455,
+    "lat": 48.17909662,
+    "station_city": "Vienna",
+    "station_name": "Hlawkagasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39319412,
+    "lat": 48.2245763,
+    "station_city": "Vienna",
+    "station_name": "Krakauer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39307732,
+    "lat": 48.2245643,
+    "station_city": "Vienna",
+    "station_name": "Krakauer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39259223,
+    "lat": 48.22851408,
+    "station_city": "Vienna",
+    "station_name": "Bruno-Marek-Allee",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34030157,
+    "lat": 48.22270304,
+    "station_city": "Vienna",
+    "station_name": "Eduardgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33973568,
+    "lat": 48.22275694,
+    "station_city": "Vienna",
+    "station_name": "Eduardgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33695989,
+    "lat": 48.22384624,
+    "station_city": "Vienna",
+    "station_name": "Johann-Nepomuk-Vogl-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33630409,
+    "lat": 48.22403774,
+    "station_city": "Vienna",
+    "station_name": "Johann-Nepomuk-Vogl-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40183593,
+    "lat": 48.2649149,
+    "station_city": "Vienna",
+    "station_name": "Bahnsteggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40171913,
+    "lat": 48.2649448,
+    "station_city": "Vienna",
+    "station_name": "Bahnsteggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33942126,
+    "lat": 48.20820561,
+    "station_city": "Vienna",
+    "station_name": "Lerchenfelder Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33934036,
+    "lat": 48.20867261,
+    "station_city": "Vienna",
+    "station_name": "Lerchenfelder Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34835042,
+    "lat": 48.2096604,
+    "station_city": "Vienna",
+    "station_name": "Lederergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34912301,
+    "lat": 48.2096245,
+    "station_city": "Vienna",
+    "station_name": "Lederergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33813665,
+    "lat": 48.19546467,
+    "station_city": "Vienna",
+    "station_name": "Westbahnhof/Gerstnerstr.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33819055,
+    "lat": 48.19535687,
+    "station_city": "Vienna",
+    "station_name": "Westbahnhof/Gerstnerstr.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35091063,
+    "lat": 48.2309077,
+    "station_city": "Vienna",
+    "station_name": "Marsanogasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36987386,
+    "lat": 48.17611955,
+    "station_city": "Vienna",
+    "station_name": "Leebgasse/Siccardsburgg.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37017936,
+    "lat": 48.17579605,
+    "station_city": "Vienna",
+    "station_name": "Leebgasse/Siccardsburgg.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34974284,
+    "lat": 48.2298785,
+    "station_city": "Vienna",
+    "station_name": "Anastasius-Grün-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28609746,
+    "lat": 48.16957773,
+    "station_city": "Vienna",
+    "station_name": "Speising, Gallgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38018654,
+    "lat": 48.19706344,
+    "station_city": "Vienna",
+    "station_name": "Unteres Belvedere",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37975534,
+    "lat": 48.19724304,
+    "station_city": "Vienna",
+    "station_name": "Unteres Belvedere",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33752576,
+    "lat": 48.20111705,
+    "station_city": "Vienna",
+    "station_name": "Urban-Loritz-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33756166,
+    "lat": 48.20144035,
+    "station_city": "Vienna",
+    "station_name": "Urban-Loritz-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33766946,
+    "lat": 48.20138055,
+    "station_city": "Vienna",
+    "station_name": "Urban-Loritz-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33770545,
+    "lat": 48.20057225,
+    "station_city": "Vienna",
+    "station_name": "Urban-Loritz-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33722936,
+    "lat": 48.20106315,
+    "station_city": "Vienna",
+    "station_name": "Urban-Loritz-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33710356,
+    "lat": 48.20066205,
+    "station_city": "Vienna",
+    "station_name": "Urban-Loritz-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46874195,
+    "lat": 48.15724647,
+    "station_city": "Vienna",
+    "station_name": "Valiergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46884075,
+    "lat": 48.15721047,
+    "station_city": "Vienna",
+    "station_name": "Valiergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41826609,
+    "lat": 48.29350306,
+    "station_city": "Vienna",
+    "station_name": "Van-Swieten-Kaserne",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41794269,
+    "lat": 48.29300696,
+    "station_city": "Vienna",
+    "station_name": "Van-Swieten-Kaserne",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28242331,
+    "lat": 48.18738015,
+    "station_city": "Vienna",
+    "station_name": "Verbindungsbahn",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28242331,
+    "lat": 48.18729035,
+    "station_city": "Vienna",
+    "station_name": "Verbindungsbahn",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27578482,
+    "lat": 48.17302252,
+    "station_city": "Vienna",
+    "station_name": "Versorgungsheimplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27610822,
+    "lat": 48.17276492,
+    "station_city": "Vienna",
+    "station_name": "Versorgungsheimplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40012903,
+    "lat": 48.18869167,
+    "station_city": "Vienna",
+    "station_name": "St. Marx",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39938344,
+    "lat": 48.18863177,
+    "station_city": "Vienna",
+    "station_name": "St. Marx",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40002123,
+    "lat": 48.18863777,
+    "station_city": "Vienna",
+    "station_name": "St. Marx",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39952714,
+    "lat": 48.18857787,
+    "station_city": "Vienna",
+    "station_name": "St. Marx",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33475,
+    "lat": 48.22488154,
+    "station_city": "Vienna",
+    "station_name": "Vinzenzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33430091,
+    "lat": 48.22473794,
+    "station_city": "Vienna",
+    "station_name": "Vinzenzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33403141,
+    "lat": 48.22512093,
+    "station_city": "Vienna",
+    "station_name": "Vinzenzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35728857,
+    "lat": 48.20487702,
+    "station_city": "Vienna",
+    "station_name": "Volkstheater",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35735146,
+    "lat": 48.20482312,
+    "station_city": "Vienna",
+    "station_name": "Volkstheater",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3111244,
+    "lat": 48.2136771,
+    "station_city": "Vienna",
+    "station_name": "Weinheimergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28103993,
+    "lat": 48.1976144,
+    "station_city": "Vienna",
+    "station_name": "Waidhausenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28023153,
+    "lat": 48.1975545,
+    "station_city": "Vienna",
+    "station_name": "Waidhausenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37137413,
+    "lat": 48.23008789,
+    "station_city": "Vienna",
+    "station_name": "Wallensteinplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37091603,
+    "lat": 48.23017169,
+    "station_city": "Vienna",
+    "station_name": "Wallensteinplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37077233,
+    "lat": 48.22974679,
+    "station_city": "Vienna",
+    "station_name": "Wallensteinplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36800545,
+    "lat": 48.2284363,
+    "station_city": "Vienna",
+    "station_name": "Klosterneuburger Straße/Wallensteinstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36853554,
+    "lat": 48.2283704,
+    "station_city": "Vienna",
+    "station_name": "Klosterneuburger Straße/Wallensteinstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36864324,
+    "lat": 48.2288312,
+    "station_city": "Vienna",
+    "station_name": "Klosterneuburger Straße/Wallensteinstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36805045,
+    "lat": 48.2288851,
+    "station_city": "Vienna",
+    "station_name": "Klosterneuburger Straße/Wallensteinstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32694375,
+    "lat": 48.23206261,
+    "station_city": "Vienna",
+    "station_name": "Gersthof, Wallrißstr.",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29101114,
+    "lat": 48.17082382,
+    "station_city": "Vienna",
+    "station_name": "Wattmanngasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29184664,
+    "lat": 48.17091372,
+    "station_city": "Vienna",
+    "station_name": "Wattmanngasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37774317,
+    "lat": 48.2046016,
+    "station_city": "Vienna",
+    "station_name": "Weihburggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37759947,
+    "lat": 48.20431421,
+    "station_city": "Vienna",
+    "station_name": "Weihburggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33174963,
+    "lat": 48.23003401,
+    "station_city": "Vienna",
+    "station_name": "Weinhauser Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33181252,
+    "lat": 48.23012381,
+    "station_city": "Vienna",
+    "station_name": "Weinhauser Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.24095705,
+    "lat": 48.00383085,
+    "station_city": "Vienna",
+    "station_name": "Baden Viadukt",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.24090315,
+    "lat": 48.00372865,
+    "station_city": "Vienna",
+    "station_name": "Baden Viadukt",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46902957,
+    "lat": 48.24285017,
+    "station_city": "Vienna",
+    "station_name": "Süßenbrunner Straße/Oberfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46897567,
+    "lat": 48.24277837,
+    "station_city": "Vienna",
+    "station_name": "Süßenbrunner Straße/Oberfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3620855,
+    "lat": 48.17643105,
+    "station_city": "Vienna",
+    "station_name": "Bernhardtstalgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36124111,
+    "lat": 48.17643105,
+    "station_city": "Vienna",
+    "station_name": "Bernhardtstalgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.42885696,
+    "lat": 48.16189048,
+    "station_city": "Vienna",
+    "station_name": "Weißenböckstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.42838986,
+    "lat": 48.16222008,
+    "station_city": "Vienna",
+    "station_name": "Weißenböckstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29370615,
+    "lat": 48.18699084,
+    "station_city": "Vienna",
+    "station_name": "Wenzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29323005,
+    "lat": 48.18694294,
+    "station_city": "Vienna",
+    "station_name": "Wenzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33878334,
+    "lat": 48.19684787,
+    "station_city": "Vienna",
+    "station_name": "Westbahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33917864,
+    "lat": 48.19653047,
+    "station_city": "Vienna",
+    "station_name": "Westbahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33948404,
+    "lat": 48.19665027,
+    "station_city": "Vienna",
+    "station_name": "Westbahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33923254,
+    "lat": 48.19644667,
+    "station_city": "Vienna",
+    "station_name": "Westbahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33894504,
+    "lat": 48.19734486,
+    "station_city": "Vienna",
+    "station_name": "Westbahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33888224,
+    "lat": 48.19686587,
+    "station_city": "Vienna",
+    "station_name": "Westbahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36628976,
+    "lat": 48.23592196,
+    "station_city": "Vienna",
+    "station_name": "Wexstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36575977,
+    "lat": 48.23600576,
+    "station_city": "Vienna",
+    "station_name": "Wexstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29906003,
+    "lat": 48.19393171,
+    "station_city": "Vienna",
+    "station_name": "Ameisgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29991343,
+    "lat": 48.1938359,
+    "station_city": "Vienna",
+    "station_name": "Ameisgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38397746,
+    "lat": 48.2255757,
+    "station_city": "Vienna",
+    "station_name": "Am Tabor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3040816,
+    "lat": 48.18762573,
+    "station_city": "Vienna",
+    "station_name": "Hietzing",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34356244,
+    "lat": 48.2106122,
+    "station_city": "Vienna",
+    "station_name": "Albertgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34432604,
+    "lat": 48.2105703,
+    "station_city": "Vienna",
+    "station_name": "Albertgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34396664,
+    "lat": 48.2108038,
+    "station_city": "Vienna",
+    "station_name": "Albertgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.42075432,
+    "lat": 48.25313905,
+    "station_city": "Vienna",
+    "station_name": "Carminweg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40631838,
+    "lat": 48.17475373,
+    "station_city": "Vienna",
+    "station_name": "Geiselbergstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40631838,
+    "lat": 48.17468183,
+    "station_city": "Vienna",
+    "station_name": "Geiselbergstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40526744,
+    "lat": 48.20887607,
+    "station_city": "Vienna",
+    "station_name": "Prater, Hauptallee",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40624653,
+    "lat": 48.20916347,
+    "station_city": "Vienna",
+    "station_name": "Prater, Hauptallee",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.48641187,
+    "lat": 48.233331,
+    "station_city": "Vienna",
+    "station_name": "Hausfeldstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2963203,
+    "lat": 48.23060253,
+    "station_city": "Vienna",
+    "station_name": "Himmelmutterweg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2957723,
+    "lat": 48.23065643,
+    "station_city": "Vienna",
+    "station_name": "Himmelmutterweg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38746293,
+    "lat": 48.21114497,
+    "station_city": "Vienna",
+    "station_name": "Hintere Zollamtsstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38652863,
+    "lat": 48.21114497,
+    "station_city": "Vienna",
+    "station_name": "Hintere Zollamtsstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38702273,
+    "lat": 48.21085757,
+    "station_city": "Vienna",
+    "station_name": "Hintere Zollamtsstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.48727427,
+    "lat": 48.2336601,
+    "station_city": "Vienna",
+    "station_name": "Hausfeldstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.48715747,
+    "lat": 48.2336721,
+    "station_city": "Vienna",
+    "station_name": "Hausfeldstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33706766,
+    "lat": 48.20199124,
+    "station_city": "Vienna",
+    "station_name": "Burggasse-Stadthalle",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36407983,
+    "lat": 48.20380532,
+    "station_city": "Vienna",
+    "station_name": "Burgring",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36341513,
+    "lat": 48.20403882,
+    "station_city": "Vienna",
+    "station_name": "Burgring",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36068426,
+    "lat": 48.21024699,
+    "station_city": "Vienna",
+    "station_name": "Rathausplatz/Burgtheater",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36058546,
+    "lat": 48.21062419,
+    "station_city": "Vienna",
+    "station_name": "Rathausplatz/Burgtheater",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36611904,
+    "lat": 48.21555066,
+    "station_city": "Vienna",
+    "station_name": "Börse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36601124,
+    "lat": 48.21564046,
+    "station_city": "Vienna",
+    "station_name": "Börse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3040547,
+    "lat": 48.18763163,
+    "station_city": "Vienna",
+    "station_name": "Hietzing",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43394154,
+    "lat": 48.2413844,
+    "station_city": "Vienna",
+    "station_name": "Siebeckstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43418404,
+    "lat": 48.24210829,
+    "station_city": "Vienna",
+    "station_name": "Siebeckstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30232997,
+    "lat": 48.22810124,
+    "station_city": "Vienna",
+    "station_name": "Dornbacher Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.30173707,
+    "lat": 48.22835254,
+    "station_city": "Vienna",
+    "station_name": "Dornbacher Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36485244,
+    "lat": 48.21577806,
+    "station_city": "Vienna",
+    "station_name": "Börse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36695443,
+    "lat": 48.21605946,
+    "station_city": "Vienna",
+    "station_name": "Börse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3705477,
+    "lat": 48.20125473,
+    "station_city": "Vienna",
+    "station_name": "Bösendorferstr./Karlsplatz U",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32732091,
+    "lat": 48.20479324,
+    "station_city": "Vienna",
+    "station_name": "Camillo-Sitte-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32732091,
+    "lat": 48.20521823,
+    "station_city": "Vienna",
+    "station_name": "Camillo-Sitte-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37988116,
+    "lat": 48.20672089,
+    "station_city": "Vienna",
+    "station_name": "Stubentor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38029436,
+    "lat": 48.20688259,
+    "station_city": "Vienna",
+    "station_name": "Stubentor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37036803,
+    "lat": 48.22589891,
+    "station_city": "Vienna",
+    "station_name": "Gaußplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36967634,
+    "lat": 48.22658111,
+    "station_city": "Vienna",
+    "station_name": "Gaußplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39953612,
+    "lat": 48.17505923,
+    "station_city": "Vienna",
+    "station_name": "Geiereckstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39935642,
+    "lat": 48.17552643,
+    "station_city": "Vienna",
+    "station_name": "Geiereckstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39970682,
+    "lat": 48.17499333,
+    "station_city": "Vienna",
+    "station_name": "Geiereckstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3833216,
+    "lat": 48.17493944,
+    "station_city": "Vienna",
+    "station_name": "Gellertplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.382073,
+    "lat": 48.17502324,
+    "station_city": "Vienna",
+    "station_name": "Gellertplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27133811,
+    "lat": 48.15474161,
+    "station_city": "Vienna",
+    "station_name": "Franz-Asenbauer-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27116752,
+    "lat": 48.15474761,
+    "station_city": "Vienna",
+    "station_name": "Franz-Asenbauer-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36115137,
+    "lat": 48.22573731,
+    "station_city": "Vienna",
+    "station_name": "Franz-Josefs-Bahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36116937,
+    "lat": 48.22549792,
+    "station_city": "Vienna",
+    "station_name": "Franz-Josefs-Bahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36112447,
+    "lat": 48.22578521,
+    "station_city": "Vienna",
+    "station_name": "Franz-Josefs-Bahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36112448,
+    "lat": 48.22555182,
+    "station_city": "Vienna",
+    "station_name": "Franz-Josefs-Bahnhof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.42134722,
+    "lat": 48.25316895,
+    "station_city": "Vienna",
+    "station_name": "Carminweg",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32413196,
+    "lat": 48.23167961,
+    "station_city": "Vienna",
+    "station_name": "Alsegger Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32469796,
+    "lat": 48.23168561,
+    "station_city": "Vienna",
+    "station_name": "Alsegger Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34207126,
+    "lat": 48.21714887,
+    "station_city": "Vienna",
+    "station_name": "Alser Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34212516,
+    "lat": 48.21721467,
+    "station_city": "Vienna",
+    "station_name": "Alser Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27782404,
+    "lat": 48.1979856,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorfer Str./Hochsatzengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27704245,
+    "lat": 48.1979856,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorfer Str./Hochsatzengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28680706,
+    "lat": 48.17006903,
+    "station_city": "Vienna",
+    "station_name": "Hofwiesengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3551507,
+    "lat": 48.22561762,
+    "station_city": "Vienna",
+    "station_name": "Nußdorfer Straße/Alserbachstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3548991,
+    "lat": 48.22477982,
+    "station_city": "Vienna",
+    "station_name": "Nußdorfer Straße/Alserbachstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35468351,
+    "lat": 48.22516282,
+    "station_city": "Vienna",
+    "station_name": "Nußdorfer Straße/Alserbachstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3549261,
+    "lat": 48.22471392,
+    "station_city": "Vienna",
+    "station_name": "Nußdorfer Straße/Alserbachstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38241437,
+    "lat": 48.22260132,
+    "station_city": "Vienna",
+    "station_name": "Heinestraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38225267,
+    "lat": 48.22193702,
+    "station_city": "Vienna",
+    "station_name": "Heinestraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38276477,
+    "lat": 48.22215242,
+    "station_city": "Vienna",
+    "station_name": "Heinestraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3792703,
+    "lat": 48.23713655,
+    "station_city": "Vienna",
+    "station_name": "Dresdner Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4124989,
+    "lat": 48.28350921,
+    "station_city": "Vienna",
+    "station_name": "Brünner Straße/Hanreitergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36657716,
+    "lat": 48.23138638,
+    "station_city": "Vienna",
+    "station_name": "Gerhardusgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36612806,
+    "lat": 48.23202668,
+    "station_city": "Vienna",
+    "station_name": "Gerhardusgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32895594,
+    "lat": 48.23154201,
+    "station_city": "Vienna",
+    "station_name": "Gersthof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32894694,
+    "lat": 48.23172151,
+    "station_city": "Vienna",
+    "station_name": "Gersthof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32883914,
+    "lat": 48.23166771,
+    "station_city": "Vienna",
+    "station_name": "Gersthof",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41054047,
+    "lat": 48.1794021,
+    "station_city": "Vienna",
+    "station_name": "Zippererstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34558359,
+    "lat": 48.18439152,
+    "station_city": "Vienna",
+    "station_name": "Arbeitergasse/Gürtel",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34570939,
+    "lat": 48.18445142,
+    "station_city": "Vienna",
+    "station_name": "Arbeitergasse/Gürtel",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43811871,
+    "lat": 48.23607152,
+    "station_city": "Vienna",
+    "station_name": "Arminenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43714852,
+    "lat": 48.23639462,
+    "station_city": "Vienna",
+    "station_name": "Arminenstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35490811,
+    "lat": 48.22796351,
+    "station_city": "Vienna",
+    "station_name": "Canisiusgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35473741,
+    "lat": 48.22825671,
+    "station_city": "Vienna",
+    "station_name": "Canisiusgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41073821,
+    "lat": 48.27993433,
+    "station_city": "Vienna",
+    "station_name": "Carabelligasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41101671,
+    "lat": 48.28059792,
+    "station_city": "Vienna",
+    "station_name": "Carabelligasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37364685,
+    "lat": 48.18241501,
+    "station_city": "Vienna",
+    "station_name": "Columbusplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37374565,
+    "lat": 48.18229521,
+    "station_city": "Vienna",
+    "station_name": "Columbusplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4126875,
+    "lat": 48.28358691,
+    "station_city": "Vienna",
+    "station_name": "Brünner Straße/Hanreitergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34196351,
+    "lat": 48.2529716,
+    "station_city": "Vienna",
+    "station_name": "An den langen Lüssen",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34185571,
+    "lat": 48.2524572,
+    "station_city": "Vienna",
+    "station_name": "An den langen Lüssen",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32335941,
+    "lat": 48.19044641,
+    "station_city": "Vienna",
+    "station_name": "Anschützgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32269461,
+    "lat": 48.19021881,
+    "station_city": "Vienna",
+    "station_name": "Anschützgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32266771,
+    "lat": 48.19058411,
+    "station_city": "Vienna",
+    "station_name": "Anschützgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.2704308,
+    "lat": 48.14261677,
+    "station_city": "Vienna",
+    "station_name": "Anton-Krieger-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.270323,
+    "lat": 48.14303037,
+    "station_city": "Vienna",
+    "station_name": "Anton-Krieger-Gasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32994403,
+    "lat": 48.22583903,
+    "station_city": "Vienna",
+    "station_name": "Antonigasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34631123,
+    "lat": 48.21547887,
+    "station_city": "Vienna",
+    "station_name": "Brünnlbadgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34537704,
+    "lat": 48.21528727,
+    "station_city": "Vienna",
+    "station_name": "Brünnlbadgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34533214,
+    "lat": 48.21549677,
+    "station_city": "Vienna",
+    "station_name": "Brünnlbadgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39145141,
+    "lat": 48.21389855,
+    "station_city": "Vienna",
+    "station_name": "Franzensbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39154121,
+    "lat": 48.21390455,
+    "station_city": "Vienna",
+    "station_name": "Franzensbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36535546,
+    "lat": 48.22714961,
+    "station_city": "Vienna",
+    "station_name": "Friedensbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36512196,
+    "lat": 48.22713771,
+    "station_city": "Vienna",
+    "station_name": "Friedensbrücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27229047,
+    "lat": 48.1989496,
+    "station_city": "Vienna",
+    "station_name": "Baumgarten",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28776826,
+    "lat": 48.17032662,
+    "station_city": "Vienna",
+    "station_name": "Hofwiesengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28713946,
+    "lat": 48.17045242,
+    "station_city": "Vienna",
+    "station_name": "Hofwiesengasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35537524,
+    "lat": 48.2513507,
+    "station_city": "Vienna",
+    "station_name": "Hohe Warte",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35556394,
+    "lat": 48.2510097,
+    "station_city": "Vienna",
+    "station_name": "Hohe Warte",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35964216,
+    "lat": 48.20675091,
+    "station_city": "Vienna",
+    "station_name": "Ring/Volkstheater U",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36002845,
+    "lat": 48.20682271,
+    "station_city": "Vienna",
+    "station_name": "Ring/Volkstheater U",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35990265,
+    "lat": 48.20670301,
+    "station_city": "Vienna",
+    "station_name": "Ring/Volkstheater U",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35695633,
+    "lat": 48.2511951,
+    "station_city": "Vienna",
+    "station_name": "Döblinger Bad",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.25594116,
+    "lat": 48.20264989,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorf, Bujattigasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.25533926,
+    "lat": 48.20290729,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorf, Bujattigasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33717546,
+    "lat": 48.20200324,
+    "station_city": "Vienna",
+    "station_name": "Burggasse-Stadthalle",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33758866,
+    "lat": 48.20212294,
+    "station_city": "Vienna",
+    "station_name": "Burggasse-Stadthalle",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43366304,
+    "lat": 48.24334069,
+    "station_city": "Vienna",
+    "station_name": "Kagran",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43358225,
+    "lat": 48.24375948,
+    "station_city": "Vienna",
+    "station_name": "Kagran",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43375284,
+    "lat": 48.24329289,
+    "station_city": "Vienna",
+    "station_name": "Kagran",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35921999,
+    "lat": 48.2289509,
+    "station_city": "Vienna",
+    "station_name": "Althanstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35974099,
+    "lat": 48.2287355,
+    "station_city": "Vienna",
+    "station_name": "Althanstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31627171,
+    "lat": 48.16530593,
+    "station_city": "Vienna",
+    "station_name": "Altmannsdorfer Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.48415709,
+    "lat": 48.23914677,
+    "station_city": "Vienna",
+    "station_name": "Zanggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.48424689,
+    "lat": 48.23916477,
+    "station_city": "Vienna",
+    "station_name": "Zanggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.48774137,
+    "lat": 48.23708268,
+    "station_city": "Vienna",
+    "station_name": "Am Heidjöchl",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.48781327,
+    "lat": 48.23716038,
+    "station_city": "Vienna",
+    "station_name": "Am Heidjöchl",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3793602,
+    "lat": 48.23718445,
+    "station_city": "Vienna",
+    "station_name": "Dresdner Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3170174,
+    "lat": 48.23244561,
+    "station_city": "Vienna",
+    "station_name": "Gersthof, Herbeckstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31823909,
+    "lat": 48.23244561,
+    "station_city": "Vienna",
+    "station_name": "Gersthof, Herbeckstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43073455,
+    "lat": 48.23914681,
+    "station_city": "Vienna",
+    "station_name": "Kagraner Brücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.43068065,
+    "lat": 48.23966741,
+    "station_city": "Vienna",
+    "station_name": "Kagraner Brücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44270011,
+    "lat": 48.25013635,
+    "station_city": "Vienna",
+    "station_name": "Kagraner Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28348337,
+    "lat": 48.16809194,
+    "station_city": "Vienna",
+    "station_name": "Speising, Hermesstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28368997,
+    "lat": 48.16776244,
+    "station_city": "Vienna",
+    "station_name": "Speising, Hermesstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28431877,
+    "lat": 48.16857124,
+    "station_city": "Vienna",
+    "station_name": "Speising, Hermesstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3149962,
+    "lat": 48.22362475,
+    "station_city": "Vienna",
+    "station_name": "Hernals",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3149512,
+    "lat": 48.22356495,
+    "station_city": "Vienna",
+    "station_name": "Hernals",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34164006,
+    "lat": 48.21522748,
+    "station_city": "Vienna",
+    "station_name": "Hernalser Gürtel",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34014886,
+    "lat": 48.21509578,
+    "station_city": "Vienna",
+    "station_name": "Hernalser Gürtel",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32003567,
+    "lat": 48.22209866,
+    "station_city": "Vienna",
+    "station_name": "Hernals, Wattgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28918767,
+    "lat": 48.18714654,
+    "station_city": "Vienna",
+    "station_name": "Fichtnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.28857678,
+    "lat": 48.18708074,
+    "station_city": "Vienna",
+    "station_name": "Fichtnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35639923,
+    "lat": 48.17560436,
+    "station_city": "Vienna",
+    "station_name": "Davidgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35615673,
+    "lat": 48.17526886,
+    "station_city": "Vienna",
+    "station_name": "Davidgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27123038,
+    "lat": 48.1990574,
+    "station_city": "Vienna",
+    "station_name": "Baumgarten",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.27193107,
+    "lat": 48.1987999,
+    "station_city": "Vienna",
+    "station_name": "Baumgarten",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38944806,
+    "lat": 48.17381314,
+    "station_city": "Vienna",
+    "station_name": "Schrankenberggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38947506,
+    "lat": 48.17388504,
+    "station_city": "Vienna",
+    "station_name": "Schrankenberggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38020461,
+    "lat": 48.24404672,
+    "station_city": "Vienna",
+    "station_name": "Friedrich-Engels-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37971951,
+    "lat": 48.24420822,
+    "station_city": "Vienna",
+    "station_name": "Friedrich-Engels-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.37958471,
+    "lat": 48.24426201,
+    "station_city": "Vienna",
+    "station_name": "Friedrich-Engels-Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35925589,
+    "lat": 48.15555665,
+    "station_city": "Vienna",
+    "station_name": "Frödenplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.35851029,
+    "lat": 48.15547875,
+    "station_city": "Vienna",
+    "station_name": "Frödenplatz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.33965472,
+    "lat": 48.17921045,
+    "station_city": "Vienna",
+    "station_name": "Flurschützstraße/Längenfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34045421,
+    "lat": 48.17952795,
+    "station_city": "Vienna",
+    "station_name": "Flurschützstraße/Längenfeldgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.414071,
+    "lat": 48.28607959,
+    "station_city": "Vienna",
+    "station_name": "Empergergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.4142327,
+    "lat": 48.28652789,
+    "station_city": "Vienna",
+    "station_name": "Empergergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29518836,
+    "lat": 48.19730899,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorfer Str./Lützowgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29460446,
+    "lat": 48.19717719,
+    "station_city": "Vienna",
+    "station_name": "Hütteldorfer Str./Lützowgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45907619,
+    "lat": 48.22144617,
+    "station_city": "Vienna",
+    "station_name": "Hardeggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.45900439,
+    "lat": 48.22141027,
+    "station_city": "Vienna",
+    "station_name": "Hardeggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34910505,
+    "lat": 48.23673567,
+    "station_city": "Vienna",
+    "station_name": "Hardtgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34914995,
+    "lat": 48.23726817,
+    "station_city": "Vienna",
+    "station_name": "Hardtgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39749704,
+    "lat": 48.25822294,
+    "station_city": "Vienna",
+    "station_name": "Am Spitz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39722754,
+    "lat": 48.25831264,
+    "station_city": "Vienna",
+    "station_name": "Am Spitz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38303427,
+    "lat": 48.2255219,
+    "station_city": "Vienna",
+    "station_name": "Am Tabor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32180536,
+    "lat": 48.22141636,
+    "station_city": "Vienna",
+    "station_name": "Hernals, Wattgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.32173346,
+    "lat": 48.22134456,
+    "station_city": "Vienna",
+    "station_name": "Hernals, Wattgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44290671,
+    "lat": 48.25005265,
+    "station_city": "Vienna",
+    "station_name": "Kagraner Platz",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26683761,
+    "lat": 48.1356929,
+    "station_city": "Vienna",
+    "station_name": "Kaiser-Franz-Josef-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.26672981,
+    "lat": 48.1361126,
+    "station_city": "Vienna",
+    "station_name": "Kaiser-Franz-Josef-Straße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31388212,
+    "lat": 48.16568933,
+    "station_city": "Vienna",
+    "station_name": "Hetzendorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.31376542,
+    "lat": 48.16583313,
+    "station_city": "Vienna",
+    "station_name": "Hetzendorf",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39314019,
+    "lat": 48.20821758,
+    "station_city": "Vienna",
+    "station_name": "Hetzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3927539,
+    "lat": 48.20857078,
+    "station_city": "Vienna",
+    "station_name": "Hetzgasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.3036864,
+    "lat": 48.18791313,
+    "station_city": "Vienna",
+    "station_name": "Hietzing",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.47027805,
+    "lat": 48.15945766,
+    "station_city": "Vienna",
+    "station_name": "Kaiserebersdorf, Zinnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.46983795,
+    "lat": 48.15955956,
+    "station_city": "Vienna",
+    "station_name": "Kaiserebersdorf, Zinnergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34514343,
+    "lat": 48.21237809,
+    "station_city": "Vienna",
+    "station_name": "Florianigasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34574533,
+    "lat": 48.21293479,
+    "station_city": "Vienna",
+    "station_name": "Florianigasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39944643,
+    "lat": 48.25721224,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorf S+U (Franz-Jonas-Platz)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29825163,
+    "lat": 48.18615234,
+    "station_city": "Vienna",
+    "station_name": "Dommayergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29882652,
+    "lat": 48.18651774,
+    "station_city": "Vienna",
+    "station_name": "Dommayergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29816173,
+    "lat": 48.18652974,
+    "station_city": "Vienna",
+    "station_name": "Dommayergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.29894332,
+    "lat": 48.18642194,
+    "station_city": "Vienna",
+    "station_name": "Dommayergasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38766058,
+    "lat": 48.24845549,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorfer Brücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38807378,
+    "lat": 48.24873669,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorfer Brücke",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44403858,
+    "lat": 48.23361833,
+    "station_city": "Vienna",
+    "station_name": "Donaustadtstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.44310429,
+    "lat": 48.23394142,
+    "station_city": "Vienna",
+    "station_name": "Donaustadtstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41456495,
+    "lat": 48.25328865,
+    "station_city": "Vienna",
+    "station_name": "Fultonstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.41452005,
+    "lat": 48.25318095,
+    "station_city": "Vienna",
+    "station_name": "Fultonstraße",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36135797,
+    "lat": 48.22309213,
+    "station_city": "Vienna",
+    "station_name": "Seegasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40069503,
+    "lat": 48.25728994,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorf S+U (Schloßhofer Str.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39899723,
+    "lat": 48.25550165,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorf S+U (Schleife)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.40058723,
+    "lat": 48.25720024,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorf S+U (Schloßhofer Str.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39960813,
+    "lat": 48.25716434,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorf S+U (Franz-Jonas-Platz)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.39966203,
+    "lat": 48.25714644,
+    "station_city": "Vienna",
+    "station_name": "Floridsdorf S+U (Franz-Jonas-Pl.)",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.36142087,
+    "lat": 48.22285273,
+    "station_city": "Vienna",
+    "station_name": "Seegasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34936555,
+    "lat": 48.23887766,
+    "station_city": "Vienna",
+    "station_name": "Gatterburggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.34908705,
+    "lat": 48.23948796,
+    "station_city": "Vienna",
+    "station_name": "Gatterburggasse",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38401336,
+    "lat": 48.225097,
+    "station_city": "Vienna",
+    "station_name": "Am Tabor",
+    "station_type": "tram"
+  },
+  {
+    "long": 16.38370796,
+    "lat": 48.225486,
+    "station_city": "Vienna",
+    "station_name": "Am Tabor",
+    "station_type": "tram"
+  }
+]

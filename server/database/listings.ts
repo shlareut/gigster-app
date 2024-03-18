@@ -13,6 +13,8 @@ export async function getListings() {
       listings.type as type,
       listings.city_district as district,
       listings.city as city,
+      listings.nearest_station as nearest_station,
+      listings.nearest_station_meter_distance as nearest_station_distance,
       min(options.price) as min_price,
       min(options.currency) as currency,
       count(options.id) as options_count,

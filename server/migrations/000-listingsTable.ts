@@ -13,6 +13,10 @@ export async function up(sql: Sql) {
       city varchar(50) NOT NULL,
       city_district varchar(50) NOT NULL,
       country varchar(50) NOT NULL,
+      lat FLOAT NOT NULL,
+      long FLOAT NOT NULL,
+      nearest_station varchar(50) NOT NULL,
+      nearest_station_meter_distance INTEGER NOT NULL,
       description varchar(1000) NOT NULL
     )
   `;

@@ -9,6 +9,13 @@ import { nextHost } from '../constants';
 export default function TestScreen() {
   return (
     <>
+      {/* // Loading animation */}
+      <LottieView
+        style={{ width: '25%', height: '25%' }}
+        source={require('../../assets/loadingAnimation.json')}
+        autoPlay
+        loop
+      />
       {/* // LISTING CARD */}
       <View className={`w-11/12 my-3 self-center opacity-50`}>
         <View className="w-full h-auto aspect-square">

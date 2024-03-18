@@ -95,6 +95,11 @@ const ListingCard = (props) => {
             {props.listing.type} in {props.listing.district},{' '}
             {props.listing.city}
           </Text>
+          {/* // start distance */}
+          <Text className="text-base">
+            𐊭 {props.listing.nearest_station_distance}m from{' '}
+            {props.listing.nearest_station}
+          </Text>
           {/* // start price */}
           {hiring ? (
             <Text className="text-base underline">

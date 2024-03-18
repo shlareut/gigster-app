@@ -63,7 +63,7 @@ export default function MyBookingsScreen() {
   const emptyScreenImage = require('../../assets/bookings.jpg');
   const [bookings, setBookings] = useState([]);
 
-  // helper to re-trigger useEffect
+  // helper to re-trigger useEffect, replace with redux!
   const local = useLocalSearchParams();
   const helperToTriggerMyBookingsUseEffect =
     local.helperToTriggerMyBookingsUseEffect;
