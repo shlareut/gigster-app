@@ -98,7 +98,8 @@ const ListingCard = (props) => {
           {/* // start distance */}
           <Text className="text-base">
             𐊭 {props.listing.nearest_station_distance}m from{' '}
-            {props.listing.nearest_station}
+            {props.listing.nearest_station_type.toLowerCase()}{' '}
+            {props.listing.nearest_station_name}
           </Text>
           {/* // start price */}
           {hiring ? (
