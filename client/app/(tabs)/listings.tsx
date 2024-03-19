@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, SafeAreaView } from 'react-native';
+import { FlatList, SafeAreaView, View } from 'react-native';
 import ListingCard from '../components/ListingCard';
 import LoadingScreen from '../components/LoadingScreen';
 import { nextHost } from '../constants';
@@ -28,7 +28,8 @@ export default function ListingsScreen() {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <FlatList
-        className="w-screen mb-10"
+        className="w-screen"
+        contentContainerStyle={{ paddingBottom: 40 }}
         snapToInterval={1}
         bounces={false}
         showsVerticalScrollIndicator={false}

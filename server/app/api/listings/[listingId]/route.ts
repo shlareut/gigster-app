@@ -9,5 +9,5 @@ type ListingParams = {
 
 export async function GET(request: NextRequest, { params }: ListingParams) {
   const data = await getSingleListing(params.listingId).catch(console.error);
-  return NextResponse.json(data[0]);
+  return NextResponse.json(data);
 }

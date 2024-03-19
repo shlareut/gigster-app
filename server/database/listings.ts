@@ -4,9 +4,25 @@ import { setEnvironment } from '../utils/config.js';
 setEnvironment();
 const sql = postgres();
 
-// NEW QUERY TO GET ALL LISTINGS
-export async function getListings() {
-  const listings = await sql`
+// type definition
+export type Listing = {
+  id: number;
+  name: string;
+  type: string;
+  city_district: string;
+  city: string;
+  nearest_station_type: string;
+  nearest_station_name: string;
+  nearest_station_meter_distance: number;
+  min_price: number;
+  currency: string;
+  options_count: number;
+  is_published: boolean;
+};
+
+// query all listings
+export async function getListings(): Promise<Listing[]> {
+  const listings = await sql<Listing[]>`
     select
       listings.id as id,
       listings.name as name,
@@ -27,20 +43,20 @@ export async function getListings() {
   return listings;
 }
 
-// Query all listings
-export async function getAllListings() {
-  const listings = await sql`
-    SELECT
-      *
-    FROM
-      listings
-  `;
-  return listings;
-}
+// // Query all listings
+// export async function getAllListings() {
+//   const listings = await sql`
+//     SELECT
+//       *
+//     FROM
+//       listings
+//   `;
+//   return listings;
+// }
 
-// Query single listing
-export async function getSingleListing(id: number) {
-  const listings = await sql`
+// query single listing by id
+export async function getSingleListing(id: number): Promise<Listing> {
+  const [listing = <Listing>{}] = await sql<Listing[]>`
     SELECT
       *
     FROM
@@ -48,5 +64,5 @@ export async function getSingleListing(id: number) {
     WHERE
       id = ${id}
   `;
-  return listings;
+  return listing;
 }

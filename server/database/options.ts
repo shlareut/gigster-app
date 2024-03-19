@@ -4,9 +4,19 @@ import { setEnvironment } from '../utils/config.js';
 setEnvironment();
 const sql = postgres();
 
-// Query all options
-export async function getAllOptions() {
-  const options = await sql`
+// define type
+export type Option = {
+  id: number;
+  name: string;
+  price: number;
+  currency: string;
+  description: string;
+  listing_id: number;
+};
+
+// query all options
+export async function getAllOptions(): Promise<Option[]> {
+  const options = await sql<Option[]>`
     SELECT
       *
     FROM
@@ -15,9 +25,9 @@ export async function getAllOptions() {
   return options;
 }
 
-// Query options by listing id
-export async function getOptionsByListingId(id: number) {
-  const options = await sql`
+// query options by listing id
+export async function getOptionsByListingId(id: number): Promise<Option[]> {
+  const options = await sql<Option[]>`
     SELECT
       *
     FROM

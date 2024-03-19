@@ -17,9 +17,9 @@ export async function POST(request: NextRequest) {
       const user = await getSingleUserByUsername(body.username).catch(
         console.error,
       );
-      if (user[0]) {
+      if (user) {
         // store user's hashed password in variable.
-        const hashedOtp = user[0].password_hash;
+        const hashedOtp = user.password_hash;
 
         // compare typedOtp from api request with hashedOtp from database
         const isOtpCorrect = await bcrypt

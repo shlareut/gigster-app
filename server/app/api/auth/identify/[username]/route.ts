@@ -17,13 +17,14 @@ export async function GET(request: NextRequest, { params }: UserParams) {
   const user = await getSingleUserByUsername(params.username).catch(
     console.error,
   );
-  if (user[0]) {
+  if (user) {
     // return "exists" if username was found.
     return new NextResponse(
       JSON.stringify({
         success: true,
         newUser: false,
         message: `Existing user identified.`,
+        value: user,
       }),
     );
   } else {
@@ -34,6 +35,7 @@ export async function GET(request: NextRequest, { params }: UserParams) {
       success: true,
       newUser: true,
       message: `New user identified.`,
+      value: user,
     }),
   );
 }

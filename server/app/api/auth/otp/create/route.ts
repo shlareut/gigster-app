@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
       const user = await getSingleUserByUsername(body.username).catch(
         console.error,
       );
-      if (user[0]) {
+      if (user) {
         // update the user's password with new otp.
         const updatedUser = await updateUserPassword(
           body.username,

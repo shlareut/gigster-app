@@ -19,12 +19,12 @@ export async function GET(request: NextRequest, { params }: UserParams) {
   const user = await getSingleUserByUsername(params.username).catch(
     console.error,
   );
-  if (user[0]) {
+  if (user) {
     return new NextResponse(
       JSON.stringify({
         success: true,
         message: `User found.`,
-        value: user[0],
+        value: user,
       }),
     );
   } else {

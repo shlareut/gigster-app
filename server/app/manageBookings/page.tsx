@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-export default function ManageBookings() {
+export default function ManageBookingsScreen() {
   const [bookings, setBookings] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function ManageBookings() {
         <ul>
           {bookings.map((item) => (
             <li>
-              {item.id} {item.status}
+              {item.id} - {item.status}
             </li>
           ))}
         </ul>

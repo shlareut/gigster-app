@@ -23,11 +23,11 @@ export async function POST(request: NextRequest) {
       const user = await getSingleUserByUsername(body.username).catch(
         console.error,
       );
-      if (user[0]) {
+      if (user) {
         // generate session token if user was found.
         const sessionToken = generateSessionToken();
         if (sessionToken) {
-          const userId = user[0].id;
+          const userId = user.id;
           // create session entry in database.
           const createdSession = await createSession(
             userId,

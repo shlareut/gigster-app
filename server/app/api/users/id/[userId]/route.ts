@@ -9,5 +9,5 @@ type UserParams = {
 
 export async function GET(request: NextRequest, { params }: UserParams) {
   const data = await getSingleUserById(params.userId).catch(console.error);
-  return NextResponse.json(data[0]);
+  return NextResponse.json(data);
 }

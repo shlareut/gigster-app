@@ -1,3 +1,4 @@
+import { AntDesign } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
 import {
@@ -97,7 +98,8 @@ const ListingCard = (props) => {
           </Text>
           {/* // start distance */}
           <Text className="text-base">
-            𐊭 {props.listing.nearest_station_distance}m from{' '}
+            <AntDesign name="enviromento" size={15} />{' '}
+            {props.listing.nearest_station_distance}m from{' '}
             {props.listing.nearest_station_type.toLowerCase()}{' '}
             {props.listing.nearest_station_name}
           </Text>

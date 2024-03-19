@@ -4,14 +4,22 @@ import { setEnvironment } from '../utils/config.js';
 setEnvironment();
 const sql = postgres();
 
-// Create single user.
+// type definition
+export type User = {
+  username: string;
+  password_hash: string;
+  first_name: string;
+  last_name: string;
+};
+
+// create single user.
 export async function createUser(
   username: string,
   password_hash: string,
   first_name: string,
   last_name: string,
-) {
-  const user = await sql`
+): Promise<User | null> {
+  const [user] = await sql<User[]>`
     INSERT INTO
       users (
         username,
@@ -30,12 +38,12 @@ export async function createUser(
       id,
       username
   `;
-  return user;
+  return user || null;
 }
 
 // Query all users
-export async function getAllUsers() {
-  const users = await sql`
+export async function getAllUsers(): Promise<User[]> {
+  const users = await sql<User[]>`
     SELECT
       *
     FROM
@@ -45,8 +53,10 @@ export async function getAllUsers() {
 }
 
 // Read single user by username.
-export async function getSingleUserByUsername(username: string) {
-  const user = await sql`
+export async function getSingleUserByUsername(
+  username: string,
+): Promise<User | null> {
+  const [user] = await sql<User[]>`
     SELECT
       *
     FROM
@@ -54,12 +64,12 @@ export async function getSingleUserByUsername(username: string) {
     WHERE
       username = ${username}
   `;
-  return user;
+  return user || null;
 }
 
 // Read single user by id.
-export async function getSingleUserById(id: number) {
-  const user = await sql`
+export async function getSingleUserById(id: number): Promise<User | null> {
+  const [user] = await sql<User[]>`
     SELECT
       *
     FROM
@@ -67,15 +77,15 @@ export async function getSingleUserById(id: number) {
     WHERE
       id = ${id}
   `;
-  return user;
+  return user || null;
 }
 
 // Update single user password.
 export async function updateUserPassword(
   username: string,
   password_hash: string,
-) {
-  const updatedUser = await sql`
+): Promise<User | null> {
+  const [updatedUser] = await sql<User[]>`
     UPDATE users
     SET
       password_hash = ${password_hash}
@@ -85,12 +95,14 @@ export async function updateUserPassword(
       id,
       username;
   `;
-  return updatedUser[0];
+  return updatedUser || null;
 }
 
 // Update single user last login timestamp.
-export async function updateUserLastLogin(username: string) {
-  const updatedUser = await sql`
+export async function updateUserLastLogin(
+  username: string,
+): Promise<User | null> {
+  const [updatedUser] = await sql<User[]>`
     UPDATE users
     SET
       last_login = CURRENT_TIMESTAMP
@@ -100,5 +112,5 @@ export async function updateUserLastLogin(username: string) {
       id,
       username;
   `;
-  return updatedUser[0];
+  return updatedUser || null;
 }
