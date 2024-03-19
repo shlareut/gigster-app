@@ -13,28 +13,39 @@ type UserParams = {
 };
 
 export async function GET(request: NextRequest, { params }: UserParams) {
-  // query username from database
+  // match user input with regex for phone format
+  if (!/^\+\d+$/.test(params.username)) {
+    return new NextResponse(
+      // return "wrong format" error
+      JSON.stringify({
+        success: false,
+        message: `Only international phone number format allowed, e.g. +123456789 (a plus sign (+) followed by digits).`,
+        value: params.username,
+      }),
+    );
+  }
+
+  // query username from database if format is correct
   const user = await getSingleUserByUsername(params.username).catch(
     console.error,
   );
-  if (user) {
-    // return "exists" if username was found.
+  if (!user) {
     return new NextResponse(
+      // return "new" if username was not found.
       JSON.stringify({
         success: true,
-        newUser: false,
-        message: `Existing user identified.`,
+        newUser: true,
+        message: `New user identified.`,
         value: user,
       }),
     );
-  } else {
   }
+  // return "exists" if username was found.
   return new NextResponse(
-    // return "new" if username was not found.
     JSON.stringify({
       success: true,
-      newUser: true,
-      message: `New user identified.`,
+      newUser: false,
+      message: `Existing user identified.`,
       value: user,
     }),
   );
