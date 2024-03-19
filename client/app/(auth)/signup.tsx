@@ -1,18 +1,31 @@
-import { router, useLocalSearchParams } from 'expo-router';
-import React, { useState } from 'react';
+import {
+  router,
+  useFocusEffect,
+  useLocalSearchParams,
+  usePathname,
+} from 'expo-router';
+import React, { useCallback, useState } from 'react';
 import { Keyboard, Text, TouchableWithoutFeedback, View } from 'react-native';
-import { MD3Colors, ProgressBar, TextInput } from 'react-native-paper';
+import { ProgressBar, TextInput } from 'react-native-paper';
 import Toast from 'react-native-toast-message';
+import checkLoginStatus from '../../util/sessions';
 import CustomButton from '../components/CustomButton';
-import { host, nextHost } from '../constants';
+import LoadingScreen from '../components/LoadingScreen';
+import { nextHost } from '../constants';
 
 export default function SignUpScreen() {
-  // define local and state variables
+  // -------------------------------------------
+  // #region variables
   const local = useLocalSearchParams();
   const username = local.username;
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [isButtonLoading, setIsButtonLoading] = useState(false);
+  // #endregion
+  // -------------------------------------------
+
+  // -------------------------------------------
+  // #region sign-up function
 
   // call sign-up api upon button click.
   const signup = async () => {
@@ -39,14 +52,52 @@ export default function SignUpScreen() {
     setIsButtonLoading(false);
   };
 
-  // check if someone is already logged in, if yes, redirect!
-  // // loading screen
-  // if (isLoading) {
-  //   return <LoadingScreen />;
-  // }
+  // #endregion
+  // -------------------------------------------
 
-  // Logging params for testing
-  console.log('Signup screen params:', local);
+  // -------------------------------------------
+  // #region check login status & do something
+
+  const path = usePathname();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useFocusEffect(
+    useCallback(() => {
+      // do something if screen is focussed
+      // console.log('Sign-up screen focussed!');
+      const checkIfLoggedIn = async () => {
+        try {
+          const status = await checkLoginStatus(path);
+          if (status.isLoggedIn) {
+            // do something if user is logged in.
+            Toast.show({
+              type: 'error',
+              text1: 'You are already logged in!',
+            });
+            router.back();
+          } else {
+            // do something if NOT logged in
+            setIsLoading(false);
+          }
+        } catch (error) {
+          console.error;
+        }
+      };
+      checkIfLoggedIn();
+      // do something if screen is UNfocussed
+      return () => {
+        // console.log('Sign-up screen unfocussed!');
+      };
+    }, []),
+  );
+
+  // loading screen
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
+  // #endregion
+  // -------------------------------------------
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>

@@ -135,17 +135,17 @@ export async function GET() {
         const databaseSession = await getSession(cookieSession).catch(
           console.error,
         );
-        if (databaseSession[0]) {
+        if (databaseSession) {
           // check if session expired.
-          const sessionExpiryDateTime = databaseSession[0].expiry_timestamp;
+          const sessionExpiryDateTime = databaseSession.expiry_timestamp;
           const currentDateTime = new Date();
           if (currentDateTime < sessionExpiryDateTime) {
             // return SUCCESS.
             return new NextResponse(
               JSON.stringify({
                 success: true,
-                message: `Session found.`,
-                userId: databaseSession[0].user_id,
+                message: `Logged-in`,
+                userId: databaseSession.user_id,
               }),
             );
           } else {

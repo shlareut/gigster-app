@@ -1,21 +1,32 @@
-import { router, useLocalSearchParams } from 'expo-router';
-import * as SecureStore from 'expo-secure-store';
-import React, { useEffect, useState } from 'react';
+import {
+  router,
+  useFocusEffect,
+  useLocalSearchParams,
+  usePathname,
+} from 'expo-router';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Keyboard, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { OtpInput } from 'react-native-otp-entry';
-import { ProgressBar, TextInput } from 'react-native-paper';
+import { ProgressBar } from 'react-native-paper';
 import Toast from 'react-native-toast-message';
+import checkLoginStatus from '../../util/sessions';
 import CustomButton from '../components/CustomButton';
-import { host, nextHost } from '../constants';
+import LoadingScreen from '../components/LoadingScreen';
+import { nextHost } from '../constants';
 
 export default function LoginScreen() {
-  // define local and state variables.
+  // -------------------------------------------
+  // #region variables
   const local = useLocalSearchParams();
   const username = local.username;
   const [typedOtp, setTypedOtp] = useState('');
   const [isButtonLoading, setIsButtonLoading] = useState(false);
+  // #endregion
+  // -------------------------------------------
 
-  // call "create otp" API upon screen load.
+  // -------------------------------------------
+  // #region create OTP function (WIP)
+
   useEffect(() => {
     const createOtp = async () => {
       // call create OTP api
@@ -26,7 +37,7 @@ export default function LoginScreen() {
         }),
       }).catch(console.error);
       const response = await request.json();
-      console.log('CREATE OTP API:', response.message);
+      // console.log('CREATE OTP API:', response.message);
       // if successful, send sms to user
       // PLACEHOLDER!
       // PLACEHOLDER!
@@ -35,7 +46,12 @@ export default function LoginScreen() {
     createOtp();
   }, []);
 
-  // call "verify otp" API upon button click.
+  // #endregion
+  // -------------------------------------------
+
+  // -------------------------------------------
+  // #region verify OTP function
+
   const verify = async () => {
     // disable button while verifying
     setIsButtonLoading(true);
@@ -48,7 +64,7 @@ export default function LoginScreen() {
       }),
     }).catch(console.error);
     const verifyResponse = await verifyRequest.json();
-    console.log('VERIFY OTP API:', verifyResponse.message);
+    // console.log('VERIFY OTP API:', verifyResponse.message);
 
     // check if verify returns a success or not.
     if (verifyResponse.success) {
@@ -61,7 +77,7 @@ export default function LoginScreen() {
         }),
       }).catch(console.error);
       const loginResponse = await loginRequest.json();
-      console.log('LOGIN API:', loginResponse.message);
+      // console.log('LOGIN API:', loginResponse.message);
 
       // check if login was successful.
       if (loginResponse.success) {
@@ -76,16 +92,52 @@ export default function LoginScreen() {
     setIsButtonLoading(false);
   };
 
-  // check if someone is already logged in, if yes, redirect!
-  // // loading screen
-  // if (isLoading) {
-  //   return <LoadingScreen />;
-  // }
+  // #endregion
+  // -------------------------------------------
 
-  // Logging params for testing
-  console.log('Login screen params:', local);
+  // -------------------------------------------
+  // #region check login status & do something
 
-  // show screen content.
+  const path = usePathname();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useFocusEffect(
+    useCallback(() => {
+      // do something if screen is focussed
+      // console.log('Login screen focussed!');
+      const checkIfLoggedIn = async () => {
+        try {
+          const status = await checkLoginStatus(path);
+          if (status.isLoggedIn) {
+            // do something if user is logged in.
+            Toast.show({
+              type: 'error',
+              text1: 'You are already logged in!',
+            });
+            router.back();
+          } else {
+            // do something if NOT logged in
+            setIsLoading(false);
+          }
+        } catch (error) {
+          console.error;
+        }
+      };
+      checkIfLoggedIn();
+      // do something if screen is UNfocussed
+      return () => {
+        // console.log('Login screen unfocussed!');
+      };
+    }, []),
+  );
+
+  // loading screen
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+  // #endregion
+  // -------------------------------------------
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View className="flex-1 bg-white">

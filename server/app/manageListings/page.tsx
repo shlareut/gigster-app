@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { geoCoder } from '../../utils/geoCoder';
 
 export default function ManageListingsScreen() {
+  // define state variables
   const [address, setAddress] = useState('');
   const [postalCode, setPostalCode] = useState('');
   const [city, setCity] = useState('');

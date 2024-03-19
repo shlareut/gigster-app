@@ -9,6 +9,36 @@ import { nextHost } from '../constants';
 export default function TestScreen() {
   return (
     <>
+      <CustomButton
+        onPress={() => {
+          router.navigate({
+            pathname: '/identify',
+            params: { entryPoint: '/myProfile' },
+          });
+        }}
+      >
+        Identify screen
+      </CustomButton>
+      <CustomButton
+        onPress={() => {
+          router.navigate({
+            pathname: '/login',
+            params: { entryPoint: '/myProfile' },
+          });
+        }}
+      >
+        Login screen
+      </CustomButton>
+      <CustomButton
+        onPress={() => {
+          router.navigate({
+            pathname: '/signup',
+            params: { entryPoint: '/myProfile' },
+          });
+        }}
+      >
+        Signup screen
+      </CustomButton>
       {/* // Loading animation */}
       <LottieView
         style={{ width: '25%', height: '25%' }}

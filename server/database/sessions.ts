@@ -35,7 +35,7 @@ export async function createSession(user_id: number, token: string) {
 
 // get session by session token
 export async function getSession(token: string) {
-  const session = await sql`
+  const [session] = await sql`
     SELECT
       *
     FROM

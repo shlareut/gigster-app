@@ -1,5 +1,10 @@
-import { router, useLocalSearchParams } from 'expo-router';
-import React, { useEffect, useState } from 'react';
+import {
+  router,
+  useFocusEffect,
+  useLocalSearchParams,
+  usePathname,
+} from 'expo-router';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   Keyboard,
   Text,
@@ -9,19 +14,28 @@ import {
 } from 'react-native';
 import { ProgressBar, TextInput } from 'react-native-paper';
 import Toast from 'react-native-toast-message';
+import checkLoginStatus from '../../util/sessions';
 import CustomButton from '../components/CustomButton';
 import LoadingScreen from '../components/LoadingScreen';
 import { nextHost } from '../constants';
 
 export default function IdentifyScreen() {
-  // define local and state variables
+  // -------------------------------------------
+  // #region variables
+
   const local = useLocalSearchParams();
   const [countryName, setCountryName] = useState('Austria');
   const [countryCode, setCountryCode] = useState('+43');
   const [lineNumber, setLineNumber] = useState('');
-  const [username, setUsername] = useState(null); // username consists of country code + line number.
+  const [username, setUsername] = useState(''); // username consists of country code + line number.
   const [isButtonLoading, setIsButtonLoading] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  // #endregion
+  // -------------------------------------------
+
+  // -------------------------------------------
+  // #region useEffect functions
 
   // update country code or country name if the user updates it.
   useEffect(() => {
@@ -34,39 +48,87 @@ export default function IdentifyScreen() {
     setUsername(`${countryCode}${lineNumber}`);
   }, [lineNumber, countryCode]);
 
-  // identify existing users and direct to login screen, else direct to sign-up screen
+  // #endregion
+  // -------------------------------------------
+
+  // -------------------------------------------
+  // #region identify and redirect function
   const identify = async () => {
+    // disable button
     setIsButtonLoading(true);
+
+    // call API
     const identifyRequest = await fetch(
       `${nextHost}/api/auth/identify/${username}`,
     );
     const identifyResponse = await identifyRequest.json();
-    console.log('IDENTIFY API:', identifyResponse.message);
-    // direct to login or sign up.
-    if (identifyResponse.newUser) {
+    // console.log('IDENTIFY API:', identifyResponse.message);
+
+    // if not successful, show error message
+    if (!identifyResponse.success) {
+      setErrorMessage(identifyResponse.message);
+    }
+    // if successful, direct to login or sign up.
+    else if (identifyResponse.success && identifyResponse.newUser) {
       // redirect to sign up screen.
       router.navigate({
         pathname: '/signup',
-        params: { ...local, username: username },
+        params: { ...local, username: identifyResponse.username },
       });
     } else {
       // redirect to login screen.
       router.navigate({
         pathname: '/login',
-        params: { ...local, username: username },
+        params: { ...local, username: identifyResponse.username },
       });
     }
     setIsButtonLoading(false);
   };
+  // #endregion
+  // -------------------------------------------
 
-  // check if someone is already logged in, if yes, redirect!
-  // // loading screen
-  // if (isLoading) {
-  //   return <LoadingScreen />;
-  // }
+  // -------------------------------------------
+  // #region check login status & do something
 
-  // Logging params for testing
-  console.log('Identify screen params:', local);
+  const path = usePathname();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useFocusEffect(
+    useCallback(() => {
+      // do something if screen is focussed
+      // console.log('Identify screen focussed!');
+      const checkIfLoggedIn = async () => {
+        try {
+          const status = await checkLoginStatus(path);
+          if (status.isLoggedIn) {
+            // do something if user is logged in.
+            Toast.show({
+              type: 'error',
+              text1: 'You are already logged in!',
+            });
+            router.back();
+          } else {
+            // do something if NOT logged in
+            setIsLoading(false);
+          }
+        } catch (error) {
+          console.error;
+        }
+      };
+      checkIfLoggedIn();
+      // do something if screen is UNfocussed
+      return () => {
+        // console.log('Identify screen unfocussed!');
+      };
+    }, []),
+  );
+
+  // loading screen
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+  // #endregion
+  // -------------------------------------------
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -77,7 +139,7 @@ export default function IdentifyScreen() {
             <ProgressBar progress={0.25} color="#155e75" />
           </View>
           {/* // Progressbar */}
-          {/* // Input field. */}
+          {/* // Input fields. */}
           <TouchableOpacity
             className="w-11/12 my-3"
             onPress={() => {
@@ -111,12 +173,14 @@ export default function IdentifyScreen() {
             value={lineNumber}
             onChangeText={(newText) => setLineNumber(newText)}
           />
+          {/* // Input fields. */}
           <View className="my-3 w-11/12">
             {isButtonLoading ? (
               <CustomButton disabled={true}>...</CustomButton>
             ) : (
               <CustomButton onPress={identify}>Continue</CustomButton>
             )}
+            <Text className="my-1 mx-0.5 text-red-500">{errorMessage}</Text>
           </View>
         </View>
       </View>

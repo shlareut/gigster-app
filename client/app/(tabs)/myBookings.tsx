@@ -1,5 +1,10 @@
-import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
-import { useEffect, useState } from 'react';
+import {
+  router,
+  useFocusEffect,
+  useLocalSearchParams,
+  usePathname,
+} from 'expo-router';
+import { useCallback, useEffect, useState } from 'react';
 import { FlatList, Image, Text, View } from 'react-native';
 import checkLoginStatus from '../../util/sessions';
 import BookingCard from '../components/BookingCard';
@@ -8,119 +13,74 @@ import LoadingScreen from '../components/LoadingScreen';
 import { nextHost } from '../constants';
 
 export default function MyBookingsScreen() {
-  // // define local and state variables
-  // const emptyScreenImage = require('../../assets/postings.jpg');
+  // -------------------------------------------
+  // #region variables
 
-  // //// START LOGIN SESSION CHECKING
-
-  // // ensure login-status is checked before setting isLoaded to false
-  // const [isLoginStatusChecked, setIsLoginStatusChecked] = useState(false);
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [userId, setUserId] = useState(null);
-
-  // // check login status on every screen load
-  // useFocusEffect(() => {
-  //   checkLoginStatus().then((status) => {
-  //     setIsLoggedIn(status.isLoggedIn);
-  //     setUserId(status.userId);
-  //     setIsLoginStatusChecked(true);
-  //     setIsLoading(false);
-  //     console.log('LOGIN STATUS:', status.isLoggedIn);
-  //   });
-  // });
-
-  // //// END LOGIN SESSION CHECKING
-
-  // // loading screen
-  // if (isLoading) {
-  //   return <LoadingScreen />;
-  // }
-  // if (isLoggedIn) {
-  //   // logged-in screen
-  //   return (
-  //     <View className="flex-1 bg-white">
-  //       <View className="my-3">
-  //         <BookingCard />
-  //         <BookingCard />
-  //       </View>
-  //     </View>
-  //   );
-  // } else {
-  //   // non-logged-in screen
-  //   return (
-  //     <View className="flex-1 h-screen w-screen items-center justify-center bg-white">
-  //       <Image className="w-48 h-48 mb-10" source={emptyScreenImage} />
-  //       <CustomButton onPress={() => router.navigate('../(auth)/identify')}>
-  //         Log in to view
-  //       </CustomButton>
-  //     </View>
-  //   );
-  // }
-  // DELETE ABOVE ONCE IT WORKS!
-
-  // define local and state variables
   const emptyScreenImage = require('../../assets/bookings.jpg');
+  const path = usePathname();
   const [bookings, setBookings] = useState([]);
-
-  // helper to re-trigger useEffect, replace with redux!
-  const local = useLocalSearchParams();
-  const helperToTriggerMyBookingsUseEffect =
-    local.helperToTriggerMyBookingsUseEffect;
-  console.log('REFRESH HELPER:', helperToTriggerMyBookingsUseEffect);
-
-  //// START LOGIN SESSION CHECKING
-
-  // ensure login-status is checked before setting isLoaded to false
-  const [isLoginStatusChecked, setIsLoginStatusChecked] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [userId, setUserId] = useState(null);
 
-  // check login status on every screen load
-  useFocusEffect(() => {
-    checkLoginStatus().then((status) => {
-      setIsLoggedIn(status.isLoggedIn);
-      setUserId(status.userId);
-      setIsLoginStatusChecked(true);
-      console.log('LOGIN STATUS:', status.isLoggedIn);
-    });
-  });
+  // #endregion
+  // -------------------------------------------
 
-  //// END LOGIN SESSION CHECKING
+  // -------------------------------------------
+  // #region check login status & do something
 
-  // call user-details api upon "userId" change
-  useEffect(() => {
-    if (isLoginStatusChecked) {
-      const queryUserBookings = async () => {
-        setIsLoading(true);
-        const userBookingsRequest = await fetch(
-          `${nextHost}/api/users/id/${userId}/bookings`,
-        );
-        const userBookingsResponse = await userBookingsRequest.json();
-        setBookings(userBookingsResponse);
-        setIsLoading(false);
+  useFocusEffect(
+    useCallback(() => {
+      // do something if screen is focussed
+      // console.log('myBooking screen focussed!');
+      const checkIfLoggedIn = async () => {
+        try {
+          const status = await checkLoginStatus(path);
+          if (status.isLoggedIn) {
+            // do something if user is logged in.
+            try {
+              // fetch user details
+              const userBookingsRequest = await fetch(
+                `${nextHost}/api/users/id/${status.userId}/bookings`,
+              );
+              const userBookingsResponse = await userBookingsRequest.json();
+              if (userBookingsResponse) {
+                setBookings(userBookingsResponse);
+                setIsLoading(false);
+              }
+            } catch (error) {
+              console.error;
+            }
+            // console.log(status);
+          } else {
+            // do something if NOT logged in
+            setBookings([]);
+            setIsLoading(false);
+          }
+        } catch (error) {
+          console.error;
+        }
       };
-      if (userId) {
-        queryUserBookings();
-      } else {
-        setBookings([]);
-        setIsLoading(false);
-      }
-    }
-  }, [userId, isLoginStatusChecked, helperToTriggerMyBookingsUseEffect]);
+      checkIfLoggedIn();
+      // do something if screen is UNfocussed
+      return () => {
+        // console.log('myBooking screen unfocussed!');
+      };
+    }, []),
+  );
 
   // loading screen
   if (isLoading) {
     return <LoadingScreen />;
   }
-  // logged-in or non-logged-in rendering
-  if (bookings && isLoggedIn) {
+  // #endregion
+  // -------------------------------------------
+
+  if (bookings) {
     return (
       <View className="flex-1 bg-white">
         {bookings.length > 0 ? (
           <FlatList
-            className="w-screen mb-10"
+            className="w-screen"
+            contentContainerStyle={{ paddingBottom: 40 }}
             snapToInterval={1}
             bounces={false}
             showsVerticalScrollIndicator={false}
@@ -140,10 +100,6 @@ export default function MyBookingsScreen() {
             </CustomButton>
           </View>
         )}
-        {/* <View className="my-3">
-          <BookingCard />
-          <BookingCard />
-        </View> */}
       </View>
     );
   } else {

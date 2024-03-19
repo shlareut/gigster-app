@@ -1,71 +1,72 @@
-import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
-import React, { useEffect, useState } from 'react';
 import {
-  FlatList,
-  Image,
-  Pressable,
-  ScrollView,
-  Text,
-  View,
-} from 'react-native';
+  router,
+  useFocusEffect,
+  useLocalSearchParams,
+  usePathname,
+} from 'expo-router';
+import React, { useCallback, useState } from 'react';
+import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import checkLoginStatus from '../../util/sessions';
 import CustomButton from '../components/CustomButton';
 import LoadingScreen from '../components/LoadingScreen';
 import { nextHost } from '../constants';
 
 export default function DetailsScreen() {
-  // define local and state variables
+  // -------------------------------------------
+  // #region variables
+  const path = usePathname();
   const local = useLocalSearchParams();
   const [listing, setListing] = useState({});
   const [options, setOptions] = useState([]);
-
-  //// START LOGIN SESSION CHECKING
-
-  // ensure login-status is checked before setting isLoaded to false
-  const [isLoginStatusChecked, setIsLoginStatusChecked] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [userId, setUserId] = useState(null);
+  // #endregion
+  // -------------------------------------------
 
-  // check login status on every screen load
-  useFocusEffect(() => {
-    checkLoginStatus().then((status) => {
-      setIsLoggedIn(status.isLoggedIn);
-      setUserId(status.userId);
-      setIsLoginStatusChecked(true);
-      console.log('LOGIN STATUS:', status.isLoggedIn);
-    });
-  });
+  // -------------------------------------------
+  // #region check login status & fetch details
 
-  //// END LOGIN SESSION CHECKING
-
-  // fetch details upon screen load
-  useEffect(() => {
-    if (isLoginStatusChecked) {
+  useFocusEffect(
+    useCallback(() => {
+      // do something if screen is focussed
+      // console.log('details screen focussed!');
       const fetchDetails = async () => {
-        // fetch details
-        const listingsRequest = await fetch(
-          `${nextHost}/api/listings/${local.listingId}`,
-        );
-        const listingResponse = await listingsRequest.json();
-        // fetch options
-        const optionsRequest = await fetch(
-          `${nextHost}/api/listings/${local.listingId}/options`,
-        );
-        const optionsResponse = await optionsRequest.json();
-        // set state variables
-        setListing(listingResponse);
-        setOptions(optionsResponse);
-        setIsLoading(false);
+        try {
+          // check online status
+          const status = await checkLoginStatus(path);
+          // fetch details
+          const listingsRequest = await fetch(
+            `${nextHost}/api/listings/${local.listingId}`,
+          );
+          const listingResponse = await listingsRequest.json();
+          // fetch options
+          const optionsRequest = await fetch(
+            `${nextHost}/api/listings/${local.listingId}/options`,
+          );
+          const optionsResponse = await optionsRequest.json();
+          // set state variables
+          setListing(listingResponse);
+          setOptions(optionsResponse);
+          setIsLoggedIn(status.isLoggedIn);
+          setIsLoading(false);
+        } catch (error) {
+          console.error;
+        }
       };
-      fetchDetails().catch(console.error);
-    }
-  }, [local.listingId, isLoginStatusChecked]);
+      fetchDetails();
+      // do something if screen is UNfocussed
+      return () => {
+        // console.log('details screen unfocussed!');
+      };
+    }, []),
+  );
 
   // loading screen
   if (isLoading) {
     return <LoadingScreen />;
   }
+  // #endregion
+  // -------------------------------------------
 
   return (
     <View className="flex-1 bg-white">
