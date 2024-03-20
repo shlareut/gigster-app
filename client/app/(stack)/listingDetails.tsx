@@ -6,6 +6,7 @@ import {
 } from 'expo-router';
 import React, { useCallback, useState } from 'react';
 import { Image, Pressable, ScrollView, Text, View } from 'react-native';
+import openMap from 'react-native-open-maps';
 import checkLoginStatus from '../../util/sessions';
 import CustomButton from '../components/CustomButton';
 import LoadingScreen from '../components/LoadingScreen';
@@ -21,6 +22,14 @@ export default function DetailsScreen() {
   const [options, setOptions] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
+  // #endregion
+  // -------------------------------------------
+
+  // -------------------------------------------
+  // #region open device map function
+
+  const openMapsApp = () => {};
 
   // #endregion
   // -------------------------------------------
@@ -88,7 +97,12 @@ export default function DetailsScreen() {
             </Text>
             <Pressable
               className="active:opacity-50"
-              onPress={() => alert('Google map in progress!')}
+              onPress={() =>
+                openMap({
+                  query: `${listing.name}, ${listing.postal_code}, ${listing.city}`,
+                  provider: 'google',
+                })
+              }
             >
               <Text className="font-bold text-cyan-800">Open map</Text>
             </Pressable>

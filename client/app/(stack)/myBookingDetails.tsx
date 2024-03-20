@@ -9,6 +9,7 @@ import { Image, Modal, ScrollView, Text, View } from 'react-native';
 import Toast from 'react-native-toast-message';
 import checkLoginStatus from '../../util/sessions';
 import BookingStatusDisplay from '../components/BookingStatusDisplay';
+import CustomButton from '../components/CustomButton';
 import LoadingScreen from '../components/LoadingScreen';
 import { nextHost } from '../constants';
 
@@ -102,12 +103,17 @@ export default function MyBookingDetailsScreen() {
         </View>
         <View className="my-8 border-t-8 border-gray-100"></View>
         <View className="w-11/12 my-3 self-center">
-          <Text className="mb-5 text-lg font-semibold">Experience</Text>
-          <Text className="mb-5">{booking.experience} years</Text>
-        </View>
-        <View className="w-11/12 my-3 self-center">
-          <Text className="mb-5 text-lg font-semibold">Remarks</Text>
-          <Text className="mb-5">{booking.remarks}</Text>
+          <View className="my-3">
+            <Text className="mb-5 text-lg font-semibold">Experience</Text>
+            <Text className="mb-5">{booking.experience} years</Text>
+          </View>
+          <View className="my-3">
+            <Text className="mb-5 text-lg font-semibold">Remarks</Text>
+            <Text className="mb-5">{booking.remarks}</Text>
+          </View>
+          <View className="my-10">
+            <CustomButton onPress={() => {}}>Cancel</CustomButton>
+          </View>
         </View>
       </ScrollView>
     </View>
