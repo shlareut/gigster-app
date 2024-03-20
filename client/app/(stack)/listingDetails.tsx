@@ -14,12 +14,14 @@ import { nextHost } from '../constants';
 export default function DetailsScreen() {
   // -------------------------------------------
   // #region variables
+
   const path = usePathname();
   const local = useLocalSearchParams();
   const [listing, setListing] = useState({});
   const [options, setOptions] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
   // #endregion
   // -------------------------------------------
 
@@ -92,7 +94,7 @@ export default function DetailsScreen() {
             </Pressable>
           </View>
           <View className="my-5 border-t border-gray-100"></View>
-          <Text className="text-justify">{listing.description}</Text>
+          <Text>{listing.description}</Text>
         </View>
         <View className="my-5 border-t-8 border-gray-100"></View>
         <View className="my-5 mx-3">
@@ -105,9 +107,7 @@ export default function DetailsScreen() {
                   <Text className="mb-5 text-lg font-semibold">
                     {option.name}
                   </Text>
-                  <Text className="text-justify mb-5">
-                    {option.description}
-                  </Text>
+                  <Text className="mb-5">{option.description}</Text>
                   <View className="flex-row items-center justify-between">
                     <View className="items-end py-1">
                       <Text className="text-lg font-bold">
@@ -120,9 +120,9 @@ export default function DetailsScreen() {
                       <CustomButton
                         onPress={() =>
                           router.navigate({
-                            pathname: '/booking',
+                            pathname: '/startBooking',
                             params: {
-                              entryPoint: '/[details]',
+                              entryPoint: `${path}`,
                               listingId: local.listingId,
                               listing: JSON.stringify(listing),
                               option: JSON.stringify(option),
@@ -138,7 +138,7 @@ export default function DetailsScreen() {
                           router.navigate({
                             pathname: '/identify',
                             params: {
-                              entryPoint: '/[details]',
+                              entryPoint: `${path}`,
                               listingId: local.listingId,
                             },
                           })

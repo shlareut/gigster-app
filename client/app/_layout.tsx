@@ -10,7 +10,7 @@ export default () => {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
-          name="(stack)/[details]"
+          name="(stack)/listingDetails"
           options={{
             title: 'Details',
             headerBackTitleVisible: false,
@@ -18,7 +18,7 @@ export default () => {
           }}
         />
         <Stack.Screen
-          name="(stack)/booking"
+          name="(stack)/startBooking"
           options={{
             title: 'Application',
             headerBackTitleVisible: false,
@@ -36,7 +36,7 @@ export default () => {
         <Stack.Screen
           name="(stack)/myBookingDetails"
           options={{
-            title: 'Application details',
+            title: 'Manage application',
             headerBackTitleVisible: false,
             presentation: 'modal',
             headerTintColor: 'black',

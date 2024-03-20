@@ -114,20 +114,6 @@ export default function ProfileScreen() {
           </View>
         </ScrollView>
       </View>
-      // <View className="flex-1 h-screen w-screen items-center bg-white">
-      //   <View className="bg-cyan-800  w-32 h-32 justify-center items-center rounded-full mt-10">
-      //     <Text className="mt-3 text-6xl text-white">{user.first_name[0]}</Text>
-      //   </View>
-      //   <Text className="mt-5 mb-10 text-lg">
-      //     {user.first_name} {user.last_name}
-      //   </Text>
-      //   <Text>ID: {user.id}</Text>
-      //   <Text>Phone: {user.username}</Text>
-      //   <Text>Last login: {user.last_login}</Text>
-      //   <View className="my-10">
-      //     <CustomButton onPress={logout}>Log out</CustomButton>
-      //   </View>
-      // </View>
     );
   } else {
     // if user is null, show non-logged-in screen
@@ -138,7 +124,7 @@ export default function ProfileScreen() {
           onPress={() => {
             router.navigate({
               pathname: '/identify',
-              params: { entryPoint: '/myProfile' },
+              params: { entryPoint: `${path}` },
             });
           }}
         >
