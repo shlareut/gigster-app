@@ -80,7 +80,7 @@ export default function MyBookingsScreen() {
         {bookings.length > 0 ? (
           <FlatList
             className="w-screen"
-            contentContainerStyle={{ paddingBottom: 40 }}
+            contentContainerStyle={{ paddingBottom: 40, paddingTop: 20 }}
             snapToInterval={1}
             bounces={false}
             showsVerticalScrollIndicator={false}

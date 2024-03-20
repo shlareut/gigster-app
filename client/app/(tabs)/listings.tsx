@@ -29,7 +29,7 @@ export default function ListingsScreen() {
     <SafeAreaView className="flex-1 bg-white">
       <FlatList
         className="w-screen"
-        contentContainerStyle={{ paddingBottom: 40 }}
+        contentContainerStyle={{ paddingBottom: 40, paddingTop: 20 }}
         snapToInterval={1}
         bounces={false}
         showsVerticalScrollIndicator={false}

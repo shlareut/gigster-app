@@ -1,5 +1,10 @@
-import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
-import React, { useEffect, useState } from 'react';
+import {
+  router,
+  useFocusEffect,
+  useLocalSearchParams,
+  usePathname,
+} from 'expo-router';
+import React, { useCallback, useState } from 'react';
 import {
   Keyboard,
   ScrollView,
@@ -8,39 +13,78 @@ import {
   View,
 } from 'react-native';
 import { ProgressBar, TextInput } from 'react-native-paper';
+import Toast from 'react-native-toast-message';
 import checkLoginStatus from '../../util/sessions';
 import CustomButton from '../components/CustomButton';
 import LoadingScreen from '../components/LoadingScreen';
 import { nextHost } from '../constants';
 
 export default function BookingScreen() {
-  // define local and state variables
+  // -------------------------------------------
+  // #region  variables
+
   const local = useLocalSearchParams();
   const [isButtonLoading, setIsButtonLoading] = useState(false);
   const [experience, setExperience] = useState('');
   const [remarks, setRemarks] = useState('');
-  const option = JSON.parse(local.option);
-  const listing = JSON.parse(local.listing);
+  const option = local.option ? JSON.parse(local.option) : null;
+  const listing = local.listing ? JSON.parse(local.listing) : null;
 
-  //// START LOGIN SESSION CHECKING
+  // #endregion variables
+  // -------------------------------------------
 
-  // ensure login-status is checked before setting isLoaded to false
-  const [isLoginStatusChecked, setIsLoginStatusChecked] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // -------------------------------------------
+  // #region check login status & do something
+
+  const path = usePathname();
   const [isLoading, setIsLoading] = useState(true);
-  const [userId, setUserId] = useState(null);
 
-  // check login status on every screen load
-  useFocusEffect(() => {
-    checkLoginStatus().then((status) => {
-      setIsLoggedIn(status.isLoggedIn);
-      setUserId(status.userId);
-      setIsLoginStatusChecked(true);
-      console.log('LOGIN STATUS:', status.isLoggedIn);
-    });
-  });
+  useFocusEffect(
+    useCallback(() => {
+      // do something if screen is focussed
+      // console.log('Booking screen focussed!');
+      const checkIfLoggedIn = async () => {
+        try {
+          const status = await checkLoginStatus(path);
+          if (status.isLoggedIn) {
+            // do something if user is logged in.
+            if (!option || !listing) {
+              // check for error case "option is null"
+              router.back();
+              Toast.show({
+                type: 'error',
+                text1: 'No option selected!',
+              });
+            } else {
+              setIsLoading(false);
+            }
+          } else {
+            // do something if NOT logged in
+            router.back();
+            Toast.show({
+              type: 'error',
+              text1: 'You are not logged in!',
+            });
+          }
+        } catch (error) {
+          console.error;
+        }
+      };
+      checkIfLoggedIn();
+      // do something if screen is UNfocussed
+      return () => {
+        // console.log('Booking screen unfocussed!');
+      };
+    }, []),
+  );
 
-  //// END LOGIN SESSION CHECKING
+  // loading screen
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
+  // #endregion
+  // -------------------------------------------
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>

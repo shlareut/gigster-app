@@ -157,18 +157,6 @@ export default function DetailsScreen() {
           )}
         </View>
       </ScrollView>
-      {/* // deprecate sticky bar and make "apply" cta for each option! */}
-      {/* <View className="h-28 border-t border-gray-200">
-        <View className="self-end my-4 mx-3 align">
-          {isLoggedIn ? (
-            <CustomButton onPress={() => alert('WIP')}>Apply now</CustomButton>
-          ) : (
-            <CustomButton onPress={() => router.navigate('../(auth)/identify')}>
-              Log in to apply
-            </CustomButton>
-          )}
-        </View>
-      </View> */}
     </View>
   );
 }

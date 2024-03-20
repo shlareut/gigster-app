@@ -11,6 +11,7 @@ export default function BookingCard(props) {
       onPress={() => {
         router.navigate({
           pathname: '/myBookingDetails',
+          params: { bookingId: props.booking.id },
         });
       }}
     >

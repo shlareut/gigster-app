@@ -39,6 +39,26 @@ export default function TestScreen() {
       >
         Signup screen
       </CustomButton>
+      <CustomButton
+        onPress={() => {
+          router.navigate({
+            pathname: '/booking',
+            params: { entryPoint: '/myProfile' },
+          });
+        }}
+      >
+        Booking screen
+      </CustomButton>
+      <CustomButton
+        onPress={() => {
+          router.navigate({
+            pathname: '/submitBooking',
+            params: { entryPoint: '/myProfile' },
+          });
+        }}
+      >
+        Submit booking screen
+      </CustomButton>
       {/* // Loading animation */}
       <LottieView
         style={{ width: '25%', height: '25%' }}

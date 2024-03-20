@@ -110,11 +110,11 @@ export default function LoginScreen() {
           const status = await checkLoginStatus(path);
           if (status.isLoggedIn) {
             // do something if user is logged in.
+            router.back();
             Toast.show({
               type: 'error',
               text1: 'You are already logged in!',
             });
-            router.back();
           } else {
             // do something if NOT logged in
             setIsLoading(false);
