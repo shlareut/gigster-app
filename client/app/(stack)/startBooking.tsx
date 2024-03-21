@@ -27,8 +27,6 @@ export default function BookingScreen() {
   const [isButtonLoading, setIsButtonLoading] = useState(false);
   const [experience, setExperience] = useState('');
   const [remarks, setRemarks] = useState('');
-  const option = local.option ? JSON.parse(local.option) : null;
-  const listing = local.listing ? JSON.parse(local.listing) : null;
 
   // #endregion variables
   // -------------------------------------------
@@ -48,7 +46,7 @@ export default function BookingScreen() {
           const status = await checkLoginStatus(path);
           if (status.isLoggedIn) {
             // do something if user is logged in.
-            if (!option || !listing) {
+            if (!local.optionId || !local.listingId) {
               // check for error case "option is null"
               router.back();
               Toast.show({
@@ -100,39 +98,12 @@ export default function BookingScreen() {
           <View className="items-center">
             <Text className="w-11/12 my-3">
               You're applying for the{' '}
-              <Text className="font-bold">{option.name}</Text> role at{' '}
-              <Text className="font-bold">{listing.name}</Text> in{' '}
-              {listing.city_district}, {listing.city}. Please enter your details
-              below to complete your application.
+              <Text className="font-bold">{local.optionName}</Text> role at{' '}
+              <Text className="font-bold">{local.listingName}</Text> in{' '}
+              {local.listingDistrict}, {local.listingCity}. Please enter your
+              details below to complete your application.
             </Text>
             {/* // Input field. */}
-            {/* <TextInput
-              className="bg-white text-left text-md w-11/12 my-3"
-              disabled={true}
-              mode="outlined"
-              inputMode="text"
-              label="First name"
-              value="Donald"
-              activeOutlineColor="#155e75"
-            />
-            <TextInput
-              className="bg-white text-left text-md w-11/12 my-3"
-              disabled={true}
-              mode="outlined"
-              inputMode="text"
-              label="Last name"
-              value="Duck"
-              activeOutlineColor="#155e75"
-            />
-            <TextInput
-              className="bg-white text-left text-md w-11/12 my-3"
-              disabled={true}
-              mode="outlined"
-              inputMode="tel"
-              label="Phone number"
-              value="+4312345"
-              activeOutlineColor="#155e75"
-            /> */}
             <TextInput
               className="bg-white text-left text-md w-11/12 my-3"
               mode="outlined"
@@ -147,7 +118,7 @@ export default function BookingScreen() {
               mode="outlined"
               multiline={true}
               inputMode="text"
-              label="Tell us why you are the best fit"
+              label="Message to employer"
               value={remarks}
               onChangeText={(newText) => setRemarks(newText)}
               activeOutlineColor="#155e75"

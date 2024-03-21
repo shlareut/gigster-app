@@ -27,14 +27,6 @@ export default function DetailsScreen() {
   // -------------------------------------------
 
   // -------------------------------------------
-  // #region open device map function
-
-  const openMapsApp = () => {};
-
-  // #endregion
-  // -------------------------------------------
-
-  // -------------------------------------------
   // #region check login status & fetch details
 
   useFocusEffect(
@@ -132,17 +124,21 @@ export default function DetailsScreen() {
                     {/* // conditional button rendering */}
                     {isLoggedIn ? (
                       <CustomButton
-                        onPress={() =>
+                        onPress={() => {
                           router.navigate({
                             pathname: '/startBooking',
                             params: {
-                              entryPoint: `${path}`,
-                              listingId: local.listingId,
-                              listing: JSON.stringify(listing),
-                              option: JSON.stringify(option),
+                              listingId: listing.id,
+                              listingName: listing.name,
+                              listingDistrict: listing.city_district,
+                              listingCity: listing.city,
+                              optionId: option.id,
+                              optionName: option.name,
+                              optionPrice: option.price,
+                              optionCurrency: option.currency,
                             },
-                          })
-                        }
+                          });
+                        }}
                       >
                         Apply now
                       </CustomButton>
@@ -153,7 +149,7 @@ export default function DetailsScreen() {
                             pathname: '/identify',
                             params: {
                               entryPoint: `${path}`,
-                              listingId: local.listingId,
+                              listingId: listing.id,
                             },
                           })
                         }

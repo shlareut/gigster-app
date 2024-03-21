@@ -42,7 +42,7 @@ export default function TestScreen() {
       <CustomButton
         onPress={() => {
           router.navigate({
-            pathname: '/booking',
+            pathname: '/startBooking',
             params: { entryPoint: '/myProfile' },
           });
         }}

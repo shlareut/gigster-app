@@ -104,14 +104,17 @@ export default function MyBookingDetailsScreen() {
         <View className="my-8 border-t-8 border-gray-100"></View>
         <View className="w-11/12 my-3 self-center">
           <View className="my-3">
-            <Text className="mb-5 text-lg font-semibold">Experience</Text>
-            <Text className="mb-5">{booking.experience} years</Text>
+            <Text className="text-lg font-semibold">Experience</Text>
+            <Text className="">{booking.experience} years</Text>
           </View>
           <View className="my-3">
-            <Text className="mb-5 text-lg font-semibold">Remarks</Text>
-            <Text className="mb-5">{booking.remarks}</Text>
+            <Text className="text-lg font-semibold">Message to employer</Text>
+            <Text className="">{booking.remarks}</Text>
           </View>
           <View className="my-10">
+            <CustomButton onPress={() => {}}>Edit</CustomButton>
+          </View>
+          <View className="mb-10">
             <CustomButton onPress={() => {}}>Cancel</CustomButton>
           </View>
         </View>

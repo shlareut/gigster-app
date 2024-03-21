@@ -24,11 +24,6 @@ export default function SubmitBookingScreen() {
   // #region variables
 
   const local = useLocalSearchParams();
-  const option = local.option ? JSON.parse(local.option) : null;
-  const listing = local.listing ? JSON.parse(local.listing) : null;
-  const optionId = option ? option.id : null;
-  const experience = local.experience ? local.experience : null;
-  const remarks = local.remarks ? local.remarks : null;
   const [isButtonLoading, setIsButtonLoading] = useState(false);
   const [userId, setUserId] = useState(null);
 
@@ -43,21 +38,21 @@ export default function SubmitBookingScreen() {
     const bookingRequest = await fetch(`${nextHost}/api/bookings`, {
       method: 'POST',
       body: JSON.stringify({
-        userId,
-        optionId,
-        experience,
-        remarks,
+        userId: userId,
+        optionId: local.optionId,
+        experience: local.experience,
+        remarks: local.remarks,
       }),
     }).catch(console.error);
     const bookingResponse = await bookingRequest.json();
-    console.log('BOOKING API:', bookingResponse.message);
+    // console.log('BOOKING API:', bookingResponse.message);
 
     // check if booking was created successfully
     if (bookingResponse.success) {
       // redirect to login screen
       router.navigate({
         pathname: '/myBookings',
-        params: { ...local, helperToTriggerMyBookingsUseEffect: Math.random() },
+        params: { ...local },
       });
     }
     setIsButtonLoading(false);
@@ -81,7 +76,7 @@ export default function SubmitBookingScreen() {
           const status = await checkLoginStatus(path);
           if (status.isLoggedIn) {
             // do something if user is logged in.
-            if (!option || !listing) {
+            if (!local.optionId || !local.listingId) {
               // check for error case "option is null"
               router.back();
               Toast.show({
@@ -143,7 +138,7 @@ export default function SubmitBookingScreen() {
               mode="outlined"
               inputMode="text"
               label="Role"
-              value={option.name}
+              value={local.optionName}
               activeOutlineColor="#155e75"
             />
             <TextInput
@@ -152,7 +147,7 @@ export default function SubmitBookingScreen() {
               mode="outlined"
               inputMode="text"
               label="Venue"
-              value={listing.name}
+              value={local.listingName}
               activeOutlineColor="#155e75"
             />
             <TextInput
@@ -161,7 +156,7 @@ export default function SubmitBookingScreen() {
               mode="outlined"
               inputMode="text"
               label="Location"
-              value={`${listing.city_district}, ${listing.city}`}
+              value={`${local.listingDistrict}, ${local.listingCity}`}
               activeOutlineColor="#155e75"
             />
             <TextInput
@@ -170,7 +165,7 @@ export default function SubmitBookingScreen() {
               mode="outlined"
               inputMode="text"
               label="Wage"
-              value={`${option.price} ${option.currency} per hour`}
+              value={`${local.optionPrice} ${local.optionCurrency} per hour`}
               activeOutlineColor="#155e75"
             />
             <TextInput
@@ -187,7 +182,7 @@ export default function SubmitBookingScreen() {
               disabled={true}
               mode="outlined"
               inputMode="text"
-              label="Tell us why you are the best fit"
+              label="Message to employer"
               value={local.remarks}
               activeOutlineColor="#155e75"
             />

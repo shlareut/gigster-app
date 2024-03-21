@@ -10,11 +10,13 @@ type BookingParams = {
   };
 };
 
+// query all bookings (this query is global, user-specific booking query can be found in user api)
 export async function GET(request: NextRequest, { params }: BookingParams) {
   const data = await getAllBookings().catch(console.error);
   return NextResponse.json(data);
 }
 
+// create new booking for a particular user
 export async function POST(request: NextRequest, { params }: BookingParams) {
   // read request content
   const body = await request.json();
@@ -26,7 +28,7 @@ export async function POST(request: NextRequest, { params }: BookingParams) {
       body.experience,
       body.remarks,
     ).catch(console.error);
-    if (booking[0]) {
+    if (booking) {
       // return SUCCESS
       return new NextResponse(
         JSON.stringify({
@@ -53,3 +55,6 @@ export async function POST(request: NextRequest, { params }: BookingParams) {
     );
   }
 }
+
+// update existing booking's remarks and experience
+export async function PUT(request: NextRequest, { params }: BookingParams) {}
