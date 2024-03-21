@@ -73,7 +73,7 @@ export async function getBookingsByUserId(id: number) {
 }
 
 // update booking experience and remarks by booking id
-export async function updateUserPassword(
+export async function updateBookingDetails(
   id: number,
   experience: number,
   remarks: string,
@@ -89,6 +89,21 @@ export async function updateUserPassword(
       id,
       experience,
       remarks;
+  `;
+  return updatedBooking || null;
+}
+
+// update booking status
+export async function updateBookingStatus(id: number, status: string) {
+  const [updatedBooking] = await sql`
+    UPDATE bookings
+    SET
+      status = ${status}
+    WHERE
+      id = ${id}
+    RETURNING
+      id,
+      status;
   `;
   return updatedBooking || null;
 }

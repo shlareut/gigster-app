@@ -5,7 +5,8 @@ import {
   usePathname,
 } from 'expo-router';
 import React, { useCallback, useState } from 'react';
-import { Image, Modal, ScrollView, Text, View } from 'react-native';
+import { Alert, Image, Modal, ScrollView, Text, View } from 'react-native';
+import { TextInput } from 'react-native-paper';
 import Toast from 'react-native-toast-message';
 import checkLoginStatus from '../../util/sessions';
 import BookingStatusDisplay from '../components/BookingStatusDisplay';
@@ -17,11 +18,69 @@ export default function MyBookingDetailsScreen() {
   // -------------------------------------------
   // #region variables
 
+  // if I update booking on this screen, it can't be local search params, I will need to query it on the spot!
   const booking = useLocalSearchParams();
-  const avatarPlaceholderImage = require('../../assets/avatar.jpg');
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [newExperience, setNewExperience] = useState(booking.experience);
+  const [newRemarks, setNewRemarks] = useState(booking.remarks);
 
   // -------------------------------------------
   // #endregion
+
+  // -------------------------------------------
+  // #region update booking details function
+
+  const updateBooking = async () => {
+    const updateBookingRequest = await fetch(`${nextHost}/api/bookings`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        bookingId: booking.id,
+        experience: newExperience,
+        remarks: newRemarks,
+      }),
+    }).catch(console.error);
+    const updateBookingResponse = await updateBookingRequest.json();
+    if (updateBookingResponse.success) {
+      console.log('Success', updateBookingResponse.message);
+      router.back();
+      Toast.show({
+        type: 'success',
+        text1: 'Booking updated!',
+      });
+    } else {
+      console.log('Failed', updateBookingResponse.message);
+    }
+  };
+
+  // #endregion
+  // -------------------------------------------
+
+  // -------------------------------------------
+  // #region cancel booking function
+
+  const cancelBooking = async () => {
+    const cancelBookingRequest = await fetch(`${nextHost}/api/bookings`, {
+      method: 'PATCH',
+      body: JSON.stringify({
+        bookingId: booking.id,
+        status: 'CANCELLED',
+      }),
+    }).catch(console.error);
+    const cancelBookingResponse = await cancelBookingRequest.json();
+    if (cancelBookingResponse.success) {
+      console.log('Success', cancelBookingResponse.message);
+      router.back();
+      Toast.show({
+        type: 'success',
+        text1: 'Booking cancelled!',
+      });
+    } else {
+      console.log('Failed', cancelBookingResponse.message);
+    }
+  };
+
+  // #endregion
+  // -------------------------------------------
 
   // -------------------------------------------
   // #region check login status & do something
@@ -43,7 +102,7 @@ export default function MyBookingDetailsScreen() {
               router.back();
               Toast.show({
                 type: 'error',
-                text1: 'No option selected!',
+                text1: 'No booking selected!',
               });
             } else {
               setIsLoading(false);
@@ -103,19 +162,103 @@ export default function MyBookingDetailsScreen() {
         </View>
         <View className="my-8 border-t-8 border-gray-100"></View>
         <View className="w-11/12 my-3 self-center">
-          <View className="my-3">
+          {/* <View className="my-3">
             <Text className="text-lg font-semibold">Experience</Text>
             <Text className="">{booking.experience} years</Text>
           </View>
           <View className="my-3">
             <Text className="text-lg font-semibold">Message to employer</Text>
             <Text className="">{booking.remarks}</Text>
-          </View>
+          </View> */}
+          <TextInput
+            className="bg-white text-left text-md w-11/12 my-3"
+            disabled={isDisabled}
+            mode="outlined"
+            inputMode="tel"
+            label="Years of experience in role"
+            value={newExperience}
+            onChangeText={(newText) => setNewExperience(newText)}
+            activeOutlineColor="#155e75"
+          />
+          <TextInput
+            className="bg-white text-left text-md w-11/12 my-3"
+            disabled={isDisabled}
+            mode="outlined"
+            inputMode="text"
+            label="Message to employer"
+            value={newRemarks}
+            onChangeText={(newText) => setNewRemarks(newText)}
+            activeOutlineColor="#155e75"
+          />
           <View className="my-10">
-            <CustomButton onPress={() => {}}>Edit</CustomButton>
+            {booking.status === 'CANCELLED' ? (
+              ''
+            ) : isDisabled ? (
+              <CustomButton
+                onPress={() => {
+                  setIsDisabled(!isDisabled);
+                }}
+              >
+                Edit
+              </CustomButton>
+            ) : booking.experience === newExperience &&
+              booking.remarks === newRemarks ? (
+              <CustomButton
+                onPress={() => {
+                  setIsDisabled(!isDisabled);
+                }}
+              >
+                Abort
+              </CustomButton>
+            ) : (
+              <CustomButton
+                onPress={() => {
+                  Alert.alert(
+                    'Update application',
+                    'You can change your application again.',
+                    [
+                      {
+                        text: 'Go back',
+                        style: 'cancel',
+                      },
+                      {
+                        text: 'Yes, update',
+                        onPress: () => updateBooking(),
+                      },
+                    ],
+                  );
+                }}
+              >
+                Update
+              </CustomButton>
+            )}
           </View>
           <View className="mb-10">
-            <CustomButton onPress={() => {}}>Cancel</CustomButton>
+            {booking.status === 'CANCELLED' ? (
+              <CustomButton disabled={true}>Application cancelled</CustomButton>
+            ) : (
+              <CustomButton
+                disabled={!isDisabled}
+                onPress={() => {
+                  Alert.alert(
+                    'Cancel application',
+                    'Are you sure? This action cannot be undone.',
+                    [
+                      {
+                        text: 'Go back',
+                        style: 'cancel',
+                      },
+                      {
+                        text: 'Yes, cancel',
+                        onPress: () => cancelBooking(),
+                      },
+                    ],
+                  );
+                }}
+              >
+                Cancel application
+              </CustomButton>
+            )}
           </View>
         </View>
       </ScrollView>
