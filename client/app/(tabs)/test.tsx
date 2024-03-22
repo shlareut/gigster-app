@@ -1,3 +1,6 @@
+import { Cloudinary } from '@cloudinary/url-gen';
+import { AdvancedImage, upload } from 'cloudinary-react-native';
+import * as ImagePicker from 'expo-image-picker';
 import { router, useFocusEffect } from 'expo-router';
 import LottieView from 'lottie-react-native';
 import { useState } from 'react';
@@ -6,7 +9,123 @@ import checkLoginStatus from '../../util/sessions';
 import CustomButton from '../components/CustomButton';
 import { nextHost } from '../constants';
 
+// Create a Cloudinary instance and set your cloud name.
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: 'dpa9tzkwg',
+  },
+  url: {
+    secure: true,
+  },
+});
+
 export default function TestScreen() {
+  const [image, setImage] = useState(null);
+  // const image =
+  //   'https://cloudinary-devs.github.io/cld-docs-assets/assets/images/happy_people.jpg';
+  const getImageUrl = async () => {
+    const imageRequest = await fetch(`${nextHost}/api/users/avatar`, {
+      method: 'POST',
+      body: JSON.stringify({
+        userId: 1,
+        image: image,
+      }),
+    }).catch(console.error);
+    const imageResponse = await imageRequest.json();
+    console.log(imageResponse);
+  };
+
+  // cloudinary image upload
+
+  const options = {
+    upload_preset: 'jvjalr2t',
+    unsigned: true,
+  };
+
+  const uploadImage = async () => {
+    await upload(cld, {
+      file: image,
+      options: options,
+      callback: (error: any, response: any) => {
+        console.log(error);
+        console.log(response);
+      },
+    });
+  };
+
+  // end
+
+  // post image and store URL
+
+  const updateAvatar = async () => {
+    await upload(cld, {
+      file: image,
+      options: options,
+      callback: (error: any, response: any) => {
+        if (error) {
+          console.log(error);
+          return {
+            success: false,
+            error: error,
+          };
+        } else {
+          console.log({
+            success: true,
+            imageUrl: response.url,
+          });
+          storeAvatar(response.url);
+          return {
+            success: true,
+            imageUrl: response.url,
+          };
+        }
+      },
+    });
+  };
+
+  const storeAvatar = async (image) => {
+    const imageRequest = await fetch(`${nextHost}/api/users`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        userId: 5,
+        avatarUrl: image,
+      }),
+    }).catch(console.error);
+    const imageResponse = await imageRequest.json();
+    console.log(imageResponse);
+  };
+
+  const manuallyUpdateImage = async () => {
+    const imageRequest = await fetch(`${nextHost}/api/users`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        userId: 5,
+        avatarUrl:
+          'https://cloudinary-devs.github.io/cld-docs-assets/assets/images/happy_people.jpg',
+      }),
+    }).catch(console.error);
+    const imageResponse = await imageRequest.json();
+    console.log(imageResponse);
+  };
+
+  // end
+
+  const pickImage = async () => {
+    // No permissions request is necessary for launching the image library
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    // console.log(result);
+
+    if (!result.canceled) {
+      setImage(result.assets[0].uri);
+    }
+  };
+
   return (
     <>
       <CustomButton
@@ -59,16 +178,8 @@ export default function TestScreen() {
       >
         Submit booking screen
       </CustomButton>
-      <CustomButton
-        onPress={() => {
-          router.navigate({
-            pathname: '/myBookingDetails',
-            params: { entryPoint: '/myProfile' },
-          });
-        }}
-      >
-        Booking details screen
-      </CustomButton>
+      <CustomButton onPress={pickImage}>Pick image</CustomButton>
+      <CustomButton onPress={updateAvatar}>Upload image</CustomButton>
       {/* // Loading animation */}
       <LottieView
         style={{ width: '25%', height: '25%' }}

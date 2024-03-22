@@ -10,6 +10,7 @@ export type User = {
   password_hash: string;
   first_name: string;
   last_name: string;
+  avatar_image: string;
 };
 
 // create single user.
@@ -111,6 +112,37 @@ export async function updateUserLastLogin(
     RETURNING
       id,
       username;
+  `;
+  return updatedUser || null;
+}
+
+// query user avatar by user id
+export async function getUserAvatarByUserId(id: number): Promise<User | null> {
+  const [user] = await sql<User[]>`
+    SELECT
+      avatar_image
+    FROM
+      users
+    WHERE
+      id = ${id}
+  `;
+  return user || null;
+}
+
+// update user avatar
+export async function updateUserAvatar(
+  id: number,
+  avatar_url: string,
+): Promise<User | null> {
+  const [updatedUser] = await sql<User[]>`
+    UPDATE users
+    SET
+      avatar_image = ${avatar_url}
+    WHERE
+      id = ${id}
+    RETURNING
+      id,
+      avatar_image;
   `;
   return updatedUser || null;
 }

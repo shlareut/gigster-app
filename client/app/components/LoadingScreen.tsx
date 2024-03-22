@@ -11,7 +11,7 @@ const LoadingScreen = () => {
         autoPlay
         loop
       />
-      <Text>Loading...</Text>
+      {/* <Text>Loading...</Text> */}
     </View>
   );
 };

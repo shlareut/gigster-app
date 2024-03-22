@@ -14,6 +14,7 @@ export async function up(sql: Sql) {
       password_hash varchar(80) NOT NULL,
       first_name varchar(80) NOT NULL,
       last_name varchar(80) NOT NULL,
+      avatar_image varchar(255) DEFAULT NULL,
       last_login timestamp DEFAULT NULL
     )
   `;

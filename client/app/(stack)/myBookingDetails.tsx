@@ -171,7 +171,7 @@ export default function MyBookingDetailsScreen() {
             <Text className="">{booking.remarks}</Text>
           </View> */}
           <TextInput
-            className="bg-white text-left text-md w-11/12 my-3"
+            className="bg-white text-left text-md my-3"
             disabled={isDisabled}
             mode="outlined"
             inputMode="tel"
@@ -181,7 +181,7 @@ export default function MyBookingDetailsScreen() {
             activeOutlineColor="#155e75"
           />
           <TextInput
-            className="bg-white text-left text-md w-11/12 my-3"
+            className="bg-white text-left text-md my-3"
             disabled={isDisabled}
             mode="outlined"
             inputMode="text"
