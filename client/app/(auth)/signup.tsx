@@ -66,6 +66,7 @@ export default function SignUpScreen() {
       // do something if screen is focussed
       // console.log('Sign-up screen focussed!');
       const checkIfLoggedIn = async () => {
+        setIsLoading(true);
         try {
           const status = await checkLoginStatus(path);
           if (status.isLoggedIn) {

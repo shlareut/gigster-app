@@ -146,6 +146,7 @@ export default function ProfileScreen() {
       // do something if screen is focussed
       // console.log('Profile screen focussed!');
       const checkIfLoggedIn = async () => {
+        setIsLoading(true);
         try {
           const status = await checkLoginStatus(path);
           if (status.isLoggedIn) {

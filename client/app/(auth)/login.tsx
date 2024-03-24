@@ -37,11 +37,7 @@ export default function LoginScreen() {
         }),
       }).catch(console.error);
       const response = await request.json();
-      // console.log('CREATE OTP API:', response.message);
-      // if successful, send sms to user
-      // PLACEHOLDER!
-      // PLACEHOLDER!
-      // PLACEHOLDER!
+      console.log('CREATE OTP API:', response.message);
     };
     createOtp();
   }, []);
@@ -106,6 +102,7 @@ export default function LoginScreen() {
       // do something if screen is focussed
       // console.log('Login screen focussed!');
       const checkIfLoggedIn = async () => {
+        setIsLoading(true);
         try {
           const status = await checkLoginStatus(path);
           if (status.isLoggedIn) {

@@ -68,14 +68,14 @@ export default function MyBookingDetailsScreen() {
     }).catch(console.error);
     const cancelBookingResponse = await cancelBookingRequest.json();
     if (cancelBookingResponse.success) {
-      console.log('Success', cancelBookingResponse.message);
+      console.log('Success:', cancelBookingResponse.message);
       router.back();
       Toast.show({
         type: 'success',
         text1: 'Booking cancelled!',
       });
     } else {
-      console.log('Failed', cancelBookingResponse.message);
+      console.log('Failed:', cancelBookingResponse.message);
     }
   };
 
@@ -93,6 +93,7 @@ export default function MyBookingDetailsScreen() {
       // do something if screen is focussed
       // console.log('Booking details screen focussed!');
       const checkIfLoggedIn = async () => {
+        setIsLoading(true);
         try {
           const status = await checkLoginStatus(path);
           if (status.isLoggedIn) {

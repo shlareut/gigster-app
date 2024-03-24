@@ -98,6 +98,7 @@ export default function IdentifyScreen() {
       // do something if screen is focussed
       // console.log('Identify screen focussed!');
       const checkIfLoggedIn = async () => {
+        setIsLoading(true);
         try {
           const status = await checkLoginStatus(path);
           if (status.isLoggedIn) {

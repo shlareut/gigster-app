@@ -12,6 +12,11 @@ import { nextHost } from '../constants';
 
 const ListingCard = (props) => {
   const hiring = props.listing.options_count > 0;
+  const heroImageUri =
+    props.listing.id < 7
+      ? `${nextHost}/hero_images/${props.listing.id}.jpeg`
+      : `${nextHost}/hero_images/placeholder.jpeg`;
+  const heroImage = { uri: heroImageUri };
   return (
     <TouchableOpacity
       activeOpacity={0.75}
@@ -37,7 +42,7 @@ const ListingCard = (props) => {
             }}
           /> */}
           <ImageBackground
-            source={{ uri: `${nextHost}/hero_images/${props.listing.id}.jpeg` }}
+            source={heroImage}
             className="flex-1"
             style={{
               borderRadius: '12',

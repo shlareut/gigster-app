@@ -66,3 +66,61 @@ export async function getSingleListing(id: number): Promise<Listing> {
   `;
   return listing;
 }
+
+// create listing
+export async function createListing(
+  name: string,
+  type: string,
+  address_line_one: string,
+  address_line_two: string,
+  postal_code: string,
+  city: string,
+  city_district: string,
+  country: string,
+  lat: number,
+  long: number,
+  nearest_station_type: string,
+  nearest_station_name: string,
+  nearest_station_meter_distance: number,
+  description: string,
+): Promise<Listing> {
+  const [listing = <Listing>{}] = await sql<Listing[]>`
+    INSERT INTO
+      listings (
+        name,
+        type,
+        address_line_one,
+        address_line_two,
+        postal_code,
+        city,
+        city_district,
+        country,
+        lat,
+        long,
+        nearest_station_type,
+        nearest_station_name,
+        nearest_station_meter_distance,
+        description
+      )
+    VALUES (
+      ${name},
+      ${type},
+      ${address_line_one},
+      ${address_line_two},
+      ${postal_code},
+      ${city},
+      ${city_district},
+      ${country},
+      ${lat},
+      ${long},
+      ${nearest_station_type},
+      ${nearest_station_name},
+      ${nearest_station_meter_distance},
+      ${description}
+    )
+    RETURNING
+    id,
+    name
+  `;
+  return listing;
+}

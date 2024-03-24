@@ -12,6 +12,7 @@ export default function ListingsScreen() {
   // fetch listings upon screen load
   useEffect(() => {
     const fetchListings = async () => {
+      setIsLoading(true);
       const response = await fetch(`${nextHost}/api/listings`);
       const listings = await response.json();
       setListings(listings);

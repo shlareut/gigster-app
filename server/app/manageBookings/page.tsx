@@ -28,7 +28,7 @@ export default function ManageBookingsScreen() {
         <ul>
           {bookings.map((item) => (
             <li>
-              {item.id} - {item.status}
+              Booking: {item.id} - User: {item.user_id} - Status: {item.status}
             </li>
           ))}
         </ul>

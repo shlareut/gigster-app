@@ -2,26 +2,33 @@
 // sending the otp will be handled by a different api.
 
 import bcrypt from 'bcrypt';
+import dotenv from 'dotenv';
 import { NextRequest, NextResponse } from 'next/server';
+import twilio from 'twilio';
 import {
   getSingleUserByUsername,
   updateUserPassword,
 } from '../../../../../database/users';
 import generateOtp from '../../../../../utils/otpGenerator';
 
+dotenv.config();
+
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = twilio(accountSid, authToken);
+
 export async function POST(request: NextRequest) {
-  // TESTING HARDCODED
-  const otp = '123456';
-  const sms = {
-    success: true,
-  };
+  // // TESTING HARDCODED
+  // const otp = '123456';
+  // const sms = {
+  //   success: true,
+  // };
 
   // read api request body
   const body = await request.json();
 
   // generate otp
-  // disabled for testing purposes
-  // const otp = generateOtp();
+  const otp = generateOtp();
 
   // hash generated otp
   const otpHash = await bcrypt.hash(otp, 12).catch(console.error);
@@ -40,13 +47,32 @@ export async function POST(request: NextRequest) {
           otpHash,
         ).catch(console.error);
         if (updatedUser) {
-          // return SUCCESS.
-          return new NextResponse(
-            JSON.stringify({
-              success: true,
-              message: `New OTP created successfully.`,
-            }),
-          );
+          // send OTP via SMS
+          try {
+            const message = await client.messages
+              .create({
+                body: `Your final project OTP is ${otp}.`,
+                from: '+16078004729',
+                to: `${body.username}`,
+              })
+              .catch(console.error);
+            // return SUCCESS.
+            return new NextResponse(
+              JSON.stringify({
+                success: true,
+                message: `New OTP created successfully.`,
+              }),
+            );
+          } catch (error) {
+            // return "failed to send OTP" error.
+            return new NextResponse(
+              JSON.stringify({
+                success: false,
+                message: `Failed to send OTP.`,
+                error: error,
+              }),
+            );
+          }
         } else {
           // return "failed to update password" error.
           return new NextResponse(

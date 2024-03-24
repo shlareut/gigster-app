@@ -19,6 +19,7 @@ export default function MyBookingsScreen() {
   const emptyScreenImage = require('../../assets/bookings.jpg');
   const path = usePathname();
   const [bookings, setBookings] = useState([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   // #endregion
@@ -32,6 +33,7 @@ export default function MyBookingsScreen() {
       // do something if screen is focussed
       // console.log('myBooking screen focussed!');
       const checkIfLoggedIn = async () => {
+        setIsLoading(true);
         try {
           const status = await checkLoginStatus(path);
           if (status.isLoggedIn) {
@@ -44,6 +46,7 @@ export default function MyBookingsScreen() {
               const userBookingsResponse = await userBookingsRequest.json();
               if (userBookingsResponse) {
                 setBookings(userBookingsResponse);
+                setIsLoggedIn(status.isLoggedIn);
                 setIsLoading(false);
               }
             } catch (error) {
@@ -53,6 +56,7 @@ export default function MyBookingsScreen() {
           } else {
             // do something if NOT logged in
             setBookings([]);
+            setIsLoggedIn(status.isLoggedIn);
             setIsLoading(false);
           }
         } catch (error) {
@@ -74,7 +78,7 @@ export default function MyBookingsScreen() {
   // #endregion
   // -------------------------------------------
 
-  if (bookings) {
+  if (isLoggedIn) {
     return (
       <View className="flex-1 bg-white">
         {bookings.length > 0 ? (
