@@ -70,7 +70,10 @@ export default function ManageBookingsScreen() {
                   <td>{booking.option_name}</td>
                   <td>{booking.listing_name}</td>
                   <td>{booking.date}</td>
-                  <td>{booking.status}</td>
+                  <td>
+                    {booking.status[0] +
+                      booking.status.slice(1).toLowerCase().replace('_', ' ')}
+                  </td>
                   <td>
                     <button
                       onClick={() => {
