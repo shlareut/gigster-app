@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { geoCoder } from '../../utils/geoCoder';
 import Button from '../components/Button';
@@ -17,8 +18,9 @@ export default function ManageListingsScreen() {
   const [type, setType] = useState('');
   const [address2, setAddress2] = useState('');
   const [district, setDistrict] = useState('');
-  const [country, setCountry] = useState('');
+  const [country, setCountry] = useState('Austria');
   const [description, setDescription] = useState('');
+  const router = useRouter();
 
   // convert address into coordinates
   const getCoordinates = async () => {
@@ -130,9 +132,11 @@ export default function ManageListingsScreen() {
             </div>
           </div>
           <form
-            onSubmit={() => {
+            onSubmit={(event) => {
               alert('Listing created!');
+              event.preventDefault();
               createListing();
+              router.push('/');
             }}
           >
             <p className={styles.subTitle}>Step 2: enter listing details.</p>
@@ -182,6 +186,7 @@ export default function ManageListingsScreen() {
                 Country{' '}
                 <input
                   required
+                  disabled={true}
                   value={country}
                   onChange={(event) => setCountry(event.currentTarget.value)}
                 />
