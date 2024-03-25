@@ -8,6 +8,7 @@ import styles from './page.module.scss';
 export default function ManageBookingsScreen() {
   const [bookings, setBookings] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const getAllBookings = async () => {
       setIsLoading(true);
@@ -83,7 +84,7 @@ export default function ManageBookingsScreen() {
                       `);
                       }}
                     >
-                      Read message
+                      View details
                     </button>
                   </td>
                   <td>

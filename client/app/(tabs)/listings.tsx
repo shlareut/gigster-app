@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useFocusEffect } from 'expo-router';
+import React, { useCallback, useEffect, useState } from 'react';
 import { FlatList, SafeAreaView, View } from 'react-native';
 import ListingCard from '../components/ListingCard';
 import LoadingScreen from '../components/LoadingScreen';
@@ -9,17 +10,37 @@ export default function ListingsScreen() {
   const [listings, setListings] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // fetch listings upon screen load
-  useEffect(() => {
-    const fetchListings = async () => {
-      setIsLoading(true);
-      const response = await fetch(`${nextHost}/api/listings`);
-      const listings = await response.json();
-      setListings(listings);
-      setIsLoading(false);
-    };
-    fetchListings().catch(console.error);
-  }, []);
+  // fetch listings upon initial screen load
+  // useEffect(() => {
+  //   const fetchListings = async () => {
+  //     setIsLoading(true);
+  //     const response = await fetch(`${nextHost}/api/listings`);
+  //     const listings = await response.json();
+  //     setListings(listings);
+  //     setIsLoading(false);
+  //   };
+  //   fetchListings().catch(console.error);
+  // }, []);
+
+  // fetch listings upon each screen load
+  useFocusEffect(
+    useCallback(() => {
+      // do something if screen is focussed
+      // console.log('listings screen focussed!');
+      const fetchListings = async () => {
+        setIsLoading(true);
+        const response = await fetch(`${nextHost}/api/listings`);
+        const listings = await response.json();
+        setListings(listings);
+        setIsLoading(false);
+      };
+      fetchListings().catch(console.error);
+      // do something if screen is UNfocussed
+      return () => {
+        // console.log('listings screen unfocussed!');
+      };
+    }, []),
+  );
 
   // loading screen
   if (isLoading) {

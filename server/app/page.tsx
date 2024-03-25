@@ -1,6 +1,7 @@
 import { CronJob } from 'cron';
 import Image from 'next/image';
 import { getListings } from '../database/listings';
+import BookingCron from './components/BookingCron';
 import PageLink from './components/PageLink';
 import styles from './page.module.scss';
 
@@ -15,6 +16,7 @@ export default async function HomeScreen() {
   //   true, // start
   //   'America/Los_Angeles', // timeZone
   // );
+  BookingCron();
   const listings = await getListings();
   return (
     <>

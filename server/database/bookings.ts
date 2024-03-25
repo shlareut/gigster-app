@@ -59,6 +59,7 @@ SELECT
       users.last_name as last_name,
       bookings.booking_timestamp as timestamp,
       TO_CHAR(bookings.booking_timestamp, 'DD Mon YYYY') as date,
+      bookings.last_update_timestamp as last_update_timestamp,
       options.name as option_name,
       options.price as option_price,
       options.currency as option_currency,
@@ -85,6 +86,7 @@ export async function getBookingsByUserId(id: number) {
       bookings.user_id as user_id,
       bookings.booking_timestamp as timestamp,
       TO_CHAR(bookings.booking_timestamp, 'DD Mon YYYY') as date,
+      bookings.last_update_timestamp as last_update_timestamp,
       options.name as option_name,
       options.price as option_price,
       options.currency as option_currency,
@@ -127,7 +129,8 @@ export async function updateBookingStatus(id: number, status: string) {
   const [updatedBooking] = await sql`
     UPDATE bookings
     SET
-      status = ${status}
+      status = ${status},
+      last_update_timestamp = now()
     WHERE
       id = ${id}
     RETURNING

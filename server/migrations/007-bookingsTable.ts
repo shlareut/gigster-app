@@ -9,7 +9,8 @@ export async function up(sql: Sql) {
       remarks varchar(1000) NOT NULL,
       user_id INTEGER NOT NULL REFERENCES users (id) ON DELETE cascade,
       option_id INTEGER NOT NULL REFERENCES options (id) ON DELETE cascade,
-      booking_timestamp timestamp NOT NULL DEFAULT now()
+      booking_timestamp timestamp NOT NULL DEFAULT now(),
+      last_update_timestamp timestamp DEFAULT now()
     )
   `;
 }

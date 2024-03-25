@@ -63,24 +63,24 @@ export default function MyBookingDetailsScreen() {
   // -------------------------------------------
   // #region cancel booking function
 
-  const cancelBooking = async () => {
-    const cancelBookingRequest = await fetch(`${nextHost}/api/bookings`, {
+  const updateBookingStatus = async (status: string) => {
+    const updateBookingStatusRequest = await fetch(`${nextHost}/api/bookings`, {
       method: 'PATCH',
       body: JSON.stringify({
         bookingId: booking.id,
-        status: 'CANCELLED',
+        status: status,
       }),
     }).catch(console.error);
-    const cancelBookingResponse = await cancelBookingRequest.json();
-    if (cancelBookingResponse.success) {
-      console.log('Success:', cancelBookingResponse.message);
+    const updateBookingStatusResponse = await updateBookingStatusRequest.json();
+    if (updateBookingStatusResponse.success) {
+      console.log('Success:', updateBookingStatusResponse.message);
       router.back();
       Toast.show({
         type: 'success',
-        text1: 'Booking cancelled!',
+        text1: `Booking status updated to ${status}!`,
       });
     } else {
-      console.log('Failed:', cancelBookingResponse.message);
+      console.log('Failed:', updateBookingStatusResponse.message);
     }
   };
 
@@ -191,10 +191,11 @@ export default function MyBookingDetailsScreen() {
             onChangeText={(newText) => setNewRemarks(newText)}
             activeOutlineColor="#155e75"
           />
-          <View className="my-10">
-            {booking.status !== 'IN_REVIEW' ? (
-              ''
-            ) : isDisabled ? (
+          {/* Edit button */}
+          {booking.status !== 'IN_REVIEW' ? (
+            ''
+          ) : isDisabled ? (
+            <View className="my-5">
               <CustomButton
                 onPress={() => {
                   setIsDisabled(!isDisabled);
@@ -202,8 +203,10 @@ export default function MyBookingDetailsScreen() {
               >
                 Edit
               </CustomButton>
-            ) : booking.experience === newExperience &&
-              booking.remarks === newRemarks ? (
+            </View>
+          ) : booking.experience === newExperience &&
+            booking.remarks === newRemarks ? (
+            <View className="my-5">
               <CustomButton
                 onPress={() => {
                   setIsDisabled(!isDisabled);
@@ -211,7 +214,9 @@ export default function MyBookingDetailsScreen() {
               >
                 Abort
               </CustomButton>
-            ) : (
+            </View>
+          ) : (
+            <View className="my-5">
               <CustomButton
                 onPress={() => {
                   Alert.alert(
@@ -232,12 +237,14 @@ export default function MyBookingDetailsScreen() {
               >
                 Update
               </CustomButton>
-            )}
-          </View>
-          <View className="mb-10">
-            {booking.status !== 'IN_REVIEW' ? (
-              ''
-            ) : (
+            </View>
+          )}
+          {/* End edit button */}
+          {/* Cancel button */}
+          {booking.status !== 'IN_REVIEW' ? (
+            ''
+          ) : (
+            <View className="my-5">
               <CustomButton
                 disabled={!isDisabled}
                 onPress={() => {
@@ -251,7 +258,7 @@ export default function MyBookingDetailsScreen() {
                       },
                       {
                         text: 'Yes, cancel',
-                        onPress: () => cancelBooking(),
+                        onPress: () => updateBookingStatus('CANCELLED'),
                       },
                     ],
                   );
@@ -259,8 +266,79 @@ export default function MyBookingDetailsScreen() {
               >
                 Cancel application
               </CustomButton>
-            )}
-          </View>
+            </View>
+          )}
+          {/* End cancel button */}
+          {/* Accept button */}
+          {booking.status === 'OFFER' ? (
+            <View className="my-5">
+              <CustomButton
+                onPress={() => {
+                  Alert.alert(
+                    'Accept offer',
+                    'Are you sure? This action cannot be undone.',
+                    [
+                      {
+                        text: 'Go back',
+                        style: 'cancel',
+                      },
+                      {
+                        text: 'Yes, accept',
+                        onPress: () => updateBookingStatus('HIRED'),
+                      },
+                    ],
+                  );
+                }}
+              >
+                Accept
+              </CustomButton>
+              <Text className="self-center">
+                Please accept the offer until{' '}
+                {new Date(
+                  new Date(booking.last_update_timestamp).getTime() +
+                    24 * 60 * 60 * 1000,
+                ).toLocaleString('en-GB', {
+                  day: 'numeric',
+                  month: 'short',
+                  hour: 'numeric',
+                  minute: 'numeric',
+                  hour12: true,
+                })}
+                .
+              </Text>
+            </View>
+          ) : (
+            ''
+          )}
+          {/* End accept button */}
+          {/* Decline button */}
+          {booking.status === 'OFFER' ? (
+            <View className="my-5">
+              <CustomButton
+                onPress={() => {
+                  Alert.alert(
+                    'Decline offer',
+                    'Are you sure? This action cannot be undone.',
+                    [
+                      {
+                        text: 'Go back',
+                        style: 'cancel',
+                      },
+                      {
+                        text: 'Yes, decline',
+                        onPress: () => updateBookingStatus('DECLINED'),
+                      },
+                    ],
+                  );
+                }}
+              >
+                Decline
+              </CustomButton>
+            </View>
+          ) : (
+            ''
+          )}
+          {/* End decline button */}
         </View>
       </ScrollView>
     </View>

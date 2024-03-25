@@ -54,6 +54,10 @@ export default function SubmitBookingScreen() {
         pathname: '/myBookings',
         params: { ...local },
       });
+      Toast.show({
+        type: 'success',
+        text1: 'Booking successful!',
+      });
     }
     setIsButtonLoading(false);
   };

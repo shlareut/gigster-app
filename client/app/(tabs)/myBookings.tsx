@@ -90,6 +90,7 @@ export default function MyBookingsScreen() {
             showsVerticalScrollIndicator={false}
             pagingEnabled={true}
             data={bookings}
+            initialNumToRender={10}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => <BookingCard booking={item} />}
           />
