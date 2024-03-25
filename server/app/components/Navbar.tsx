@@ -51,7 +51,7 @@ export default function Navbar() {
           <PageLink to="/manageOptions">Options</PageLink>
         </li>
         <li>
-          <PageLink to="/Bookings">Bookings</PageLink>
+          <PageLink to="/manageBookings">Bookings</PageLink>
         </li>
       </ul>
     </div>

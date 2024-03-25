@@ -103,7 +103,7 @@ export async function PUT(request: NextRequest, { params }: BookingParams) {
   }
 }
 
-// cancel existing booking
+// update existing booking status
 export async function PATCH(request: NextRequest, { params }: BookingParams) {
   // read request content
   const body = await request.json();

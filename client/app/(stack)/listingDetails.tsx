@@ -22,6 +22,11 @@ export default function DetailsScreen() {
   const [options, setOptions] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const heroImageUri =
+    local.listingId < 7
+      ? `${nextHost}/hero_images/${local.listingId}.jpeg`
+      : `${nextHost}/hero_images/placeholder.jpeg`;
+  const heroImage = { uri: heroImageUri };
 
   // #endregion
   // -------------------------------------------
@@ -74,10 +79,7 @@ export default function DetailsScreen() {
   return (
     <View className="flex-1 bg-white">
       <ScrollView>
-        <Image
-          className="w-screen h-60"
-          source={{ uri: `${nextHost}/hero_images/${listing.id}.jpeg` }}
-        />
+        <Image className="w-screen h-60" source={heroImage} />
         <View className="my-5 mx-3">
           <Text className="text-3xl font-bold">{listing.name}</Text>
           <Text className="mt-2 font-bold">{listing.type}</Text>

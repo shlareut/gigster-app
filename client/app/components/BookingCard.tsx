@@ -5,6 +5,11 @@ import { nextHost } from '../constants';
 import BookingStatusDisplay from './BookingStatusDisplay';
 
 export default function BookingCard(props) {
+  const heroImageUri =
+    props.booking.listing_id < 7
+      ? `${nextHost}/hero_images/${props.booking.listing_id}.jpeg`
+      : `${nextHost}/hero_images/placeholder.jpeg`;
+  const heroImage = { uri: heroImageUri };
   return (
     <TouchableOpacity
       activeOpacity={0.75}
@@ -18,12 +23,7 @@ export default function BookingCard(props) {
       <View className="w-11/12 my-5 self-center">
         <View className="items-center h-fit flex-row">
           <View className="h-24 w-24 mr-3">
-            <Image
-              className="flex-1 rounded-lg"
-              source={{
-                uri: `${nextHost}/hero_images/${props.booking.listing_id}.jpeg`,
-              }}
-            />
+            <Image className="flex-1 rounded-lg" source={heroImage} />
           </View>
           <View className="flex-1 gap-0.5">
             <Text className="text-base font-bold">

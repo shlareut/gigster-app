@@ -23,6 +23,11 @@ export default function MyBookingDetailsScreen() {
   const [isDisabled, setIsDisabled] = useState(true);
   const [newExperience, setNewExperience] = useState(booking.experience);
   const [newRemarks, setNewRemarks] = useState(booking.remarks);
+  const heroImageUri =
+    booking.listing_id < 7
+      ? `${nextHost}/hero_images/${booking.listing_id}.jpeg`
+      : `${nextHost}/hero_images/placeholder.jpeg`;
+  const heroImage = { uri: heroImageUri };
 
   // -------------------------------------------
   // #endregion
@@ -142,12 +147,7 @@ export default function MyBookingDetailsScreen() {
         <View className="w-11/12 my-3 mt-10 self-center">
           <View className="items-center h-fit flex-row">
             <View className="h-24 w-24 mr-3">
-              <Image
-                className="flex-1 rounded-lg"
-                source={{
-                  uri: `${nextHost}/hero_images/${booking.listing_id}.jpeg`,
-                }}
-              />
+              <Image className="flex-1 rounded-lg" source={heroImage} />
             </View>
             <View className="flex-1 gap-0.5">
               <Text className="text-base font-bold">{booking.option_name}</Text>
