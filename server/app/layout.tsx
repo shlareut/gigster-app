@@ -1,6 +1,7 @@
 import './globals.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import BookingCron from './components/BookingCron';
 import Footer from './components/Footers';
 import Navbar from './components/Navbar';
 
