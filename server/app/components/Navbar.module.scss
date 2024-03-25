@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap: 10px;
+}
+
+@keyframes rotateAnimation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logoImage:hover {
+  animation: rotateAnimation 1s infinite;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoTitle {
+  font-size: 24px;
+}
+
+.logoSubTitle {
+  font-size: 12px;
+}
+
+.linkList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  gap: 25px;
+}

@@ -37,3 +37,33 @@ export async function getOptionsByListingId(id: number): Promise<Option[]> {
   `;
   return options;
 }
+
+// create option
+export async function createOption(
+  name: string,
+  price: number,
+  currency: string,
+  description: string,
+  listing_id: number,
+): Promise<Option[]> {
+  const option = await sql<Option[]>`
+  INSERT INTO options(
+    name,
+    price,
+    currency,
+    description,
+    listing_id
+  )
+  VALUES(
+    ${name},
+    ${price},
+    ${currency},
+    ${description},
+    ${listing_id}
+  )
+  RETURNING
+  id,
+  name
+  `;
+  return option;
+}

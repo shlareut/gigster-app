@@ -35,7 +35,7 @@ export default function ListingsScreen() {
         bounces={false}
         showsVerticalScrollIndicator={false}
         pagingEnabled={true}
-        data={listings}
+        data={listings.sort((a, b) => a.id - b.id)}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <ListingCard listing={item} />}
       />
