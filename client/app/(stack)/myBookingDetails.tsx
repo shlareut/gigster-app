@@ -192,7 +192,7 @@ export default function MyBookingDetailsScreen() {
             activeOutlineColor="#155e75"
           />
           <View className="my-10">
-            {booking.status === 'CANCELLED' ? (
+            {booking.status !== 'IN_REVIEW' ? (
               ''
             ) : isDisabled ? (
               <CustomButton
@@ -235,8 +235,8 @@ export default function MyBookingDetailsScreen() {
             )}
           </View>
           <View className="mb-10">
-            {booking.status === 'CANCELLED' ? (
-              <CustomButton disabled={true}>Application cancelled</CustomButton>
+            {booking.status !== 'IN_REVIEW' ? (
+              ''
             ) : (
               <CustomButton
                 disabled={!isDisabled}
