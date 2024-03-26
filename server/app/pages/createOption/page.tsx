@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import Button from '../components/Button';
+import Button from '../../components/Button';
 import styles from './page.module.scss';
 
 export default function ManageOptionsScreen() {
@@ -19,7 +19,7 @@ export default function ManageOptionsScreen() {
   useEffect(() => {
     const getAllListings = async () => {
       setIsLoading(true);
-      const listingsRequest = await fetch(`./api/listings`).catch(
+      const listingsRequest = await fetch(`./../api/listings`).catch(
         console.error,
       );
       const listingsResponse = await listingsRequest.json();
@@ -32,7 +32,7 @@ export default function ManageOptionsScreen() {
 
   // create option function
   const createOption = async () => {
-    const option = await fetch(`./api/options`, {
+    const option = await fetch(`./../api/options`, {
       method: 'POST',
       body: JSON.stringify({
         name: name,
@@ -78,7 +78,7 @@ export default function ManageOptionsScreen() {
                 alert('Option created!');
                 event.preventDefault();
                 createOption();
-                router.push('/manageOptions');
+                router.push('/pages/manageOptions');
               }}
               style={{ display: 'flex', flexDirection: 'column' }}
             >

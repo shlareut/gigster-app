@@ -2,8 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { geoCoder } from '../../utils/geoCoder';
-import Button from '../components/Button';
+import { geoCoder } from '../../../utils/geoCoder';
+import Button from '../../components/Button';
 import styles from './page.module.scss';
 
 export default function ManageListingsScreen() {
@@ -42,7 +42,7 @@ export default function ManageListingsScreen() {
     }
     const lat = coordinates.lat;
     const long = coordinates.long;
-    const stationRequest = await fetch(`./api/nearbyStation`, {
+    const stationRequest = await fetch(`./../api/nearbyStation`, {
       method: 'POST',
       body: JSON.stringify({
         lat,
@@ -61,7 +61,7 @@ export default function ManageListingsScreen() {
 
   // create listing
   const createListing = async () => {
-    const listing = await fetch(`./api/listings`, {
+    const listing = await fetch(`./../api/listings`, {
       method: 'POST',
       body: JSON.stringify({
         name: name,
@@ -136,7 +136,7 @@ export default function ManageListingsScreen() {
               alert('Listing created!');
               event.preventDefault();
               createListing();
-              router.push('/');
+              router.push('/pages/manageListings');
             }}
           >
             <p className={styles.subTitle}>Step 2: enter listing details.</p>

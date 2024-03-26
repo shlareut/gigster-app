@@ -1,8 +1,7 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import Button from '../components/Button';
+import Button from '../../components/Button';
 import styles from './page.module.scss';
 
 export default function ManageBookingsScreen() {
@@ -12,7 +11,7 @@ export default function ManageBookingsScreen() {
   useEffect(() => {
     const getAllBookings = async () => {
       setIsLoading(true);
-      const bookingsRequest = await fetch(`./api/bookings`).catch(
+      const bookingsRequest = await fetch(`./../api/bookings`).catch(
         console.error,
       );
       const bookingsResponse = await bookingsRequest.json();
@@ -24,7 +23,7 @@ export default function ManageBookingsScreen() {
   }, []);
 
   const updateBooking = async (id: any, status: any) => {
-    const updateBookingRequest = await fetch(`./api/bookings`, {
+    const updateBookingRequest = await fetch(`./../api/bookings`, {
       method: 'PATCH',
       body: JSON.stringify({
         bookingId: id,

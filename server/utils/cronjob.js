@@ -1,8 +1,7 @@
 import { CronJob } from 'cron';
-import React from 'react';
-import { getAllBookings, updateBookingStatus } from '../../database/bookings';
+import { getAllBookings, updateBookingStatus } from '../database/bookings';
 
-export default function BookingCron() {
+export function BookingCron() {
   new CronJob(
     '*/15 * * * * *', // cronTime
     async function () {

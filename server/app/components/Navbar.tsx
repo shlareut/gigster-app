@@ -45,13 +45,13 @@ export default function Navbar() {
           </Link>
         </li> */}
         <li>
-          <PageLink to="/">Listings</PageLink>
+          <PageLink to="/pages/manageListings">Listings</PageLink>
         </li>
         <li>
-          <PageLink to="/manageOptions">Options</PageLink>
+          <PageLink to="/pages/manageOptions">Options</PageLink>
         </li>
         <li>
-          <PageLink to="/manageBookings">Bookings</PageLink>
+          <PageLink to="/pages/manageBookings">Bookings</PageLink>
         </li>
       </ul>
     </div>

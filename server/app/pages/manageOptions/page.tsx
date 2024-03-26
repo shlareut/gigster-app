@@ -1,5 +1,5 @@
-import { getAllOptions } from '../../database/options';
-import PageLink from '../components/PageLink';
+import { getAllOptions } from '../../../database/options';
+import PageLink from '../../components/PageLink';
 import styles from './page.module.scss';
 
 export default async function OptionsScreen() {
@@ -8,7 +8,7 @@ export default async function OptionsScreen() {
     <>
       <div className={styles.titleWrapper}>
         <h1 className={styles.title}>Options</h1>
-        <PageLink to="/createOption">Create option</PageLink>
+        <PageLink to="/pages/createOption">Create option</PageLink>
       </div>
       <ol className={styles.list}>
         {options.map((option) => (
