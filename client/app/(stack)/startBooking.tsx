@@ -109,7 +109,7 @@ export default function BookingScreen() {
               className="bg-white text-left text-md w-11/12 my-3"
               mode="outlined"
               inputMode="numeric"
-              label="Years of experience in role"
+              label={`Years of experience as ${local.optionName.toLowerCase()}`}
               value={experience}
               onChangeText={(newText) => setExperience(newText)}
               activeOutlineColor="#155e75"

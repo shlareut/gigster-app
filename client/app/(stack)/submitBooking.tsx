@@ -56,7 +56,7 @@ export default function SubmitBookingScreen() {
       });
       Toast.show({
         type: 'success',
-        text1: 'Booking successful!',
+        text1: 'Application submitted successfully!',
       });
     }
     setIsButtonLoading(false);
