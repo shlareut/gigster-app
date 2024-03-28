@@ -48,17 +48,17 @@ export default function ManageOptionsScreen() {
   return (
     <>
       <div>
-        <h1 className={styles.title}>Create option</h1>
+        <h1 className={styles.title}>Create vacancy</h1>
         {isLoading ? (
           <div>Loading...</div>
         ) : (
           <div className={styles.form}>
             <p className={styles.subTitle}>
-              Step 1: select listing from the dropdown.
+              Step 1: select location from the dropdown.
             </p>
             <div className={styles.inputDetails}>
               <label className={styles.input}>
-                Listing:{' '}
+                Location:{' '}
                 <select
                   onChange={(event) => setListing(event.currentTarget.value)}
                 >
@@ -82,10 +82,10 @@ export default function ManageOptionsScreen() {
               }}
               style={{ display: 'flex', flexDirection: 'column' }}
             >
-              <p className={styles.subTitle}>Step 2: enter option details.</p>
+              <p className={styles.subTitle}>Step 2: enter vacancy details.</p>
               <div className={styles.inputDetails}>
                 <label>
-                  Listing id:{' '}
+                  Location id:{' '}
                   <input
                     className={styles.input}
                     required
@@ -94,7 +94,7 @@ export default function ManageOptionsScreen() {
                   />
                 </label>
                 <label>
-                  Role name:{' '}
+                  Job title:{' '}
                   <input
                     className={styles.input}
                     required
@@ -103,7 +103,7 @@ export default function ManageOptionsScreen() {
                   />
                 </label>
                 <label>
-                  Price:{' '}
+                  Hourly pay:{' '}
                   <input
                     className={styles.input}
                     required

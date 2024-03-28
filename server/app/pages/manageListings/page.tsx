@@ -20,8 +20,8 @@ export default async function ListingsScreen() {
   return (
     <>
       <div className={styles.titleWrapper}>
-        <h1 className={styles.title}>Listings</h1>
-        <PageLink to="/pages/createListing">Create listing</PageLink>
+        <h1 className={styles.title}>Locations</h1>
+        <PageLink to="/pages/createListing">Create location</PageLink>
       </div>
       <div className={styles.listings}>
         {listings

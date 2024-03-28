@@ -7,13 +7,13 @@ export default async function OptionsScreen() {
   return (
     <>
       <div className={styles.titleWrapper}>
-        <h1 className={styles.title}>Options</h1>
-        <PageLink to="/pages/createOption">Create option</PageLink>
+        <h1 className={styles.title}>Vacancies</h1>
+        <PageLink to="/pages/createOption">Create vacancy</PageLink>
       </div>
       <ol className={styles.list}>
         {options.map((option) => (
           <li key={option.id} className={styles.listItem}>
-            {option.name}, listing: {option.listing_id}, hourly pay:{' '}
+            {option.name}, location: {option.listing_id}, hourly pay:{' '}
             {option.price} {option.currency}
           </li>
         ))}

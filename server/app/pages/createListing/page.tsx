@@ -86,7 +86,7 @@ export default function ManageListingsScreen() {
   return (
     <>
       <div>
-        <h1 className={styles.title}>Create listing</h1>
+        <h1 className={styles.title}>Create location</h1>
         <div className={styles.form}>
           <p className={styles.subTitle}>
             Step 1: enter address to get nearest public transport station.
@@ -139,7 +139,7 @@ export default function ManageListingsScreen() {
               router.push('/pages/manageListings');
             }}
           >
-            <p className={styles.subTitle}>Step 2: enter listing details.</p>
+            <p className={styles.subTitle}>Step 2: enter location details.</p>
             <div className={styles.inputDetails}>
               <label className={styles.input}>
                 Name{' '}
@@ -220,7 +220,7 @@ export default function ManageListingsScreen() {
                 />
               </label>
             </div>
-            <Button type="submit">Create listing</Button>
+            <Button type="submit">Create location</Button>
           </form>
         </div>
       </div>

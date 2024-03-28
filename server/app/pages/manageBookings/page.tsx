@@ -45,15 +45,15 @@ export default function ManageBookingsScreen() {
     <>
       <div>
         <div className={styles.titleWrapper}>
-          <h1 className={styles.title}>Bookings</h1>
+          <h1 className={styles.title}>Applications</h1>
         </div>
         <table>
           <thead>
             <tr>
               <th>ID</th>
               <th>User</th>
-              <th>Role</th>
-              <th>Listing</th>
+              <th>Job title</th>
+              <th>Location</th>
               <th>Applied on</th>
               <th>Status</th>
             </tr>
