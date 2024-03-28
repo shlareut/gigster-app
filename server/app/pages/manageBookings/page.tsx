@@ -55,7 +55,9 @@ export default function ManageBookingsScreen() {
               <th>Job title</th>
               <th>Location</th>
               <th>Applied on</th>
+              <th>Details</th>
               <th>Status</th>
+              <th colSpan={2}>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -71,10 +73,6 @@ export default function ManageBookingsScreen() {
                   <td>{booking.listing_name}</td>
                   <td>{booking.date}</td>
                   <td>
-                    {booking.status[0] +
-                      booking.status.slice(1).toLowerCase().replace('_', ' ')}
-                  </td>
-                  <td>
                     <button
                       onClick={() => {
                         alert(`
@@ -86,7 +84,11 @@ export default function ManageBookingsScreen() {
                       View details
                     </button>
                   </td>
-                  <th>
+                  <td>
+                    {booking.status[0] +
+                      booking.status.slice(1).toLowerCase().replace('_', ' ')}
+                  </td>
+                  <td>
                     {booking.status === 'IN_REVIEW' ? (
                       <Button
                         onClick={() => {
@@ -100,8 +102,8 @@ export default function ManageBookingsScreen() {
                     ) : (
                       ''
                     )}
-                  </th>
-                  <th>
+                  </td>
+                  <td>
                     {booking.status === 'IN_REVIEW' ? (
                       <Button
                         onClick={() => {
@@ -115,7 +117,7 @@ export default function ManageBookingsScreen() {
                     ) : (
                       ''
                     )}
-                  </th>
+                  </td>
                 </tr>
               ))}
           </tbody>

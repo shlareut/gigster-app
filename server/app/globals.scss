@@ -69,13 +69,17 @@ a {
 
 th {
   padding: 8px 10px;
-}
-
-td {
   border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
+  background-color: lightgray;
 }
 
 td {
+  // border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
   text-align: center;
+  height: 63px;
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
 }
