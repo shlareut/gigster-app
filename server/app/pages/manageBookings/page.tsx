@@ -63,7 +63,7 @@ export default function ManageBookingsScreen() {
               .sort((a, b) => a.id - b.id)
               .map((booking) => (
                 <tr key={booking.id}>
-                  <th>{booking.id}</th>
+                  <td>{booking.id}</td>
                   <td>
                     {booking.first_name} {booking.last_name}
                   </td>
@@ -86,7 +86,7 @@ export default function ManageBookingsScreen() {
                       View details
                     </button>
                   </td>
-                  <td>
+                  <th>
                     {booking.status === 'IN_REVIEW' ? (
                       <Button
                         onClick={() => {
@@ -100,8 +100,8 @@ export default function ManageBookingsScreen() {
                     ) : (
                       ''
                     )}
-                  </td>
-                  <td>
+                  </th>
+                  <th>
                     {booking.status === 'IN_REVIEW' ? (
                       <Button
                         onClick={() => {
@@ -115,7 +115,7 @@ export default function ManageBookingsScreen() {
                     ) : (
                       ''
                     )}
-                  </td>
+                  </th>
                 </tr>
               ))}
           </tbody>
