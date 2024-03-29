@@ -54,11 +54,11 @@ export default function ManageOptionsScreen() {
         ) : (
           <div className={styles.form}>
             <p className={styles.subTitle}>
-              Step 1: select location from the dropdown.
+              Step 1: select business from the dropdown.
             </p>
             <div className={styles.inputDetails}>
               <label className={styles.input}>
-                Location:{' '}
+                Business:{' '}
                 <select
                   onChange={(event) => setListing(event.currentTarget.value)}
                 >
@@ -85,7 +85,7 @@ export default function ManageOptionsScreen() {
               <p className={styles.subTitle}>Step 2: enter vacancy details.</p>
               <div className={styles.inputDetails}>
                 <label>
-                  Location id:{' '}
+                  Business id:{' '}
                   <input
                     className={styles.input}
                     required

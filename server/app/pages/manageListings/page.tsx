@@ -15,13 +15,13 @@ export default async function ListingsScreen() {
   //   true, // start
   //   'America/Los_Angeles', // timeZone
   // );
-  BookingCron();
+  // BookingCron();
   const listings = await getListings();
   return (
     <>
       <div className={styles.titleWrapper}>
-        <h1 className={styles.title}>Locations</h1>
-        <PageLink to="/pages/createListing">Create location</PageLink>
+        <h1 className={styles.title}>Businesses</h1>
+        <PageLink to="/pages/createListing">Create business</PageLink>
       </div>
       <div className={styles.listings}>
         {listings

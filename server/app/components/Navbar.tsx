@@ -45,7 +45,7 @@ export default function Navbar() {
           </Link>
         </li> */}
         <li>
-          <PageLink to="/pages/manageListings">Locations</PageLink>
+          <PageLink to="/pages/manageListings">Businesses</PageLink>
         </li>
         <li>
           <PageLink to="/pages/manageOptions">Vacancies</PageLink>
