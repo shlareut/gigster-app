@@ -17,7 +17,7 @@ Jobster is a two-sided marketplace that connects semi-skilled job seekers with l
 
 ### Features
 
-- App (end-user app)
+- App (mobile app)
 
   - Browse local businesses
   - View nearest metro/tram station
